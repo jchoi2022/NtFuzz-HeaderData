@@ -1,0 +1,11 @@
+--- coan-6.0.1/src/directive.cpp	2014-08-23 20:06:47.000000000 +0900
++++ coan-6.0.1-patched/src/directive.cpp	2019-07-19 14:24:49.594896900 +0900
+@@ -182,7 +182,7 @@
+ 	} else {
+ 		if (options::implicit()) {
+ 			retval = type == HASH_IFDEF ?
+-			         LT_FALSE : LT_TRUE;
++			         LT_TRUE : LT_TRUE;
+ 		}
+ 	}
+ 	sloc->report();

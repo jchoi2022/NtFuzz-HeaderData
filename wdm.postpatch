@@ -1,0 +1,529 @@
+--- wdm_bf278d97.h	2019-07-26 20:40:17.913767700 +0900
++++ wdm_bf278d97_patched.h	2019-07-26 20:40:34.103684500 +0900
+@@ -545,9 +545,9 @@
+     USHORT Sbz2;
+ } ACL;
+ typedef ACL *PACL;
+-                                         SE_PRIVILEGE_ENABLED | \
+-                                         SE_PRIVILEGE_REMOVED | \
+-                                         SE_PRIVILEGE_USED_FOR_ACCESS)
++
++
++
+ typedef struct _PRIVILEGE_SET {
+     ULONG PrivilegeCount;
+     ULONG Control;
+@@ -657,23 +657,23 @@
+     ULONG Flags;
+     SE_ADT_PARAMETER_ARRAY_ENTRY Parameters[ SE_MAX_AUDIT_PARAMETERS ];
+ } SE_ADT_PARAMETER_ARRAY_EX, *PSE_ADT_PARAMETER_ARRAY_EX;
+-     ( sizeof(SE_ADT_PARAMETER_ARRAY) - \
+-       sizeof(SE_ADT_PARAMETER_ARRAY_ENTRY) * \
+-       (SE_MAX_AUDIT_PARAMETERS - AuditParameters->ParameterCount) )
+-    ((DeviceType) << 16) | ((Access) << 14) | ((Function) << 2) | (Method) \
+-)
+-                                   FILE_READ_DATA |\
+-                                   FILE_READ_ATTRIBUTES |\
+-                                   FILE_READ_EA |\
+-                                   SYNCHRONIZE)
+-                                   FILE_WRITE_DATA |\
+-                                   FILE_WRITE_ATTRIBUTES |\
+-                                   FILE_WRITE_EA |\
+-                                   FILE_APPEND_DATA |\
+-                                   SYNCHRONIZE)
+-                                   FILE_READ_ATTRIBUTES |\
+-                                   FILE_EXECUTE |\
+-                                   SYNCHRONIZE)
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+ typedef struct _IO_STATUS_BLOCK {
+     union {
+         NTSTATUS Status;
+@@ -984,48 +984,48 @@
+     ULONG DriverNameOffset;
+     IO_ERROR_LOG_PACKET EntryData;
+ }IO_ERROR_LOG_MESSAGE, *PIO_ERROR_LOG_MESSAGE;
+-                                            sizeof(IO_ERROR_LOG_PACKET) + \
+-                                            (sizeof(WCHAR) * 40))
+-    (ERROR_LOG_LIMIT_SIZE + IO_ERROR_LOG_MESSAGE_HEADER_LENGTH)
+-    ((PORT_MAXIMUM_MESSAGE_LENGTH > ERROR_LOG_MESSAGE_LIMIT_SIZE) ? \
+-        ERROR_LOG_MESSAGE_LIMIT_SIZE : \
+-        PORT_MAXIMUM_MESSAGE_LENGTH)
+-                                IO_ERROR_LOG_MESSAGE_HEADER_LENGTH)
+-                                  KEY_QUERY_VALUE |\
+-                                  KEY_ENUMERATE_SUB_KEYS |\
+-                                  KEY_NOTIFY) \
+-                                  & \
+-                                 (~SYNCHRONIZE))
+-                                  KEY_SET_VALUE |\
+-                                  KEY_CREATE_SUB_KEY) \
+-                                  & \
+-                                 (~SYNCHRONIZE))
+-                                  & \
+-                                 (~SYNCHRONIZE))
+-                                  KEY_QUERY_VALUE |\
+-                                  KEY_SET_VALUE |\
+-                                  KEY_CREATE_SUB_KEY |\
+-                                  KEY_ENUMERATE_SUB_KEYS |\
+-                                  KEY_NOTIFY |\
+-                                  KEY_CREATE_LINK) \
+-                                  & \
+-                                 (~SYNCHRONIZE))
+-                (REG_OPTION_RESERVED |\
+-                 REG_OPTION_NON_VOLATILE |\
+-                 REG_OPTION_VOLATILE |\
+-                 REG_OPTION_CREATE_LINK |\
+-                 REG_OPTION_BACKUP_RESTORE |\
+-                 REG_OPTION_OPEN_LINK |\
+-                 REG_OPTION_DONT_VIRTUALIZE)
+-                (REG_OPTION_RESERVED |\
+-                 REG_OPTION_BACKUP_RESTORE |\
+-                 REG_OPTION_OPEN_LINK |\
+-                 REG_OPTION_DONT_VIRTUALIZE)
+-                (REG_NOTIFY_CHANGE_NAME |\
+-                 REG_NOTIFY_CHANGE_ATTRIBUTES |\
+-                 REG_NOTIFY_CHANGE_LAST_SET |\
+-                 REG_NOTIFY_CHANGE_SECURITY |\
+-                 REG_NOTIFY_THREAD_AGNOSTIC)
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+ typedef struct _KEY_BASIC_INFORMATION {
+     LARGE_INTEGER LastWriteTime;
+     ULONG TitleIndex;
+@@ -1146,12 +1146,12 @@
+     ViewShare = 1,
+     ViewUnmap = 2
+ } SECTION_INHERIT;
+-                            SECTION_MAP_WRITE | \
+-                            SECTION_MAP_READ | \
+-                            SECTION_MAP_EXECUTE | \
+-                            SECTION_EXTEND_SIZE)
+-                            SESSION_QUERY_ACCESS | \
+-                            SESSION_MODIFY_ACCESS)
++
++
++
++
++
++
+ typedef struct _MEM_ADDRESS_REQUIREMENTS {
+     PVOID LowestStartingAddress;
+     PVOID HighestEndingAddress;
+@@ -1762,17 +1762,17 @@
+     _Out_writes_bytes_opt_(OutputBufferLength) PVOID OutputBuffer,
+     _In_ ULONG OutputBufferLength
+     );
+-                                        SERVICE_FILE_SYSTEM_DRIVER | \
+-                                        SERVICE_RECOGNIZER_DRIVER)
+-                                        SERVICE_WIN32_SHARE_PROCESS)
+-                                        SERVICE_WIN32_SHARE_PROCESS)
+-                                        SERVICE_WIN32_OWN_PROCESS)
+-                                        SERVICE_ADAPTER | \
+-                                        SERVICE_DRIVER | \
+-                                        SERVICE_INTERACTIVE_PROCESS | \
+-                                        SERVICE_USER_SERVICE | \
+-                                        SERVICE_USERSERVICE_INSTANCE | \
+-                                        SERVICE_PKG_SERVICE)
++
++
++
++
++
++
++
++
++
++
++
+ typedef enum _CM_SERVICE_NODE_TYPE {
+     DriverType = SERVICE_KERNEL_DRIVER,
+     FileSystemType = SERVICE_FILE_SYSTEM_DRIVER,
+@@ -1794,14 +1794,14 @@
+     SevereError = SERVICE_ERROR_SEVERE,
+     CriticalError = SERVICE_ERROR_CRITICAL
+ } SERVICE_ERROR_TYPE;
+-                                         CM_SERVICE_VIRTUAL_DISK_BOOT_LOAD | \
+-                                         CM_SERVICE_USB_DISK_BOOT_LOAD | \
+-                                         CM_SERVICE_SD_DISK_BOOT_LOAD | \
+-                                         CM_SERVICE_USB3_DISK_BOOT_LOAD | \
+-                                         CM_SERVICE_MEASURED_BOOT_LOAD | \
+-                                         CM_SERVICE_VERIFIER_BOOT_LOAD | \
+-                                         CM_SERVICE_WINPE_BOOT_LOAD | \
+-                                         CM_SERVICE_RAM_DISK_BOOT_LOAD)
++
++
++
++
++
++
++
++
+ typedef int CM_RESOURCE_TYPE;
+ typedef enum _CM_SHARE_DISPOSITION {
+     CmResourceShareUndetermined = 0,
+@@ -2046,10 +2046,10 @@
+     ULONG ProtectedModeDataBaseAddress;
+ } CM_PNP_BIOS_INSTALLATION_CHECK, *PCM_PNP_BIOS_INSTALLATION_CHECK;
+ #include "poppack.h"
+-                                                EISA_HAS_DMA_ENTRY + \
+-                                                EISA_HAS_IRQ_ENTRY + \
+-                                                EISA_HAS_MEMORY_ENTRY + \
+-                                                EISA_HAS_TYPE_ENTRY
++
++
++
++
+ typedef struct _CM_SCSI_DEVICE_DATA {
+     USHORT Version;
+     USHORT Revision;
+@@ -2823,8 +2823,8 @@
+ RtlxUnicodeStringToAnsiSize(
+     _In_ PCUNICODE_STRING UnicodeString
+     );
+-    RtlxUnicodeStringToAnsiSize(STRING) \
+-)
++
++
+ _IRQL_requires_max_(PASSIVE_LEVEL)
+ NTSYSAPI
+ ULONG
+@@ -2832,8 +2832,8 @@
+ RtlxAnsiStringToUnicodeSize(
+     _In_ PCANSI_STRING AnsiString
+     );
+-    RtlxAnsiStringToUnicodeSize(STRING) \
+-)
++
++
+ _IRQL_requires_max_(PASSIVE_LEVEL)
+ _Must_inspect_result_
+ NTSYSAPI
+@@ -3145,7 +3145,7 @@
+     Product.QuadPart = Multiplicand.QuadPart * Multiplier;
+     return Product;
+ }
+-    Result.QuadPart = Source.QuadPart & Mask.QuadPart
++
+ DECLSPEC_DEPRECATED_DDK_WINXP
+ __inline
+ LARGE_INTEGER
+@@ -3212,35 +3212,35 @@
+     Result.QuadPart = LargeInteger.QuadPart >> ShiftCount;
+     return Result;
+ }
+-    (((X).HighPart == (Y).HighPart) && ((X).LowPart > (Y).LowPart)) || \
+-    ((X).HighPart > (Y).HighPart) \
+-)
+-    (((X).HighPart == (Y).HighPart) && ((X).LowPart >= (Y).LowPart)) || \
+-    ((X).HighPart > (Y).HighPart) \
+-)
+-    !(((X).LowPart ^ (Y).LowPart) | ((X).HighPart ^ (Y).HighPart)) \
+-)
+-    (((X).LowPart ^ (Y).LowPart) | ((X).HighPart ^ (Y).HighPart)) \
+-)
+-    (((X).HighPart == (Y).HighPart) && ((X).LowPart < (Y).LowPart)) || \
+-    ((X).HighPart < (Y).HighPart) \
+-)
+-    (((X).HighPart == (Y).HighPart) && ((X).LowPart <= (Y).LowPart)) || \
+-    ((X).HighPart < (Y).HighPart) \
+-)
+-    (((X).HighPart == 0) && ((X).LowPart > 0)) || \
+-    ((X).HighPart > 0 ) \
+-)
+-    (X).HighPart >= 0 \
+-)
+-    !((X).LowPart | (X).HighPart) \
+-)
+-    ((X).LowPart | (X).HighPart) \
+-)
+-    ((X).HighPart < 0) \
+-)
+-    ((X).HighPart < 0) || !((X).LowPart | (X).HighPart) \
+-)
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+ typedef struct _TIME_FIELDS {
+     CSHORT Year;
+     CSHORT Month;
+@@ -3267,12 +3267,12 @@
+     _In_ PTIME_FIELDS TimeFields,
+     _Out_ PLARGE_INTEGER Time
+     );
+-        *(USHORT UNALIGNED *)(ADDRESS) = (VALUE)
+-        *(ULONG UNALIGNED *)(ADDRESS) = (VALUE)
+-        *(ULONGLONG UNALIGNED *)(ADDRESS) = (VALUE)
+-         RtlStoreUlonglong(ADDRESS,VALUE)
+-         *(USHORT UNALIGNED *)(DEST_ADDRESS) = *(PUSHORT)(SRC_ADDRESS)
+-         *(ULONG UNALIGNED *)(DEST_ADDRESS) = *(PULONG)(SRC_ADDRESS)
++
++
++
++
++
++
+ typedef struct _RTL_BITMAP {
+     ULONG SizeOfBitMap;
+     PULONG Buffer;
+@@ -3547,8 +3547,8 @@
+     _In_opt_ PACL Dacl,
+     _In_ BOOLEAN DaclDefaulted
+     );
+-                                           SEF_MACL_NO_READ_UP | \
+-                                           SEF_MACL_NO_EXECUTE_UP)
++
++
+ NTSYSAPI
+ USHORT
+ FASTCALL
+@@ -3857,63 +3857,63 @@
+ #pragma endregion
+ extern "C" {
+ #include <ktmtypes.h>
+-                                                    TRANSACTIONMANAGER_QUERY_INFORMATION)
+-                                                    TRANSACTIONMANAGER_SET_INFORMATION |\
+-                                                    TRANSACTIONMANAGER_RECOVER |\
+-                                                    TRANSACTIONMANAGER_RENAME |\
+-                                                    TRANSACTIONMANAGER_CREATE_RM)
+-                                                    TRANSACTIONMANAGER_GENERIC_READ |\
+-                                                    TRANSACTIONMANAGER_GENERIC_WRITE |\
+-                                                    TRANSACTIONMANAGER_GENERIC_EXECUTE |\
+-                                                    TRANSACTIONMANAGER_BIND_TRANSACTION)
+-                                             TRANSACTION_QUERY_INFORMATION |\
+-                                             SYNCHRONIZE)
+-                                             TRANSACTION_SET_INFORMATION |\
+-                                             TRANSACTION_COMMIT |\
+-                                             TRANSACTION_ENLIST |\
+-                                             TRANSACTION_ROLLBACK |\
+-                                             TRANSACTION_PROPAGATE |\
+-                                             SYNCHRONIZE)
+-                                             TRANSACTION_COMMIT |\
+-                                             TRANSACTION_ROLLBACK |\
+-                                             SYNCHRONIZE)
+-                                             TRANSACTION_GENERIC_READ |\
+-                                             TRANSACTION_GENERIC_WRITE |\
+-                                             TRANSACTION_GENERIC_EXECUTE)
+-                                             STANDARD_RIGHTS_WRITE |\
+-                                             TRANSACTION_SET_INFORMATION |\
+-                                             TRANSACTION_ENLIST |\
+-                                             TRANSACTION_ROLLBACK |\
+-                                             TRANSACTION_PROPAGATE |\
+-                                             SYNCHRONIZE)
+-                                             RESOURCEMANAGER_QUERY_INFORMATION |\
+-                                             SYNCHRONIZE)
+-                                             RESOURCEMANAGER_SET_INFORMATION |\
+-                                             RESOURCEMANAGER_RECOVER |\
+-                                             RESOURCEMANAGER_ENLIST |\
+-                                             RESOURCEMANAGER_GET_NOTIFICATION |\
+-                                             RESOURCEMANAGER_REGISTER_PROTOCOL |\
+-                                             RESOURCEMANAGER_COMPLETE_PROPAGATION |\
+-                                             SYNCHRONIZE)
+-                                             RESOURCEMANAGER_RECOVER |\
+-                                             RESOURCEMANAGER_ENLIST |\
+-                                             RESOURCEMANAGER_GET_NOTIFICATION |\
+-                                             RESOURCEMANAGER_COMPLETE_PROPAGATION |\
+-                                             SYNCHRONIZE)
+-                                             RESOURCEMANAGER_GENERIC_READ |\
+-                                             RESOURCEMANAGER_GENERIC_WRITE |\
+-                                             RESOURCEMANAGER_GENERIC_EXECUTE)
+-                                        ENLISTMENT_QUERY_INFORMATION)
+-                                        ENLISTMENT_SET_INFORMATION |\
+-                                        ENLISTMENT_RECOVER |\
+-                                        ENLISTMENT_SUBORDINATE_RIGHTS |\
+-                                        ENLISTMENT_SUPERIOR_RIGHTS)
+-                                        ENLISTMENT_RECOVER |\
+-                                        ENLISTMENT_SUBORDINATE_RIGHTS |\
+-                                        ENLISTMENT_SUPERIOR_RIGHTS)
+-                                        ENLISTMENT_GENERIC_READ |\
+-                                        ENLISTMENT_GENERIC_WRITE |\
+-                                        ENLISTMENT_GENERIC_EXECUTE)
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+ typedef enum _TRANSACTION_OUTCOME {
+     TransactionOutcomeUndetermined = 1,
+     TransactionOutcomeCommitted,
+@@ -4618,9 +4618,9 @@
+     HighImportance,
+     MediumHighImportance
+ } KDPC_IMPORTANCE;
+-    NT_ASSERT(((Object)->Type == 0) || \
+-              ((Object)->Type == DpcObject) || \
+-              ((Object)->Type == ThreadedDpcObject))
++
++
++
+ typedef struct _KDPC {
+     union {
+         ULONG TargetInfoAsUlong;
+@@ -4652,12 +4652,12 @@
+     ULONG ByteOffset;
+ } MDL, *PMDL;
+ typedef _Readable_bytes_(_Inexpressible_(polymorphism)) MDL *PMDLX;
+-                           MDL_PAGES_LOCKED | \
+-                           MDL_SOURCE_IS_NONPAGED_POOL | \
+-                           MDL_PARTIAL_HAS_BEEN_MAPPED | \
+-                           MDL_PARENT_MAPPED_SYSTEM_VA | \
+-                           MDL_SYSTEM_VA | \
+-                           MDL_IO_SPACE )
++
++
++
++
++
++
+ typedef struct _DISPATCHER_HEADER {
+     union {
+         union {
+@@ -8350,11 +8350,11 @@
+     );
+ extern PBOOLEAN Mm64BitPhysicalAddress;
+ extern PVOID MmBadPointer;
+-                       __pragma(warning(push)) \
+-                       __pragma(warning(disable:4995)) \
+-                       *(PVOID *) MmBadPointer \
+-                       __pragma(warning(pop)) \
+-                        )
++
++
++
++
++
+ #pragma deprecated(MmBadPointer)
+                                (((Size) & (PAGE_SIZE - 1)) != 0))
+     ((BYTE_OFFSET (Va) + ((SIZE_T) (Size)) + (PAGE_SIZE - 1)) >> PAGE_SHIFT)

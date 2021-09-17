@@ -1,0 +1,779 @@
+--- include/ntifs_bf278d97.h	2019-09-04 12:35:13.819534400 +0900
++++ include/ntifs_bf278d97_patched.h	2019-10-08 18:02:47.778338700 +0900
+@@ -122,8 +122,8 @@
+     ACCESS_MASK Mask;
+     ULONG SidStart;
+ } SYSTEM_ACCESS_FILTER_ACE, *PSYSTEM_ACCESS_FILTER_ACE;
+-                                           SYSTEM_MANDATORY_LABEL_NO_READ_UP | \
+-                                           SYSTEM_MANDATORY_LABEL_NO_EXECUTE_UP)
++
++
+ typedef USHORT SECURITY_DESCRIPTOR_CONTROL, *PSECURITY_DESCRIPTOR_CONTROL;
+ typedef struct _SECURITY_DESCRIPTOR_RELATIVE {
+     UCHAR Revision;
+@@ -238,21 +238,21 @@
+     BOOLEAN ObjectCreation;
+     BOOLEAN GenerateOnClose;
+ } SE_AUDIT_INFO, *PSE_AUDIT_INFO;
+-                          TOKEN_ASSIGN_PRIMARY |\
+-                          TOKEN_DUPLICATE |\
+-                          TOKEN_IMPERSONATE |\
+-                          TOKEN_QUERY |\
+-                          TOKEN_QUERY_SOURCE |\
+-                          TOKEN_ADJUST_PRIVILEGES |\
+-                          TOKEN_ADJUST_GROUPS |\
+-                          TOKEN_ADJUST_DEFAULT )
+-                          TOKEN_ADJUST_SESSIONID )
+-                          TOKEN_QUERY)
+-                          TOKEN_ADJUST_PRIVILEGES |\
+-                          TOKEN_ADJUST_GROUPS |\
+-                          TOKEN_ADJUST_DEFAULT)
+-                                       TOKEN_QUERY |\
+-                                       TOKEN_QUERY_SOURCE )
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+ typedef enum _TOKEN_TYPE {
+     TokenPrimary = 1,
+     TokenImpersonation
+@@ -447,12 +447,12 @@
+     ULONG ValueLength;
+ } CLAIM_SECURITY_ATTRIBUTE_OCTET_STRING_VALUE,
+     *PCLAIM_SECURITY_ATTRIBUTE_OCTET_STRING_VALUE;
+-                        CLAIM_SECURITY_ATTRIBUTE_NON_INHERITABLE | \
+-                        CLAIM_SECURITY_ATTRIBUTE_VALUE_CASE_SENSITIVE | \
+-                        CLAIM_SECURITY_ATTRIBUTE_USE_FOR_DENY_ONLY | \
+-                        CLAIM_SECURITY_ATTRIBUTE_DISABLED_BY_DEFAULT | \
+-                        CLAIM_SECURITY_ATTRIBUTE_DISABLED | \
+-                        CLAIM_SECURITY_ATTRIBUTE_MANDATORY )
++
++
++
++
++
++
+ typedef struct _CLAIM_SECURITY_ATTRIBUTE_V1 {
+     PWSTR Name;
+     USHORT ValueType;
+@@ -831,19 +831,19 @@
+     _In_opt_ PVOID Lock,
+     _In_opt_ PRTL_HEAP_PARAMETERS Parameters
+     );
+-                                        HEAP_GROWABLE | \
+-                                        HEAP_GENERATE_EXCEPTIONS | \
+-                                        HEAP_ZERO_MEMORY | \
+-                                        HEAP_REALLOC_IN_PLACE_ONLY | \
+-                                        HEAP_TAIL_CHECKING_ENABLED | \
+-                                        HEAP_FREE_CHECKING_ENABLED | \
+-                                        HEAP_DISABLE_COALESCE_ON_FREE | \
+-                                        HEAP_CLASS_MASK | \
+-                                        HEAP_CREATE_ALIGN_16 | \
+-                                        HEAP_CREATE_ENABLE_TRACING | \
+-                                        HEAP_CREATE_ENABLE_EXECUTE | \
+-                                        HEAP_CREATE_SEGMENT_HEAP | \
+-                                        HEAP_CREATE_HARDENED )
++
++
++
++
++
++
++
++
++
++
++
++
++
+ #pragma region Desktop Family
+ #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+ FORCEINLINE
+@@ -1071,8 +1071,8 @@
+ RtlxUnicodeStringToOemSize(
+     _In_ PCUNICODE_STRING UnicodeString
+     );
+-    RtlxUnicodeStringToOemSize(STRING) \
+-)
++
++
+ _IRQL_requires_max_(PASSIVE_LEVEL)
+ NTSYSAPI
+ ULONG
+@@ -1080,10 +1080,10 @@
+ RtlxOemStringToUnicodeSize(
+     _In_ PCOEM_STRING OemString
+     );
+-    RtlxOemStringToUnicodeSize(STRING) \
+-)
+-    (ULONG)(RtlOemStringToUnicodeSize(STRING) - sizeof(UNICODE_NULL)) \
+-    )
++
++
++
++
+ _IRQL_requires_max_(PASSIVE_LEVEL)
+ NTSYSAPI
+ NTSTATUS
+@@ -2081,8 +2081,8 @@
+ #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+ #endif
+ #pragma endregion
+-    ((DeviceType) << 16) | ((Access) << 14) | ((Function) << 2) | (Method) \
+-)
++
++
+ __kernel_entry NTSYSCALLAPI
+ NTSTATUS
+ NTAPI
+@@ -2195,9 +2195,9 @@
+     ULONG Flags;
+     SE_ADT_PARAMETER_ARRAY_ENTRY Parameters[ SE_MAX_AUDIT_PARAMETERS ];
+ } SE_ADT_PARAMETER_ARRAY_EX, *PSE_ADT_PARAMETER_ARRAY_EX;
+-     ( sizeof(SE_ADT_PARAMETER_ARRAY) - \
+-       sizeof(SE_ADT_PARAMETER_ARRAY_ENTRY) * \
+-       (SE_MAX_AUDIT_PARAMETERS - AuditParameters->ParameterCount) )
++
++
++
+ _IRQL_requires_same_
+ _IRQL_requires_max_(PASSIVE_LEVEL)
+ NTSTATUS
+@@ -2471,38 +2471,38 @@
+ typedef struct _FILE_ID_128 {
+     UCHAR Identifier[16];
+ } FILE_ID_128, *PFILE_ID_128;
+-                                        ((FID128).Identifier[1] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[2] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[3] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[4] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[5] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[6] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[7] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[8] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[9] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[10] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[11] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[12] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[13] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[14] == (UCHAR)-1) && \
+-                                        ((FID128).Identifier[15] == (UCHAR)-1))
+-    ((FID128).Identifier[0] = (UCHAR)-1); \
+-    ((FID128).Identifier[1] = (UCHAR)-1); \
+-    ((FID128).Identifier[2] = (UCHAR)-1); \
+-    ((FID128).Identifier[3] = (UCHAR)-1); \
+-    ((FID128).Identifier[4] = (UCHAR)-1); \
+-    ((FID128).Identifier[5] = (UCHAR)-1); \
+-    ((FID128).Identifier[6] = (UCHAR)-1); \
+-    ((FID128).Identifier[7] = (UCHAR)-1); \
+-    ((FID128).Identifier[8] = (UCHAR)-1); \
+-    ((FID128).Identifier[9] = (UCHAR)-1); \
+-    ((FID128).Identifier[10] = (UCHAR)-1); \
+-    ((FID128).Identifier[11] = (UCHAR)-1); \
+-    ((FID128).Identifier[12] = (UCHAR)-1); \
+-    ((FID128).Identifier[13] = (UCHAR)-1); \
+-    ((FID128).Identifier[14] = (UCHAR)-1); \
+-    ((FID128).Identifier[15] = (UCHAR)-1); \
+-}
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+ typedef struct _FILE_NOTIFY_INFORMATION {
+     ULONG NextEntryOffset;
+     ULONG Action;
+@@ -3436,9 +3436,9 @@
+     ULONG HandleInfo;
+ } MARK_HANDLE_INFO32, *PMARK_HANDLE_INFO32;
+ #pragma warning(default:4201)
+-                                     USN_SOURCE_AUXILIARY_DATA | \
+-                                     USN_SOURCE_REPLICATION_MANAGEMENT | \
+-                                     USN_SOURCE_CLIENT_REPLICATION_MANAGEMENT)
++
++
++
+ typedef struct {
+     ACCESS_MASK DesiredAccess;
+     ULONG SecurityIds[1];
+@@ -3792,23 +3792,23 @@
+     ULONGLONG Flags;
+     LONGLONG NewNumberOfSectors;
+ } SHRINK_VOLUME_INFORMATION, *PSHRINK_VOLUME_INFORMATION;
+-                (TXFS_RM_FLAG_LOGGING_MODE | \
+-                 TXFS_RM_FLAG_RENAME_RM | \
+-                 TXFS_RM_FLAG_LOG_CONTAINER_COUNT_MAX | \
+-                 TXFS_RM_FLAG_LOG_CONTAINER_COUNT_MIN | \
+-                 TXFS_RM_FLAG_LOG_GROWTH_INCREMENT_NUM_CONTAINERS | \
+-                 TXFS_RM_FLAG_LOG_GROWTH_INCREMENT_PERCENT | \
+-                 TXFS_RM_FLAG_LOG_AUTO_SHRINK_PERCENTAGE | \
+-                 TXFS_RM_FLAG_LOG_NO_CONTAINER_COUNT_MAX | \
+-                 TXFS_RM_FLAG_LOG_NO_CONTAINER_COUNT_MIN | \
+-                 TXFS_RM_FLAG_SHRINK_LOG | \
+-                 TXFS_RM_FLAG_GROW_LOG | \
+-                 TXFS_RM_FLAG_ENFORCE_MINIMUM_SIZE | \
+-                 TXFS_RM_FLAG_PRESERVE_CHANGES | \
+-                 TXFS_RM_FLAG_RESET_RM_AT_NEXT_START | \
+-                 TXFS_RM_FLAG_DO_NOT_RESET_RM_AT_NEXT_START | \
+-                 TXFS_RM_FLAG_PREFER_CONSISTENCY | \
+-                 TXFS_RM_FLAG_PREFER_AVAILABILITY)
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+ typedef struct _TXFS_MODIFY_RM {
+     ULONG Flags;
+     ULONG LogContainerCountMax;
+@@ -3820,14 +3820,14 @@
+     USHORT LoggingMode;
+ } TXFS_MODIFY_RM,
+  *PTXFS_MODIFY_RM;
+-                (TXFS_RM_FLAG_LOG_GROWTH_INCREMENT_NUM_CONTAINERS | \
+-                 TXFS_RM_FLAG_LOG_GROWTH_INCREMENT_PERCENT | \
+-                 TXFS_RM_FLAG_LOG_NO_CONTAINER_COUNT_MAX | \
+-                 TXFS_RM_FLAG_LOG_NO_CONTAINER_COUNT_MIN | \
+-                 TXFS_RM_FLAG_RESET_RM_AT_NEXT_START | \
+-                 TXFS_RM_FLAG_DO_NOT_RESET_RM_AT_NEXT_START | \
+-                 TXFS_RM_FLAG_PREFER_CONSISTENCY | \
+-                 TXFS_RM_FLAG_PREFER_AVAILABILITY)
++
++
++
++
++
++
++
++
+ typedef struct _TXFS_QUERY_RM_INFORMATION {
+     ULONG BytesRequired;
+     ULONGLONG TailLsn;
+@@ -3857,8 +3857,8 @@
+     ULONG TmLogPathOffset;
+ } TXFS_QUERY_RM_INFORMATION,
+  *PTXFS_QUERY_RM_INFORMATION;
+-                (TXFS_ROLLFORWARD_REDO_FLAG_USE_LAST_REDO_LSN | \
+-                 TXFS_ROLLFORWARD_REDO_FLAG_USE_LAST_VIRTUAL_CLOCK)
++
++
+ typedef struct _TXFS_ROLLFORWARD_REDO_INFORMATION {
+     LARGE_INTEGER LastVirtualClock;
+     ULONGLONG LastRedoLsn;
+@@ -3868,18 +3868,18 @@
+  *PTXFS_ROLLFORWARD_REDO_INFORMATION;
+ #pragma deprecated(TXFS_ROLLFORWARD_REDO_INFORMATION)
+ #pragma deprecated(PTXFS_ROLLFORWARD_REDO_INFORMATION)
+-                (TXFS_START_RM_FLAG_LOG_CONTAINER_COUNT_MAX | \
+-                 TXFS_START_RM_FLAG_LOG_CONTAINER_COUNT_MIN | \
+-                 TXFS_START_RM_FLAG_LOG_CONTAINER_SIZE | \
+-                 TXFS_START_RM_FLAG_LOG_GROWTH_INCREMENT_NUM_CONTAINERS | \
+-                 TXFS_START_RM_FLAG_LOG_GROWTH_INCREMENT_PERCENT | \
+-                 TXFS_START_RM_FLAG_LOG_AUTO_SHRINK_PERCENTAGE | \
+-                 TXFS_START_RM_FLAG_RECOVER_BEST_EFFORT | \
+-                 TXFS_START_RM_FLAG_LOG_NO_CONTAINER_COUNT_MAX | \
+-                 TXFS_START_RM_FLAG_LOGGING_MODE | \
+-                 TXFS_START_RM_FLAG_PRESERVE_CHANGES | \
+-                 TXFS_START_RM_FLAG_PREFER_CONSISTENCY | \
+-                 TXFS_START_RM_FLAG_PREFER_AVAILABILITY)
++
++
++
++
++
++
++
++
++
++
++
++
+ typedef struct _TXFS_START_RM_INFORMATION {
+     ULONG Flags;
+     ULONGLONG LogContainerSize;
+@@ -4726,16 +4726,16 @@
+         UCHAR DataBuffer[1];
+     } GenericReparseBuffer;
+ } REPARSE_GUID_DATA_BUFFER, *PREPARSE_GUID_DATA_BUFFER;
+-                           ((_tag) & 0x80000000) \
+-                           )
+-                           ((_tag) & 0x20000000) \
+-                           )
+-                           ((_tag) & 0x10000000) \
+-                           )
+-                  !((_tag) & ~IO_REPARSE_TAG_VALID_VALUES) && \
+-                  ((_tag) > IO_REPARSE_TAG_RESERVED_RANGE) && \
+-                  (((_tag) & 0x30000000) != 0x30000000) \
+-                 )
++
++
++
++
++
++
++
++
++
++
+ #pragma pack(4)
+ typedef struct _REPARSE_INDEX_KEY {
+     ULONG FileReparseTag;
+@@ -4752,10 +4752,10 @@
+         REPARSE_GUID_DATA_BUFFER ReparseGuidDataBuffer;
+     } DUMMYUNIONNAME;
+ } REPARSE_DATA_BUFFER_EX, *PREPARSE_DATA_BUFFER_EX;
+-    UFIELD_OFFSET(REPARSE_DATA_BUFFER_EX, ReparseGuidDataBuffer.GenericReparseBuffer)
+-    UFIELD_OFFSET(REPARSE_DATA_BUFFER_EX, ReparseDataBuffer.GenericReparseBuffer)
+-                                               SUPPORTED_FS_FEATURES_OFFLOAD_WRITE |\
+-                                               SUPPORTED_FS_FEATURES_QUERY_OPEN)
++
++
++
++
+ typedef struct _SCRUB_DATA_INPUT {
+     ULONG Size;
+     ULONG Flags;
+@@ -5013,11 +5013,11 @@
+     ULONG TotalExtentCount;
+     UCHAR Extents[ANYSIZE_ARRAY];
+ } FSCTL_QUERY_GHOSTED_FILE_EXTENTS_OUTPUT, *PFSCTL_QUERY_GHOSTED_FILE_EXTENTS_OUTPUT;
+-  FIELD_OFFSET(FSCTL_QUERY_GHOSTED_FILE_EXTENTS_OUTPUT, Extents) + \
+-      ALIGN_UP((FIELD_OFFSET(GHOSTED_FILE_EXTENT, RecallMetadataBuffer) + \
+-                MaxRecallMetadataBufferSize), \
+-               8) * \
+-          (Count)
++
++
++
++
++
+ typedef struct _FSCTL_UNMAP_SPACE_INPUT_BUFFER {
+     LARGE_INTEGER BytesToUnmap;
+ } FSCTL_UNMAP_SPACE_INPUT_BUFFER, *PFSCTL_UNMAP_SPACE_INPUT_BUFFER;
+@@ -5200,8 +5200,8 @@
+         };
+     };
+ } KAPC_STATE, *PKAPC_STATE, *PRKAPC_STATE;
+-    (KAPC_STATE_NORMAL_USER_APC_PENDING_MASK | \
+-     KAPC_STATE_SPECIAL_USER_APC_PENDING_MASK)
++
++
+ typedef struct _KQUEUE {
+     DISPATCHER_HEADER Header;
+     LIST_ENTRY EntryListHead;
+@@ -5427,10 +5427,10 @@
+ ExDisableResourceBoostLite (
+     _In_ PERESOURCE Resource
+     );
+-        TOKEN_NO_CHILD_PROCESS \
+-        | TOKEN_NO_CHILD_PROCESS_UNLESS_SECURE \
+-        | TOKEN_AUDIT_NO_CHILD_PROCESS \
+-        )
++
++
++
++
+ typedef struct _SE_EXPORTS {
+     LUID SeCreateTokenPrivilege;
+     LUID SeAssignPrimaryTokenPrivilege;
+@@ -5515,16 +5515,16 @@
+     _In_ PESILO pServerSilo,
+     _In_opt_ PVOID Context);
+ typedef SE_LOGON_SESSION_TERMINATED_ROUTINE_EX *PSE_LOGON_SESSION_TERMINATED_ROUTINE_EX;
+-    (8 + (4 * ((SID *)Sid)->SubAuthorityCount))
+-            if (SeTokenType((C)->ClientToken) == TokenPrimary) { \
+-                PsDereferencePrimaryToken( (C)->ClientToken ); \
+-            } else { \
+-                PsDereferenceImpersonationToken( (C)->ClientToken ); \
+-            } \
+-        }
+-        ( ARGUMENT_PRESENT( ((PSECURITY_SUBJECT_CONTEXT) SubjectContext)->ClientToken) ? \
+-            ((PSECURITY_SUBJECT_CONTEXT) SubjectContext)->ClientToken : \
+-            ((PSECURITY_SUBJECT_CONTEXT) SubjectContext)->PrimaryToken )
++
++
++
++
++
++
++
++
++
++
+ NTKERNELAPI
+ VOID
+ SeCaptureSubjectContextEx (
+@@ -5972,16 +5972,16 @@
+     _In_ PLUID LogonId,
+     _In_ PESILO pServerSilo
+     );
+-                                                TokenInformationClass == TokenIsAppContainer || \
+-                                                TokenInformationClass == TokenVirtualizationAllowed || \
+-                                                TokenInformationClass == TokenVirtualizationEnabled || \
+-                                                TokenInformationClass == TokenUIAccess || \
+-                                                TokenInformationClass == TokenSessionId || \
+-                                                TokenInformationClass == TokenHasRestrictions || \
+-                                                TokenInformationClass == TokenAppContainerNumber || \
+-                                                TokenInformationClass == TokenPrivateNameSpace
+-_When_(QUERY_TYPE_ULONG(TokenInformationClass), _At_((PULONG)TokenInformation, _Out_))
+-_When_(!QUERY_TYPE_ULONG(TokenInformationClass), _At_(TokenInformation, _Outptr_result_buffer_(_Inexpressible_(token-dependent))))
++
++
++
++
++
++
++
++
++
++
+ NTKERNELAPI
+ NTSTATUS
+ SeQueryInformationToken (
+@@ -7426,28 +7426,28 @@
+     _In_opt_ __drv_aliasesMem PVOID Context,
+     _In_ BOOLEAN AlreadySynchronized
+     );
+-    FsRtlPrivateLock( A1, \
+-                      A2, \
+-                      A3, \
+-                      A4, \
+-                      A5, \
+-                      A6, \
+-                      A7, \
+-                      A8, \
+-                      A9, \
+-                      NULL, \
+-                      A10, \
+-                      A11 ) \
+-)
+-    ((FL)->FastIoIsQuestionable))
+-    NT_ASSERT( (FL)->LockRequestsInProgress >= 0 ); \
+-    (void) \
+-    (InterlockedIncrement((LONG volatile *)&((FL)->LockRequestsInProgress)));\
+-}
+-    NT_ASSERT( (FL)->LockRequestsInProgress > 0 ); \
+-    (void) \
+-    (InterlockedDecrement((LONG volatile *)&((FL)->LockRequestsInProgress)));\
+-}
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+ typedef struct {
+     FAST_MUTEX Mutex;
+     PRTL_SPLAY_LINKS Cache;
+@@ -7541,27 +7541,27 @@
+ } FSRTL_COMPARISON_RESULT;
+ extern UCHAR const* const LEGAL_ANSI_CHARACTER_ARRAY;
+ extern PUSHORT NLS_OEM_LEAD_BYTE_INFO;
+-    FsRtlTestAnsiCharacter((C), FALSE, FALSE, FSRTL_WILD_CHARACTER) \
+-)
+-    FsRtlTestAnsiCharacter((C), TRUE, (WILD_OK), FSRTL_FAT_LEGAL) \
+-)
+-    FsRtlTestAnsiCharacter((C), TRUE, (WILD_OK), FSRTL_HPFS_LEGAL) \
+-)
+-    FsRtlTestAnsiCharacter((C), TRUE, (WILD_OK), FSRTL_NTFS_LEGAL) \
+-)
+-    FsRtlTestAnsiCharacter((C), TRUE, (WILD_OK), FSRTL_NTFS_STREAM_LEGAL) \
+-)
+-    FsRtlTestAnsiCharacter((C), TRUE, FALSE, (FLAGS)) \
+-)
+-        ((SCHAR)(C) < 0) ? DEFAULT_RET : \
+-                           FlagOn( LEGAL_ANSI_CHARACTER_ARRAY[(C)], \
+-                                   (FLAGS) | \
+-                                   ((WILD_OK) ? FSRTL_WILD_CHARACTER : 0) ) \
+-)
+-    (BOOLEAN)((UCHAR)(DBCS_CHAR) < 0x80 ? FALSE : \
+-              (NLS_MB_CODE_PAGE_TAG && \
+-               (NLS_OEM_LEAD_BYTE_INFO[(UCHAR)(DBCS_CHAR)] != 0))) \
+-)
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+ _IRQL_requires_max_(APC_LEVEL)
+ NTKERNELAPI
+ VOID
+@@ -7617,12 +7617,12 @@
+ FsRtlIsNtstatusExpected (
+     _In_ NTSTATUS Exception
+     );
+-    ExAllocatePoolWithTag((POOL_TYPE)((PoolType) | POOL_RAISE_IF_ALLOCATION_FAILURE), \
+-                          NumberOfBytes, \
+-                          Tag)
+-    ExAllocatePoolWithQuotaTag((POOL_TYPE)((PoolType) | POOL_RAISE_IF_ALLOCATION_FAILURE), \
+-                               NumberOfBytes, \
+-                               Tag)
++
++
++
++
++
++
+ _IRQL_requires_max_(APC_LEVEL)
+ __drv_preferredFunction(ExAllocateFromNPagedLookasideList, "The FsRtlAllocateResource routine is obsolete, but is exported to support existing driver binaries. Use ExAllocateFromNPagedLookasideList and ExInitializeResourceLite instead.")
+ NTKERNELAPI
+@@ -8231,9 +8231,9 @@
+     _In_ PNOTIFY_SYNC NotifySync,
+     _In_ PLIST_ENTRY NotifyList
+     );
+-      (((C) >= 0x40) ? FALSE : FlagOn( LEGAL_ANSI_CHARACTER_ARRAY[(C)], \
+-                                       FSRTL_WILD_CHARACTER ) ) \
+-)
++
++
++
+ _IRQL_requires_max_(PASSIVE_LEVEL)
+ NTKERNELAPI
+ VOID
+@@ -8411,15 +8411,15 @@
+     PVOID InstanceId;
+     PFREE_FUNCTION FreeCallback;
+ } FSRTL_PER_FILE_CONTEXT, *PFSRTL_PER_FILE_CONTEXT;
+-    ((_fc)->OwnerId = (_owner), \
+-     (_fc)->InstanceId = (_inst), \
+-     (_fc)->FreeCallback = (_cb))
+-    (FsRtlSupportsPerFileContexts(_fo) ? \
+-        FsRtlGetPerStreamContextPointer(_fo)->FileContextSupportPointer : \
+-        NULL)
+-    ((FsRtlGetPerStreamContextPointer(_fo) != NULL) && \
+-     (FsRtlGetPerStreamContextPointer(_fo)->Version >= FSRTL_FCB_HEADER_V1) && \
+-     (FsRtlGetPerStreamContextPointer(_fo)->FileContextSupportPointer != NULL))
++
++
++
++
++
++
++
++
++
+ _Must_inspect_result_
+ _IRQL_requires_max_(APC_LEVEL)
+ NTKERNELAPI
+@@ -8446,12 +8446,12 @@
+     _In_opt_ PVOID OwnerId,
+     _In_opt_ PVOID InstanceId
+     );
+-{ \
+-    FsRtlSetupAdvancedHeader( _advhdr, _fmutx ); \
+-    if ((_fctxptr) != NULL) { \
+-        (_advhdr)->FileContextSupportPointer = (_fctxptr); \
+-    } \
+-}
++
++
++
++
++
++
+ _IRQL_requires_max_(APC_LEVEL)
+ NTKERNELAPI
+ VOID
+@@ -8464,13 +8464,13 @@
+     PVOID InstanceId;
+     PFREE_FUNCTION FreeCallback;
+ } FSRTL_PER_STREAM_CONTEXT, *PFSRTL_PER_STREAM_CONTEXT;
+-    ((_fc)->OwnerId = (_owner), \
+-     (_fc)->InstanceId = (_inst), \
+-     (_fc)->FreeCallback = (_cb))
+-    ((PFSRTL_ADVANCED_FCB_HEADER)((_fo)->FsContext))
+-    ((NULL != FsRtlGetPerStreamContextPointer(_fo)) && \
+-     FlagOn(FsRtlGetPerStreamContextPointer(_fo)->Flags2, \
+-                    FSRTL_FLAG2_SUPPORTS_FILTER_CONTEXTS))
++
++
++
++
++
++
++
+ _Must_inspect_result_
+ _IRQL_requires_max_(APC_LEVEL)
+ NTKERNELAPI
+@@ -8488,11 +8488,11 @@
+     _In_opt_ PVOID OwnerId,
+     _In_opt_ PVOID InstanceId
+     );
+- (((NULL != (_sc)) && \
+-   FlagOn((_sc)->Flags2,FSRTL_FLAG2_SUPPORTS_FILTER_CONTEXTS) && \
+-   !IsListEmpty(&(_sc)->FilterContexts)) ? \
+-        FsRtlLookupPerStreamContextInternal((_sc), (_oid), (_iid)) : \
+-        NULL)
++
++
++
++
++
+ _Must_inspect_result_
+ _IRQL_requires_max_(APC_LEVEL)
+ NTKERNELAPI
+@@ -8534,8 +8534,8 @@
+     PVOID OwnerId;
+     PVOID InstanceId;
+ } FSRTL_PER_FILEOBJECT_CONTEXT, *PFSRTL_PER_FILEOBJECT_CONTEXT;
+-    ((_fc)->OwnerId = (_owner), \
+-     (_fc)->InstanceId = (_inst)) \
++
++
+ _Must_inspect_result_
+ _IRQL_requires_max_(APC_LEVEL)
+ NTKERNELAPI
+@@ -8562,13 +8562,13 @@
+     _In_opt_ PVOID OwnerId,
+     _In_opt_ PVOID InstanceId
+     );
+-    (IRP)->IoStatus.Status = (STATUS); \
+-    IoCompleteRequest( (IRP), IO_DISK_INCREMENT ); \
+-}
+-    KeEnterCriticalRegion(); \
+-}
+-    KeLeaveCriticalRegion(); \
+-}
++
++
++
++
++
++
++
+ NTKERNELAPI
+ VOID
+ FsRtlIncrementCcFastReadNotPossible(
+@@ -9299,9 +9299,9 @@
+ BOOLEAN (*PASYNC_READ_COMPLETION_CALLBACK) (
+      _In_ PVOID Context
+      );
+-    ((FO)->SectionObjectPointer != NULL) && \
+-    (((PSECTION_OBJECT_POINTERS)(FO)->SectionObjectPointer)->SharedCacheMap != NULL) \
+-)
++
++
++
+ extern ULONG CcFastMdlReadWait;
+ typedef struct _CC_ASYNC_READ_CONTEXT {
+     PASYNC_READ_COMPLETION_CALLBACK CompletionRoutine;
+@@ -9338,8 +9338,8 @@
+     _In_ PFILE_OBJECT FileObject,
+     _In_ PCC_FILE_SIZES FileSizes
+     );
+-    ((PLARGE_INTEGER)((FO)->SectionObjectPointer->SharedCacheMap) + 1) \
+-)
++
++
+ NTKERNELAPI
+ BOOLEAN
+ CcPurgeCacheSection (
+@@ -9521,10 +9521,10 @@
+     _In_ PFILE_OBJECT FileObject,
+     _In_ PMDL MdlChain
+     );
+-    if ((LEN) >= 256) { \
+-        CcScheduleReadAhead((FO),(FOFF),(LEN)); \
+-    } \
+-}
++
++
++
++
+ NTKERNELAPI
+ VOID
+ CcScheduleReadAhead (
+@@ -9711,9 +9711,9 @@
+     ULONG_PTR dwLower ;
+     ULONG_PTR dwUpper ;
+ } SecHandle, * PSecHandle ;
+-            ((PSecHandle) (x))->dwLower = ((PSecHandle) (x))->dwUpper = ((ULONG_PTR) ((INT_PTR)-1)) ;
+-            ( ( ((PSecHandle) (x))->dwLower != ((ULONG_PTR) ((INT_PTR) -1 ))) && \
+-              ( ((PSecHandle) (x))->dwUpper != ((ULONG_PTR) ((INT_PTR) -1 ))) )
++
++
++
+ typedef SecHandle CredHandle;
+ typedef PSecHandle PCredHandle;
+ typedef SecHandle CtxtHandle;

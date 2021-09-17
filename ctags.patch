@@ -1,0 +1,63 @@
+--- ctags/c.c	2009-07-10 18:51:01.000000000 +0900
++++ ctags-patched/c.c	2019-08-30 17:35:38.809807300 +0900
+@@ -26,6 +26,7 @@
+ #include "parse.h"
+ #include "read.h"
+ #include "routines.h"
++#include "c_annot.h"
+ 
+ /*
+ *   MACROS
+@@ -1517,7 +1518,7 @@
+ static void readPackageOrNamespace (statementInfo *const st, const declType declaration)
+ {
+ 	st->declaration = declaration;
+-	
++
+ 	if (declaration == DECL_NAMESPACE && !isLanguage (Lang_csharp))
+ 	{
+ 		/* In C++ a namespace is specified one level at a time. */
+@@ -1762,10 +1763,10 @@
+ 		case KEYWORD_VOLATILE:  st->declaration = DECL_BASE;            break;
+ 		case KEYWORD_VIRTUAL:   st->implementation = IMP_VIRTUAL;       break;
+ 		case KEYWORD_WCHAR_T:   st->declaration = DECL_BASE;            break;
+-		
++
+ 		case KEYWORD_NAMESPACE: readPackageOrNamespace (st, DECL_NAMESPACE); break;
+ 		case KEYWORD_PACKAGE:   readPackageOrNamespace (st, DECL_PACKAGE);   break;
+-		
++
+ 		case KEYWORD_EVENT:
+ 			if (isLanguage (Lang_csharp))
+ 				st->declaration = DECL_EVENT;
+@@ -2087,7 +2088,7 @@
+ 	 * But watch out for "@interface"!
+ 	 */
+ 	tokenInfo *const token = activeToken (st);
+-	
++
+ 	int c = skipToNonWhite ();
+ 	readIdentifier (token, c);
+ 	if (token->keyword == KEYWORD_INTERFACE)
+@@ -2235,7 +2236,11 @@
+ 					if (++identifierCount > 1)
+ 						info->isKnrParamList = FALSE;
+ 					readIdentifier (token, c);
+-					if (isType (token, TOKEN_NAME)  &&  info->isNameCandidate)
++          if (isAnnotKeyword(token->name->buffer)) {
++	 				  info->isKnrParamList = FALSE;
++	 				  info->isNameCandidate = FALSE;
++          }
++          else if (isType (token, TOKEN_NAME)  &&  info->isNameCandidate)
+ 						token->type = TOKEN_PAREN_NAME;
+ 					else if (isType (token, TOKEN_KEYWORD))
+ 					{
+@@ -2486,7 +2491,7 @@
+ static void parseGeneralToken (statementInfo *const st, const int c)
+ {
+ 	const tokenInfo *const prev = prevToken (st, 1);
+-	
++
+ 	if (isident1 (c) || (isLanguage (Lang_java) && isHighChar (c)))
+ 	{
+ 		parseIdentifier (st, c);

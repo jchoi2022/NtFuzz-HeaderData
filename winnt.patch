@@ -1,0 +1,52 @@
+--- winnt.h	2019-07-25 18:38:56.015380200 +0900
++++ winnt_patched.h	2019-07-25 18:36:56.194369800 +0900
+@@ -2322,49 +2322,6 @@
+ 
+ // begin_ntoshvp
+ 
+-#if ! defined(lint)
+-
+-#ifdef _PREFAST_
+-
+-void _Prefast_unreferenced_parameter_impl_(const char*, ...);
+-#define UNREFERENCED_PARAMETER(P)          _Prefast_unreferenced_parameter_impl_("PREfast", ((void) (P), 0))
+-#define DBG_UNREFERENCED_PARAMETER(P)      _Prefast_unreferenced_parameter_impl_("PREfast", ((void) (P), 0))
+-#define DBG_UNREFERENCED_LOCAL_VARIABLE(V) _Prefast_unreferenced_parameter_impl_("PREfast", ((void) (V), 0))
+-
+-#else // _PREFAST_
+-
+-#define UNREFERENCED_PARAMETER(P)          (P)
+-#define DBG_UNREFERENCED_PARAMETER(P)      (P)
+-#define DBG_UNREFERENCED_LOCAL_VARIABLE(V) (V)
+-
+-#endif // _PREFAST_
+-
+-#else // lint
+-
+-// Note: lint -e530 says don't complain about uninitialized variables for
+-// this variable.  Error 527 has to do with unreachable code.
+-// -restore restores checking to the -save state
+-
+-#define UNREFERENCED_PARAMETER(P)          \
+-    /*lint -save -e527 -e530 */ \
+-    { \
+-        (P) = (P); \
+-    } \
+-    /*lint -restore */
+-#define DBG_UNREFERENCED_PARAMETER(P)      \
+-    /*lint -save -e527 -e530 */ \
+-    { \
+-        (P) = (P); \
+-    } \
+-    /*lint -restore */
+-#define DBG_UNREFERENCED_LOCAL_VARIABLE(V) \
+-    /*lint -save -e527 -e530 */ \
+-    { \
+-        (V) = (V); \
+-    } \
+-    /*lint -restore */
+-
+-#endif // lint
+ 
+ // end_ntoshvp
+ 
