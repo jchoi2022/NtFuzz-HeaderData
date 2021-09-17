@@ -1,0 +1,289 @@
+DEFINE_GUID(GUID_DEVINTERFACE_VIRTUALIZABLE_DEVICE,
+0xa13a7a93, 0x11f0, 0x4bd2, 0xa9, 0xf5, 0x6b, 0x5c, 0x5b, 0x88, 0x52, 0x7d);
+    CTL_CODE (FILE_DEVICE_UNKNOWN, (_index_ + 0x810), METHOD_BUFFERED, FILE_READ_DATA)
+typedef enum _SRIOV_PF_EVENT
+{
+    SriovEventPfQueryStopDevice,
+    SriovEventPfRestart,
+    SriovEventPfMaximum
+} SRIOV_PF_EVENT, *PSRIOV_PF_EVENT;
+typedef struct _SRIOV_PNP_EVENT_COMPLETE
+{
+    NTSTATUS QueryStatus;
+} SRIOV_PNP_EVENT_COMPLETE, *PSRIOV_PNP_EVENT_COMPLETE;
+typedef struct _SRIOV_INVALIDATE_BLOCK
+{
+    USHORT VfIndex;
+    UINT64 BlockMask;
+} SRIOV_INVALIDATE_BLOCK, *PSRIOV_INVALIDATE_BLOCK;
+typedef struct _SRIOV_MITIGATED_RANGE_COUNT_INPUT
+{
+    USHORT VfIndex;
+} SRIOV_MITIGATED_RANGE_COUNT_INPUT, *PSRIOV_MITIGATED_RANGE_COUNT_INPUT;
+typedef struct _SRIOV_MITIGATED_RANGE_COUNT_OUTPUT
+{
+    ULONG RangeCount[6];
+} SRIOV_MITIGATED_RANGE_COUNT_OUTPUT, *PSRIOV_MITIGATED_RANGE_COUNT_OUTPUT;
+typedef struct _SRIOV_MITIGATED_RANGES_INPUT
+{
+    USHORT VfIndex;
+    UCHAR BarNumber;
+} SRIOV_MITIGATED_RANGES_INPUT, *PSRIOV_MITIGATED_RANGES_INPUT;
+typedef struct _SRIOV_MITIGATED_RANGES_OUTPUT
+{
+    ULONG64 BasePageNumber;
+    _Field_range_(1, 0x80000)
+    ULONG PageCount;
+    BOOLEAN InterceptReads;
+    BOOLEAN InterceptWrites;
+} SRIOV_MITIGATED_RANGES_OUTPUT, *PSRIOV_MITIGATED_RANGES_OUTPUT;
+typedef struct _SRIOV_MITIGATED_RANGE_UPDATE_INPUT
+{
+    USHORT VfIndex;
+} SRIOV_MITIGATED_RANGE_UPDATE_INPUT, *PSRIOV_MITIGATED_RANGE_UPDATE_INPUT;
+typedef struct _SRIOV_MITIGATED_RANGE_UPDATE_OUTPUT
+{
+    USHORT VfIndex;
+} SRIOV_MITIGATED_RANGE_UPDATE_OUTPUT, *PSRIOV_MITIGATED_RANGE_UPDATE_OUTPUT;
+typedef struct _SRIOV_PROXY_QUERY_LUID_OUTPUT
+{
+    LUID DeviceLuid;
+} SRIOV_PROXY_QUERY_LUID_OUTPUT, *PSRIOV_PROXY_QUERY_LUID_OUTPUT;
+DEFINE_GUID(GUID_SRIOV_DEVICE_INTERFACE_STANDARD,
+0x937ee9b6, 0xed3, 0x411c, 0x98, 0x2b, 0x1f, 0x56, 0x4a, 0xfb, 0xab, 0xd3);
+typedef
+_Function_class_(SRIOV_READ_CONFIG)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_READ_CONFIG(
+    _In_ PVOID Context,
+    _Out_writes_bytes_(Length) PVOID Data,
+    _In_ USHORT VfIndex,
+    _In_ ULONG Offset,
+    _In_ ULONG Length
+    );
+typedef SRIOV_READ_CONFIG *PSRIOV_READ_CONFIG;
+typedef
+_Function_class_(SRIOV_WRITE_CONFIG)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_WRITE_CONFIG(
+    _In_ PVOID Context,
+    _In_reads_bytes_(Length) const VOID* Data,
+    _In_ USHORT VfIndex,
+    _In_ ULONG Offset,
+    _In_ ULONG Length
+    );
+typedef SRIOV_WRITE_CONFIG *PSRIOV_WRITE_CONFIG;
+typedef
+_Function_class_(SRIOV_QUERY_PROBED_BARS)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_QUERY_PROBED_BARS(
+    _In_ PVOID Context,
+    _Out_writes_(PCI_TYPE0_ADDRESSES) PULONG BaseRegisterValues
+    );
+typedef SRIOV_QUERY_PROBED_BARS *PSRIOV_QUERY_PROBED_BARS;
+typedef
+_Function_class_(SRIOV_QUERY_PROBED_BARS_2)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_QUERY_PROBED_BARS_2(
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _Out_writes_(PCI_TYPE0_ADDRESSES) PULONG BaseRegisterValues
+    );
+typedef SRIOV_QUERY_PROBED_BARS_2 *PSRIOV_QUERY_PROBED_BARS_2;
+typedef
+_Function_class_(SRIOV_WRITE_BLOCK)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_WRITE_BLOCK (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _In_ ULONG BlockId,
+    _In_reads_bytes_(Length)
+                PVOID Buffer,
+    _In_range_(<, VPCI_MAX_READ_WRITE_BLOCK_SIZE)
+                ULONG Length
+    );
+typedef SRIOV_WRITE_BLOCK *PSRIOV_WRITE_BLOCK;
+typedef
+_Function_class_(SRIOV_READ_BLOCK)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_READ_BLOCK (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _In_ ULONG BlockId,
+    _Out_writes_bytes_(Length)
+                PVOID Buffer,
+    _In_range_(<, VPCI_MAX_READ_WRITE_BLOCK_SIZE)
+                ULONG Length
+    );
+typedef SRIOV_READ_BLOCK *PSRIOV_READ_BLOCK;
+typedef
+_Function_class_(SRIOV_GET_DEVICE_LOCATION)
+_IRQL_requires_(PASSIVE_LEVEL)
+VOID
+SRIOV_GET_DEVICE_LOCATION (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _Out_ PUINT16 SegmentNumber,
+    _Out_ PUINT8 BusNumber,
+    _Out_ PUINT8 FunctionNumber
+    );
+typedef SRIOV_GET_DEVICE_LOCATION *PSRIOV_GET_DEVICE_LOCATION;
+typedef
+_Function_class_(SRIOV_GET_MMIO_REQUIREMENTS)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_GET_MMIO_REQUIREMENTS (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _In_ ULONG BlockId,
+    _Out_writes_bytes_(Length) PVOID Buffer,
+    _In_ ULONG Length
+    );
+typedef SRIOV_GET_MMIO_REQUIREMENTS *PSRIOV_GET_MMIO_REQUIREMENTS;
+typedef
+_Function_class_(SRIOV_RESET_FUNCTION)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_RESET_FUNCTION (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex
+    );
+typedef SRIOV_RESET_FUNCTION *PSRIOV_RESET_FUNCTION;
+typedef
+_Function_class_(SRIOV_SET_POWER_STATE)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_SET_POWER_STATE (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _In_ DEVICE_POWER_STATE PowerState,
+    _In_ BOOLEAN Wake
+    );
+typedef SRIOV_SET_POWER_STATE *PSRIOV_SET_POWER_STATE;
+typedef
+_Function_class_(SRIOV_GET_VENDOR_AND_DEVICE_IDS)
+_IRQL_requires_(PASSIVE_LEVEL)
+VOID
+SRIOV_GET_VENDOR_AND_DEVICE_IDS (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _Out_ PUSHORT VendorId,
+    _Out_ PUSHORT DeviceId
+    );
+typedef SRIOV_GET_VENDOR_AND_DEVICE_IDS *PSRIOV_GET_VENDOR_AND_DEVICE_IDS;
+typedef
+_Function_class_(SRIOV_GET_RESOURCE_FOR_BAR)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_GET_RESOURCE_FOR_BAR (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _In_ USHORT BarIndex,
+    _Out_ PCM_PARTIAL_RESOURCE_DESCRIPTOR Resource
+    );
+typedef SRIOV_GET_RESOURCE_FOR_BAR *PSRIOV_GET_RESOURCE_FOR_BAR;
+typedef
+_Function_class_(SRIOV_QUERY_LUID)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_QUERY_LUID (
+    _In_ PVOID Context,
+    _Out_ PLUID Luid
+    );
+typedef SRIOV_QUERY_LUID *PSRIOV_QUERY_LUID;
+typedef
+_Function_class_(SRIOV_QUERY_VF_LUID)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_QUERY_VF_LUID (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _Out_ PLUID Luid
+    );
+typedef SRIOV_QUERY_VF_LUID *PSRIOV_QUERY_VF_LUID;
+typedef
+_Function_class_(SRIOV_QUERY_VF_LUID)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+SRIOV_QUERY_LUID_VF (
+    _In_ PVOID Context,
+    _In_ LUID Luid,
+    _Out_ PUSHORT VfIndex
+    );
+typedef SRIOV_QUERY_LUID_VF *PSRIOV_QUERY_LUID_VF;
+typedef struct _SRIOV_DEVICE_INTERFACE_STANDARD
+{
+    USHORT Size;
+    USHORT Version;
+    PVOID Context;
+    PINTERFACE_REFERENCE InterfaceReference;
+    PINTERFACE_DEREFERENCE InterfaceDereference;
+    PSRIOV_READ_CONFIG ReadVfConfig;
+    PSRIOV_WRITE_CONFIG WriteVfConfig;
+    PSRIOV_READ_BLOCK ReadVfConfigBlock;
+    PSRIOV_WRITE_BLOCK WriteVfConfigBlock;
+    PSRIOV_QUERY_PROBED_BARS QueryProbedBars;
+    PSRIOV_GET_VENDOR_AND_DEVICE_IDS GetVendorAndDevice;
+    PSRIOV_GET_DEVICE_LOCATION GetDeviceLocation;
+    PSRIOV_RESET_FUNCTION ResetVf;
+    PSRIOV_SET_POWER_STATE SetVfPowerState;
+    PSRIOV_GET_RESOURCE_FOR_BAR GetResourceForBar;
+    PSRIOV_QUERY_LUID QueryLuid;
+} SRIOV_DEVICE_INTERFACE_STANDARD, *PSRIOV_DEVICE_INTERFACE_STANDARD;
+typedef struct _SRIOV_DEVICE_INTERFACE_STANDARD_2
+{
+   USHORT Size;
+   USHORT Version;
+   PVOID Context;
+   PINTERFACE_REFERENCE InterfaceReference;
+   PINTERFACE_DEREFERENCE InterfaceDereference;
+   PSRIOV_READ_CONFIG ReadVfConfig;
+   PSRIOV_WRITE_CONFIG WriteVfConfig;
+   PSRIOV_READ_BLOCK ReadVfConfigBlock;
+   PSRIOV_WRITE_BLOCK WriteVfConfigBlock;
+   PSRIOV_QUERY_PROBED_BARS QueryProbedBars;
+   PSRIOV_GET_VENDOR_AND_DEVICE_IDS GetVendorAndDevice;
+   PSRIOV_GET_DEVICE_LOCATION GetDeviceLocation;
+   PSRIOV_RESET_FUNCTION ResetVf;
+   PSRIOV_SET_POWER_STATE SetVfPowerState;
+   PSRIOV_GET_RESOURCE_FOR_BAR GetResourceForBar;
+   PSRIOV_QUERY_LUID QueryLuid;
+    PSRIOV_QUERY_PROBED_BARS_2 QueryProbedBars_2;
+    PSRIOV_QUERY_VF_LUID QueryVfLuid;
+    PSRIOV_QUERY_LUID_VF QueryLuidVf;
+} SRIOV_DEVICE_INTERFACE_STANDARD_2, *PSRIOV_DEVICE_INTERFACE_STANDARD_2;
+DEFINE_GUID(GUID_MITIGABLE_DEVICE_INTERFACE,
+0xadfd9567, 0x4245, 0x497e, 0x85, 0x72, 0x78, 0xd4, 0x5c, 0x16, 0x22, 0xb8);
+typedef
+_Function_class_(READ_WRITE_MITIGATED_REGISTER)
+_IRQL_requires_(PASSIVE_LEVEL)
+NTSTATUS
+READ_WRITE_MITIGATED_REGISTER (
+    _In_ PVOID Context,
+    _In_ USHORT VfIndex,
+    _In_ BOOLEAN Read,
+    _In_range_(0,5) USHORT BarIndex,
+    _In_ ULONGLONG Offset,
+    _In_range_(1,8) ULONG Length,
+    _When_(Read != FALSE, _Out_writes_bytes_(Length))
+    _When_(Read == FALSE, _In_reads_bytes_(Length))
+                    PUCHAR Data
+    );
+typedef READ_WRITE_MITIGATED_REGISTER *PREAD_WRITE_MITIGATED_REGISTER;
+typedef struct _MITIGABLE_DEVICE_INTERFACE
+{
+    USHORT Size;
+    USHORT Version;
+    PVOID Context;
+    PINTERFACE_REFERENCE InterfaceReference;
+    PINTERFACE_DEREFERENCE InterfaceDereference;
+    PREAD_WRITE_MITIGATED_REGISTER ReadWriteMitigatedRegister;
+} MITIGABLE_DEVICE_INTERFACE, *PMITIGABLE_DEVICE_INTERFACE;
+DEFINE_GUID(GUID_DEVINTERFACE_DIRECTLY_ASSIGNABLE_DEVICE,
+0x0db3e0f9, 0x3536, 0x4213, 0x95, 0x72, 0xad, 0x77, 0xe2, 0x24, 0xbe, 0x27);

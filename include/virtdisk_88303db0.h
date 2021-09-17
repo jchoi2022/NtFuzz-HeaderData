@@ -1,0 +1,870 @@
+#include <winapifamily.h>
+#pragma region Desktop Family or VHD Package
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PKG_VHD)
+#pragma warning(disable:4200)
+#pragma warning(disable:4201)
+extern "C" {
+typedef struct _VIRTUAL_STORAGE_TYPE
+{
+    ULONG DeviceId;
+    GUID VendorId;
+} VIRTUAL_STORAGE_TYPE, *PVIRTUAL_STORAGE_TYPE;
+DEFINE_GUID(VIRTUAL_STORAGE_TYPE_VENDOR_UNKNOWN, 0x00000000, 0x0000, 0x0000, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00);
+DEFINE_GUID(VIRTUAL_STORAGE_TYPE_VENDOR_MICROSOFT, 0xec984aec, 0xa0f9, 0x47e9, 0x90, 0x1f, 0x71, 0x41, 0x5a, 0x66, 0x34, 0x5b);
+typedef enum _OPEN_VIRTUAL_DISK_VERSION
+{
+    OPEN_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    OPEN_VIRTUAL_DISK_VERSION_1 = 1,
+    OPEN_VIRTUAL_DISK_VERSION_2 = 2,
+    OPEN_VIRTUAL_DISK_VERSION_3 = 3,
+} OPEN_VIRTUAL_DISK_VERSION;
+typedef struct _OPEN_VIRTUAL_DISK_PARAMETERS
+{
+    OPEN_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            ULONG RWDepth;
+        } Version1;
+        struct
+        {
+            BOOL GetInfoOnly;
+            BOOL ReadOnly;
+            GUID ResiliencyGuid;
+        } Version2;
+        struct
+        {
+            BOOL GetInfoOnly;
+            BOOL ReadOnly;
+            GUID ResiliencyGuid;
+            GUID SnapshotId;
+        } Version3;
+    };
+} OPEN_VIRTUAL_DISK_PARAMETERS, *POPEN_VIRTUAL_DISK_PARAMETERS;
+typedef enum _VIRTUAL_DISK_ACCESS_MASK {
+    VIRTUAL_DISK_ACCESS_NONE = 0x00000000,
+    VIRTUAL_DISK_ACCESS_ATTACH_RO = 0x00010000,
+    VIRTUAL_DISK_ACCESS_ATTACH_RW = 0x00020000,
+    VIRTUAL_DISK_ACCESS_DETACH = 0x00040000,
+    VIRTUAL_DISK_ACCESS_GET_INFO = 0x00080000,
+    VIRTUAL_DISK_ACCESS_CREATE = 0x00100000,
+    VIRTUAL_DISK_ACCESS_METAOPS = 0x00200000,
+    VIRTUAL_DISK_ACCESS_READ = 0x000d0000,
+    VIRTUAL_DISK_ACCESS_ALL = 0x003f0000,
+    VIRTUAL_DISK_ACCESS_WRITABLE = 0x00320000
+} VIRTUAL_DISK_ACCESS_MASK;
+DEFINE_ENUM_FLAG_OPERATORS(VIRTUAL_DISK_ACCESS_MASK);
+typedef enum _OPEN_VIRTUAL_DISK_FLAG
+{
+    OPEN_VIRTUAL_DISK_FLAG_NONE = 0x00000000,
+    OPEN_VIRTUAL_DISK_FLAG_NO_PARENTS = 0x00000001,
+    OPEN_VIRTUAL_DISK_FLAG_BLANK_FILE = 0x00000002,
+    OPEN_VIRTUAL_DISK_FLAG_BOOT_DRIVE = 0x00000004,
+    OPEN_VIRTUAL_DISK_FLAG_CACHED_IO = 0x00000008,
+    OPEN_VIRTUAL_DISK_FLAG_CUSTOM_DIFF_CHAIN = 0x00000010,
+    OPEN_VIRTUAL_DISK_FLAG_PARENT_CACHED_IO = 0x00000020,
+    OPEN_VIRTUAL_DISK_FLAG_VHDSET_FILE_ONLY = 0x00000040,
+    OPEN_VIRTUAL_DISK_FLAG_IGNORE_RELATIVE_PARENT_LOCATOR = 0x00000080,
+    OPEN_VIRTUAL_DISK_FLAG_NO_WRITE_HARDENING = 0x00000100,
+} OPEN_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(OPEN_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+OpenVirtualDisk(
+    _In_ PVIRTUAL_STORAGE_TYPE VirtualStorageType,
+    _In_ PCWSTR Path,
+    _In_ VIRTUAL_DISK_ACCESS_MASK VirtualDiskAccessMask,
+    _In_ OPEN_VIRTUAL_DISK_FLAG Flags,
+    _In_opt_ POPEN_VIRTUAL_DISK_PARAMETERS Parameters,
+    _Out_ PHANDLE Handle
+    );
+typedef enum _CREATE_VIRTUAL_DISK_VERSION
+{
+    CREATE_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    CREATE_VIRTUAL_DISK_VERSION_1 = 1,
+    CREATE_VIRTUAL_DISK_VERSION_2 = 2,
+    CREATE_VIRTUAL_DISK_VERSION_3 = 3,
+    CREATE_VIRTUAL_DISK_VERSION_4 = 4,
+} CREATE_VIRTUAL_DISK_VERSION;
+typedef struct _CREATE_VIRTUAL_DISK_PARAMETERS
+{
+    CREATE_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            GUID UniqueId;
+            ULONGLONG MaximumSize;
+            ULONG BlockSizeInBytes;
+            ULONG SectorSizeInBytes;
+            PCWSTR ParentPath;
+            PCWSTR SourcePath;
+        } Version1;
+        struct
+        {
+            GUID UniqueId;
+            ULONGLONG MaximumSize;
+            ULONG BlockSizeInBytes;
+            ULONG SectorSizeInBytes;
+            ULONG PhysicalSectorSizeInBytes;
+            PCWSTR ParentPath;
+            PCWSTR SourcePath;
+            OPEN_VIRTUAL_DISK_FLAG OpenFlags;
+            VIRTUAL_STORAGE_TYPE ParentVirtualStorageType;
+            VIRTUAL_STORAGE_TYPE SourceVirtualStorageType;
+            GUID ResiliencyGuid;
+        } Version2;
+        struct
+        {
+            GUID UniqueId;
+            ULONGLONG MaximumSize;
+            ULONG BlockSizeInBytes;
+            ULONG SectorSizeInBytes;
+            ULONG PhysicalSectorSizeInBytes;
+            PCWSTR ParentPath;
+            PCWSTR SourcePath;
+            OPEN_VIRTUAL_DISK_FLAG OpenFlags;
+            VIRTUAL_STORAGE_TYPE ParentVirtualStorageType;
+            VIRTUAL_STORAGE_TYPE SourceVirtualStorageType;
+            GUID ResiliencyGuid;
+            PCWSTR SourceLimitPath;
+            VIRTUAL_STORAGE_TYPE BackingStorageType;
+        } Version3;
+        struct
+        {
+            GUID UniqueId;
+            ULONGLONG MaximumSize;
+            ULONG BlockSizeInBytes;
+            ULONG SectorSizeInBytes;
+            ULONG PhysicalSectorSizeInBytes;
+            PCWSTR ParentPath;
+            PCWSTR SourcePath;
+            OPEN_VIRTUAL_DISK_FLAG OpenFlags;
+            VIRTUAL_STORAGE_TYPE ParentVirtualStorageType;
+            VIRTUAL_STORAGE_TYPE SourceVirtualStorageType;
+            GUID ResiliencyGuid;
+            PCWSTR SourceLimitPath;
+            VIRTUAL_STORAGE_TYPE BackingStorageType;
+            GUID PmemAddressAbstractionType;
+            ULONGLONG DataAlignment;
+        } Version4;
+    };
+} CREATE_VIRTUAL_DISK_PARAMETERS, *PCREATE_VIRTUAL_DISK_PARAMETERS;
+typedef enum _CREATE_VIRTUAL_DISK_FLAG
+{
+    CREATE_VIRTUAL_DISK_FLAG_NONE = 0x0,
+    CREATE_VIRTUAL_DISK_FLAG_FULL_PHYSICAL_ALLOCATION = 0x1,
+    CREATE_VIRTUAL_DISK_FLAG_PREVENT_WRITES_TO_SOURCE_DISK = 0x2,
+    CREATE_VIRTUAL_DISK_FLAG_DO_NOT_COPY_METADATA_FROM_PARENT = 0x4,
+    CREATE_VIRTUAL_DISK_FLAG_CREATE_BACKING_STORAGE = 0x8,
+    CREATE_VIRTUAL_DISK_FLAG_USE_CHANGE_TRACKING_SOURCE_LIMIT = 0x10,
+    CREATE_VIRTUAL_DISK_FLAG_PRESERVE_PARENT_CHANGE_TRACKING_STATE = 0x20,
+    CREATE_VIRTUAL_DISK_FLAG_VHD_SET_USE_ORIGINAL_BACKING_STORAGE = 0x40,
+    CREATE_VIRTUAL_DISK_FLAG_SPARSE_FILE = 0x80,
+    CREATE_VIRTUAL_DISK_FLAG_PMEM_COMPATIBLE = 0x100,
+} CREATE_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(CREATE_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+CreateVirtualDisk(
+    _In_ PVIRTUAL_STORAGE_TYPE VirtualStorageType,
+    _In_ PCWSTR Path,
+    _In_ VIRTUAL_DISK_ACCESS_MASK VirtualDiskAccessMask,
+    _In_opt_ PSECURITY_DESCRIPTOR SecurityDescriptor,
+    _In_ CREATE_VIRTUAL_DISK_FLAG Flags,
+    _In_ ULONG ProviderSpecificFlags,
+    _In_ PCREATE_VIRTUAL_DISK_PARAMETERS Parameters,
+    _In_opt_ LPOVERLAPPED Overlapped,
+    _Out_ PHANDLE Handle
+    );
+typedef enum _ATTACH_VIRTUAL_DISK_VERSION
+{
+    ATTACH_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    ATTACH_VIRTUAL_DISK_VERSION_1 = 1,
+    ATTACH_VIRTUAL_DISK_VERSION_2 = 2,
+} ATTACH_VIRTUAL_DISK_VERSION;
+typedef struct _ATTACH_VIRTUAL_DISK_PARAMETERS
+{
+    ATTACH_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            ULONG Reserved;
+        } Version1;
+        struct
+        {
+            ULONGLONG RestrictedOffset;
+            ULONGLONG RestrictedLength;
+        } Version2;
+    };
+} ATTACH_VIRTUAL_DISK_PARAMETERS, *PATTACH_VIRTUAL_DISK_PARAMETERS;
+typedef enum _ATTACH_VIRTUAL_DISK_FLAG
+{
+    ATTACH_VIRTUAL_DISK_FLAG_NONE = 0x00000000,
+    ATTACH_VIRTUAL_DISK_FLAG_READ_ONLY = 0x00000001,
+    ATTACH_VIRTUAL_DISK_FLAG_NO_DRIVE_LETTER = 0x00000002,
+    ATTACH_VIRTUAL_DISK_FLAG_PERMANENT_LIFETIME = 0x00000004,
+    ATTACH_VIRTUAL_DISK_FLAG_NO_LOCAL_HOST = 0x00000008,
+    ATTACH_VIRTUAL_DISK_FLAG_NO_SECURITY_DESCRIPTOR = 0x00000010,
+    ATTACH_VIRTUAL_DISK_FLAG_BYPASS_DEFAULT_ENCRYPTION_POLICY = 0x00000020,
+    ATTACH_VIRTUAL_DISK_FLAG_NON_PNP = 0x00000040,
+    ATTACH_VIRTUAL_DISK_FLAG_RESTRICTED_RANGE = 0x00000080,
+    ATTACH_VIRTUAL_DISK_FLAG_SINGLE_PARTITION = 0x00000100,
+    ATTACH_VIRTUAL_DISK_FLAG_REGISTER_VOLUME = 0x00000200,
+} ATTACH_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(ATTACH_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+AttachVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_opt_ PSECURITY_DESCRIPTOR SecurityDescriptor,
+    _In_ ATTACH_VIRTUAL_DISK_FLAG Flags,
+    _In_ ULONG ProviderSpecificFlags,
+    _In_opt_ PATTACH_VIRTUAL_DISK_PARAMETERS Parameters,
+    _In_opt_ LPOVERLAPPED Overlapped
+    );
+typedef enum _DETACH_VIRTUAL_DISK_FLAG
+{
+    DETACH_VIRTUAL_DISK_FLAG_NONE = 0x00000000,
+} DETACH_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(DETACH_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+DetachVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ DETACH_VIRTUAL_DISK_FLAG Flags,
+    _In_ ULONG ProviderSpecificFlags
+    );
+DWORD
+WINAPI
+GetVirtualDiskPhysicalPath(
+    _In_ HANDLE VirtualDiskHandle,
+    _Inout_ PULONG DiskPathSizeInBytes,
+    _Out_writes_bytes_(*DiskPathSizeInBytes) PWSTR DiskPath
+    );
+DWORD
+WINAPI
+GetAllAttachedVirtualDiskPhysicalPaths(
+    _Inout_ PULONG PathsBufferSizeInBytes,
+    _Out_writes_bytes_(*PathsBufferSizeInBytes) PWSTR PathsBuffer
+    );
+typedef enum _DEPENDENT_DISK_FLAG
+{
+    DEPENDENT_DISK_FLAG_NONE = 0x00000000,
+    DEPENDENT_DISK_FLAG_MULT_BACKING_FILES = 0x00000001,
+    DEPENDENT_DISK_FLAG_FULLY_ALLOCATED = 0x00000002,
+    DEPENDENT_DISK_FLAG_READ_ONLY = 0x00000004,
+    DEPENDENT_DISK_FLAG_REMOTE = 0x00000008,
+    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME = 0x00000010,
+    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME_PARENT = 0x00000020,
+    DEPENDENT_DISK_FLAG_REMOVABLE = 0x00000040,
+    DEPENDENT_DISK_FLAG_NO_DRIVE_LETTER = 0x00000080,
+    DEPENDENT_DISK_FLAG_PARENT = 0x00000100,
+    DEPENDENT_DISK_FLAG_NO_HOST_DISK = 0x00000200,
+    DEPENDENT_DISK_FLAG_PERMANENT_LIFETIME = 0x00000400,
+} DEPENDENT_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(DEPENDENT_DISK_FLAG);
+typedef enum _STORAGE_DEPENDENCY_INFO_VERSION
+{
+    STORAGE_DEPENDENCY_INFO_VERSION_UNSPECIFIED = 0,
+    STORAGE_DEPENDENCY_INFO_VERSION_1 = 1,
+    STORAGE_DEPENDENCY_INFO_VERSION_2 = 2,
+} STORAGE_DEPENDENCY_INFO_VERSION;
+typedef struct _STORAGE_DEPENDENCY_INFO_TYPE_1
+{
+    DEPENDENT_DISK_FLAG DependencyTypeFlags;
+    ULONG ProviderSpecificFlags;
+    VIRTUAL_STORAGE_TYPE VirtualStorageType;
+} STORAGE_DEPENDENCY_INFO_TYPE_1, *PSTORAGE_DEPENDENCY_INFO_TYPE_1;
+typedef struct _STORAGE_DEPENDENCY_INFO_TYPE_2
+{
+    DEPENDENT_DISK_FLAG DependencyTypeFlags;
+    ULONG ProviderSpecificFlags;
+    VIRTUAL_STORAGE_TYPE VirtualStorageType;
+    ULONG AncestorLevel;
+    PWSTR DependencyDeviceName;
+    PWSTR HostVolumeName;
+    PWSTR DependentVolumeName;
+    PWSTR DependentVolumeRelativePath;
+} STORAGE_DEPENDENCY_INFO_TYPE_2, *PSTORAGE_DEPENDENCY_INFO_TYPE_2;
+typedef struct _STORAGE_DEPENDENCY_INFO
+{
+    STORAGE_DEPENDENCY_INFO_VERSION Version;
+    ULONG NumberEntries;
+    union
+    {
+        STORAGE_DEPENDENCY_INFO_TYPE_1 Version1Entries[];
+        STORAGE_DEPENDENCY_INFO_TYPE_2 Version2Entries[];
+    };
+} STORAGE_DEPENDENCY_INFO, *PSTORAGE_DEPENDENCY_INFO;
+typedef enum _GET_STORAGE_DEPENDENCY_FLAG
+{
+    GET_STORAGE_DEPENDENCY_FLAG_NONE = 0x00000000,
+    GET_STORAGE_DEPENDENCY_FLAG_HOST_VOLUMES = 0x00000001,
+    GET_STORAGE_DEPENDENCY_FLAG_DISK_HANDLE = 0x00000002,
+} GET_STORAGE_DEPENDENCY_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(GET_STORAGE_DEPENDENCY_FLAG);
+DWORD
+WINAPI
+GetStorageDependencyInformation(
+    _In_ HANDLE ObjectHandle,
+    _In_ GET_STORAGE_DEPENDENCY_FLAG Flags,
+    _In_ ULONG StorageDependencyInfoSize,
+    _Inout_ PSTORAGE_DEPENDENCY_INFO StorageDependencyInfo,
+    _Inout_opt_ PULONG SizeUsed
+    );
+typedef enum _GET_VIRTUAL_DISK_INFO_VERSION
+{
+    GET_VIRTUAL_DISK_INFO_UNSPECIFIED = 0,
+    GET_VIRTUAL_DISK_INFO_SIZE = 1,
+    GET_VIRTUAL_DISK_INFO_IDENTIFIER = 2,
+    GET_VIRTUAL_DISK_INFO_PARENT_LOCATION = 3,
+    GET_VIRTUAL_DISK_INFO_PARENT_IDENTIFIER = 4,
+    GET_VIRTUAL_DISK_INFO_PARENT_TIMESTAMP = 5,
+    GET_VIRTUAL_DISK_INFO_VIRTUAL_STORAGE_TYPE = 6,
+    GET_VIRTUAL_DISK_INFO_PROVIDER_SUBTYPE = 7,
+    GET_VIRTUAL_DISK_INFO_IS_4K_ALIGNED = 8,
+    GET_VIRTUAL_DISK_INFO_PHYSICAL_DISK = 9,
+    GET_VIRTUAL_DISK_INFO_VHD_PHYSICAL_SECTOR_SIZE = 10,
+    GET_VIRTUAL_DISK_INFO_SMALLEST_SAFE_VIRTUAL_SIZE = 11,
+    GET_VIRTUAL_DISK_INFO_FRAGMENTATION = 12,
+    GET_VIRTUAL_DISK_INFO_IS_LOADED = 13,
+    GET_VIRTUAL_DISK_INFO_VIRTUAL_DISK_ID = 14,
+    GET_VIRTUAL_DISK_INFO_CHANGE_TRACKING_STATE = 15,
+} GET_VIRTUAL_DISK_INFO_VERSION;
+typedef struct _GET_VIRTUAL_DISK_INFO
+{
+    GET_VIRTUAL_DISK_INFO_VERSION Version;
+    union
+    {
+        struct
+        {
+            ULONGLONG VirtualSize;
+            ULONGLONG PhysicalSize;
+            ULONG BlockSize;
+            ULONG SectorSize;
+        } Size;
+        GUID Identifier;
+        struct
+        {
+            BOOL ParentResolved;
+            WCHAR ParentLocationBuffer[1];
+        } ParentLocation;
+        GUID ParentIdentifier;
+        ULONG ParentTimestamp;
+        VIRTUAL_STORAGE_TYPE VirtualStorageType;
+        ULONG ProviderSubtype;
+        BOOL Is4kAligned;
+        BOOL IsLoaded;
+        struct
+        {
+            ULONG LogicalSectorSize;
+            ULONG PhysicalSectorSize;
+            BOOL IsRemote;
+        } PhysicalDisk;
+        ULONG VhdPhysicalSectorSize;
+        ULONGLONG SmallestSafeVirtualSize;
+        ULONG FragmentationPercentage;
+        GUID VirtualDiskId;
+        struct
+        {
+            BOOL Enabled;
+            BOOL NewerChanges;
+            WCHAR MostRecentId[1];
+        } ChangeTrackingState;
+    };
+} GET_VIRTUAL_DISK_INFO, *PGET_VIRTUAL_DISK_INFO;
+_Success_(return == ERROR_SUCCESS)
+DWORD
+WINAPI
+GetVirtualDiskInformation(
+    _In_ HANDLE VirtualDiskHandle,
+    _Inout_ PULONG VirtualDiskInfoSize,
+    _Inout_updates_bytes_to_(*VirtualDiskInfoSize, *VirtualDiskInfoSize) PGET_VIRTUAL_DISK_INFO VirtualDiskInfo,
+    _Out_opt_ PULONG SizeUsed
+    );
+typedef enum _SET_VIRTUAL_DISK_INFO_VERSION
+{
+    SET_VIRTUAL_DISK_INFO_UNSPECIFIED = 0,
+    SET_VIRTUAL_DISK_INFO_PARENT_PATH = 1,
+    SET_VIRTUAL_DISK_INFO_IDENTIFIER = 2,
+    SET_VIRTUAL_DISK_INFO_PARENT_PATH_WITH_DEPTH = 3,
+    SET_VIRTUAL_DISK_INFO_PHYSICAL_SECTOR_SIZE = 4,
+    SET_VIRTUAL_DISK_INFO_VIRTUAL_DISK_ID = 5,
+    SET_VIRTUAL_DISK_INFO_CHANGE_TRACKING_STATE = 6,
+    SET_VIRTUAL_DISK_INFO_PARENT_LOCATOR = 7,
+} SET_VIRTUAL_DISK_INFO_VERSION;
+typedef struct _SET_VIRTUAL_DISK_INFO
+{
+    SET_VIRTUAL_DISK_INFO_VERSION Version;
+    union
+    {
+        PCWSTR ParentFilePath;
+        GUID UniqueIdentifier;
+        struct
+        {
+            ULONG ChildDepth;
+            PCWSTR ParentFilePath;
+        } ParentPathWithDepthInfo;
+        ULONG VhdPhysicalSectorSize;
+        GUID VirtualDiskId;
+        BOOL ChangeTrackingEnabled;
+        struct
+        {
+            GUID LinkageId;
+            PCWSTR ParentFilePath;
+        } ParentLocator;
+    };
+} SET_VIRTUAL_DISK_INFO, *PSET_VIRTUAL_DISK_INFO;
+DWORD
+WINAPI
+SetVirtualDiskInformation(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ PSET_VIRTUAL_DISK_INFO VirtualDiskInfo
+    );
+DWORD
+WINAPI
+EnumerateVirtualDiskMetadata(
+    _In_ HANDLE VirtualDiskHandle,
+    _Inout_ PULONG NumberOfItems,
+    _Out_writes_(*NumberOfItems) GUID* Items
+    );
+DWORD
+WINAPI
+GetVirtualDiskMetadata(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ const GUID *Item,
+    _Inout_ PULONG MetaDataSize,
+    _Out_writes_bytes_(*MetaDataSize) PVOID MetaData
+    );
+DWORD
+WINAPI
+SetVirtualDiskMetadata(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ const GUID *Item,
+    _In_ ULONG MetaDataSize,
+    _In_reads_bytes_(MetaDataSize) const void *MetaData
+    );
+DWORD
+WINAPI
+DeleteVirtualDiskMetadata(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ const GUID *Item
+    );
+typedef struct _VIRTUAL_DISK_PROGRESS
+{
+    DWORD OperationStatus;
+    ULONGLONG CurrentValue;
+    ULONGLONG CompletionValue;
+} VIRTUAL_DISK_PROGRESS, *PVIRTUAL_DISK_PROGRESS;
+DWORD WINAPI
+GetVirtualDiskOperationProgress(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ LPOVERLAPPED Overlapped,
+    _Out_ PVIRTUAL_DISK_PROGRESS Progress
+    );
+typedef enum _COMPACT_VIRTUAL_DISK_VERSION
+{
+    COMPACT_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    COMPACT_VIRTUAL_DISK_VERSION_1 = 1,
+} COMPACT_VIRTUAL_DISK_VERSION;
+typedef struct _COMPACT_VIRTUAL_DISK_PARAMETERS
+{
+    COMPACT_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            ULONG Reserved;
+        } Version1;
+    };
+} COMPACT_VIRTUAL_DISK_PARAMETERS, *PCOMPACT_VIRTUAL_DISK_PARAMETERS;
+typedef enum _COMPACT_VIRTUAL_DISK_FLAG
+{
+    COMPACT_VIRTUAL_DISK_FLAG_NONE = 0x00000000,
+    COMPACT_VIRTUAL_DISK_FLAG_NO_ZERO_SCAN = 0x00000001,
+    COMPACT_VIRTUAL_DISK_FLAG_NO_BLOCK_MOVES = 0x00000002,
+} COMPACT_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(COMPACT_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+CompactVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ COMPACT_VIRTUAL_DISK_FLAG Flags,
+    _In_opt_ PCOMPACT_VIRTUAL_DISK_PARAMETERS Parameters,
+    _In_opt_ LPOVERLAPPED Overlapped
+    );
+typedef enum _MERGE_VIRTUAL_DISK_VERSION
+{
+    MERGE_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    MERGE_VIRTUAL_DISK_VERSION_1 = 1,
+    MERGE_VIRTUAL_DISK_VERSION_2 = 2,
+} MERGE_VIRTUAL_DISK_VERSION;
+typedef struct _MERGE_VIRTUAL_DISK_PARAMETERS
+{
+    MERGE_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            ULONG MergeDepth;
+        } Version1;
+        struct
+        {
+            ULONG MergeSourceDepth;
+            ULONG MergeTargetDepth;
+        } Version2;
+    };
+} MERGE_VIRTUAL_DISK_PARAMETERS, *PMERGE_VIRTUAL_DISK_PARAMETERS;
+typedef enum _MERGE_VIRTUAL_DISK_FLAG
+{
+    MERGE_VIRTUAL_DISK_FLAG_NONE = 0x00000000,
+} MERGE_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(MERGE_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+MergeVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ MERGE_VIRTUAL_DISK_FLAG Flags,
+    _In_ PMERGE_VIRTUAL_DISK_PARAMETERS Parameters,
+    _In_opt_ LPOVERLAPPED Overlapped
+    );
+typedef enum _EXPAND_VIRTUAL_DISK_VERSION
+{
+    EXPAND_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    EXPAND_VIRTUAL_DISK_VERSION_1 = 1,
+} EXPAND_VIRTUAL_DISK_VERSION;
+typedef struct _EXPAND_VIRTUAL_DISK_PARAMETERS
+{
+    EXPAND_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            ULONGLONG NewSize;
+        } Version1;
+    };
+} EXPAND_VIRTUAL_DISK_PARAMETERS, *PEXPAND_VIRTUAL_DISK_PARAMETERS;
+typedef enum _EXPAND_VIRTUAL_DISK_FLAG
+{
+    EXPAND_VIRTUAL_DISK_FLAG_NONE = 0x00000000,
+} EXPAND_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(EXPAND_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+ExpandVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ EXPAND_VIRTUAL_DISK_FLAG Flags,
+    _In_ PEXPAND_VIRTUAL_DISK_PARAMETERS Parameters,
+    _In_opt_ LPOVERLAPPED Overlapped
+    );
+typedef enum _RESIZE_VIRTUAL_DISK_VERSION
+{
+    RESIZE_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    RESIZE_VIRTUAL_DISK_VERSION_1 = 1,
+} RESIZE_VIRTUAL_DISK_VERSION;
+typedef struct _RESIZE_VIRTUAL_DISK_PARAMETERS
+{
+    RESIZE_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            ULONGLONG NewSize;
+        } Version1;
+    };
+} RESIZE_VIRTUAL_DISK_PARAMETERS, *PRESIZE_VIRTUAL_DISK_PARAMETERS;
+typedef enum _RESIZE_VIRTUAL_DISK_FLAG
+{
+    RESIZE_VIRTUAL_DISK_FLAG_NONE = 0x0,
+    RESIZE_VIRTUAL_DISK_FLAG_ALLOW_UNSAFE_VIRTUAL_SIZE = 0x1,
+    RESIZE_VIRTUAL_DISK_FLAG_RESIZE_TO_SMALLEST_SAFE_VIRTUAL_SIZE = 0x2,
+} RESIZE_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(RESIZE_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+ResizeVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ RESIZE_VIRTUAL_DISK_FLAG Flags,
+    _In_ PRESIZE_VIRTUAL_DISK_PARAMETERS Parameters,
+    _In_opt_ LPOVERLAPPED Overlapped
+    );
+typedef enum _MIRROR_VIRTUAL_DISK_VERSION
+{
+    MIRROR_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    MIRROR_VIRTUAL_DISK_VERSION_1 = 1,
+} MIRROR_VIRTUAL_DISK_VERSION;
+typedef struct _MIRROR_VIRTUAL_DISK_PARAMETERS
+{
+    MIRROR_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            PCWSTR MirrorVirtualDiskPath;
+        } Version1;
+    };
+} MIRROR_VIRTUAL_DISK_PARAMETERS, *PMIRROR_VIRTUAL_DISK_PARAMETERS;
+typedef enum _MIRROR_VIRTUAL_DISK_FLAG
+{
+    MIRROR_VIRTUAL_DISK_FLAG_NONE = 0x00000000,
+    MIRROR_VIRTUAL_DISK_FLAG_EXISTING_FILE = 0x00000001,
+    MIRROR_VIRTUAL_DISK_FLAG_SKIP_MIRROR_ACTIVATION = 0x00000002
+} MIRROR_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(MIRROR_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+MirrorVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ MIRROR_VIRTUAL_DISK_FLAG Flags,
+    _In_ PMIRROR_VIRTUAL_DISK_PARAMETERS Parameters,
+    _In_ LPOVERLAPPED Overlapped
+    );
+DWORD
+WINAPI
+BreakMirrorVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle
+    );
+DWORD
+WINAPI
+AddVirtualDiskParent(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ PCWSTR ParentPath
+    );
+typedef struct _QUERY_CHANGES_VIRTUAL_DISK_RANGE {
+    ULONG64 ByteOffset;
+    ULONG64 ByteLength;
+    ULONG64 Reserved;
+} QUERY_CHANGES_VIRTUAL_DISK_RANGE, *PQUERY_CHANGES_VIRTUAL_DISK_RANGE;
+typedef enum _QUERY_CHANGES_VIRTUAL_DISK_FLAG
+{
+    QUERY_CHANGES_VIRTUAL_DISK_FLAG_NONE = 0x00000000,
+} QUERY_CHANGES_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(QUERY_CHANGES_VIRTUAL_DISK_FLAG);
+typedef enum _TAKE_SNAPSHOT_VHDSET_FLAG
+{
+    TAKE_SNAPSHOT_VHDSET_FLAG_NONE = 0x00000000,
+    TAKE_SNAPSHOT_VHDSET_FLAG_WRITEABLE = 0x00000001,
+} TAKE_SNAPSHOT_VHDSET_FLAG, *PTAKE_SNAPSHOT_VHDSET_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(TAKE_SNAPSHOT_VHDSET_FLAG);
+typedef enum _TAKE_SNAPSHOT_VHDSET_VERSION
+{
+    TAKE_SNAPSHOT_VHDSET_VERSION_UNSPECIFIED = 0,
+    TAKE_SNAPSHOT_VHDSET_VERSION_1 = 1,
+} TAKE_SNAPSHOT_VHDSET_VERSION;
+typedef struct _TAKE_SNAPSHOT_VHDSET_PARAMETERS
+{
+    TAKE_SNAPSHOT_VHDSET_VERSION Version;
+    union
+    {
+        struct
+        {
+            GUID SnapshotId;
+        } Version1;
+    };
+} TAKE_SNAPSHOT_VHDSET_PARAMETERS, *PTAKE_SNAPSHOT_VHDSET_PARAMETERS;
+typedef enum _DELETE_SNAPSHOT_VHDSET_FLAG
+{
+    DELETE_SNAPSHOT_VHDSET_FLAG_NONE = 0x00000000,
+    DELETE_SNAPSHOT_VHDSET_FLAG_PERSIST_RCT = 0x00000001,
+} DELETE_SNAPSHOT_VHDSET_FLAG, *PDELETE_SNAPSHOT_VHDSET_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(DELETE_SNAPSHOT_VHDSET_FLAG);
+typedef enum _DELETE_SNAPSHOT_VHDSET_VERSION
+{
+    DELETE_SNAPSHOT_VHDSET_VERSION_UNSPECIFIED = 0,
+    DELETE_SNAPSHOT_VHDSET_VERSION_1 = 1,
+} DELETE_SNAPSHOT_VHDSET_VERSION;
+typedef struct _DELETE_SNAPSHOT_VHDSET_PARAMETERS
+{
+    DELETE_SNAPSHOT_VHDSET_VERSION Version;
+    union
+    {
+        struct
+        {
+            GUID SnapshotId;
+        } Version1;
+    };
+} DELETE_SNAPSHOT_VHDSET_PARAMETERS, *PDELETE_SNAPSHOT_VHDSET_PARAMETERS;
+typedef enum _MODIFY_VHDSET_VERSION
+{
+    MODIFY_VHDSET_UNSPECIFIED = 0,
+    MODIFY_VHDSET_SNAPSHOT_PATH = 1,
+    MODIFY_VHDSET_REMOVE_SNAPSHOT = 2,
+    MODIFY_VHDSET_DEFAULT_SNAPSHOT_PATH = 3,
+} MODIFY_VHDSET_VERSION, *PMODIFY_VHDSET_VERSION;
+typedef enum _MODIFY_VHDSET_FLAG
+{
+    MODIFY_VHDSET_FLAG_NONE = 0x00000000,
+    MODIFY_VHDSET_FLAG_WRITEABLE_SNAPSHOT = 0x00000001,
+} MODIFY_VHDSET_FLAG, *PMODIFY_VHDSET_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(MODIFY_VHDSET_FLAG);
+typedef struct _MODIFY_VHDSET_PARAMETERS
+{
+    MODIFY_VHDSET_VERSION Version;
+    union
+    {
+        struct
+        {
+            GUID SnapshotId;
+            PCWSTR SnapshotFilePath;
+        } SnapshotPath;
+        GUID SnapshotId;
+        PCWSTR DefaultFilePath;
+    };
+} MODIFY_VHDSET_PARAMETERS, *PMODIFY_VHDSET_PARAMETERS;
+typedef enum _APPLY_SNAPSHOT_VHDSET_FLAG
+{
+    APPLY_SNAPSHOT_VHDSET_FLAG_NONE = 0x00000000,
+    APPLY_SNAPSHOT_VHDSET_FLAG_WRITEABLE = 0x00000001,
+} APPLY_SNAPSHOT_VHDSET_FLAG, *PAPPLY_SNAPSHOT_VHDSET_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(APPLY_SNAPSHOT_VHDSET_FLAG);
+typedef enum _APPLY_SNAPSHOT_VHDSET_VERSION
+{
+    APPLY_SNAPSHOT_VHDSET_VERSION_UNSPECIFIED = 0,
+    APPLY_SNAPSHOT_VHDSET_VERSION_1 = 1,
+} APPLY_SNAPSHOT_VHDSET_VERSION;
+typedef struct _APPLY_SNAPSHOT_VHDSET_PARAMETERS
+{
+    APPLY_SNAPSHOT_VHDSET_VERSION Version;
+    union
+    {
+        struct
+        {
+            GUID SnapshotId;
+            GUID LeafSnapshotId;
+        } Version1;
+    };
+} APPLY_SNAPSHOT_VHDSET_PARAMETERS, *PAPPLY_SNAPSHOT_VHDSET_PARAMETERS;
+typedef enum _RAW_SCSI_VIRTUAL_DISK_FLAG
+{
+    RAW_SCSI_VIRTUAL_DISK_FLAG_NONE = 0X00000000
+} RAW_SCSI_VIRTUAL_DISK_FLAG, *PRAW_SCSI_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(RAW_SCSI_VIRTUAL_DISK_FLAG);
+typedef enum _RAW_SCSI_VIRTUAL_DISK_VERSION
+{
+    RAW_SCSI_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    RAW_SCSI_VIRTUAL_DISK_VERSION_1 = 1,
+} RAW_SCSI_VIRTUAL_DISK_VERSION;
+typedef struct _RAW_SCSI_VIRTUAL_DISK_PARAMETERS
+{
+    RAW_SCSI_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            BOOL RSVDHandle;
+            UCHAR DataIn;
+            UCHAR CdbLength;
+            UCHAR SenseInfoLength;
+            ULONG SrbFlags;
+            ULONG DataTransferLength;
+            _Field_size_bytes_full_(DataTransferLength)
+            PVOID DataBuffer;
+            _Field_size_bytes_full_(SenseInfoLength)
+            UCHAR* SenseInfo;
+            _Field_size_bytes_full_(CdbLength)
+            UCHAR* Cdb;
+        } Version1;
+    };
+} RAW_SCSI_VIRTUAL_DISK_PARAMETERS, *PRAW_SCSI_VIRTUAL_DISK_PARAMETERS;
+typedef struct _RAW_SCSI_VIRTUAL_DISK_RESPONSE
+{
+    RAW_SCSI_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            UCHAR ScsiStatus;
+            UCHAR SenseInfoLength;
+            ULONG DataTransferLength;
+        } Version1;
+    };
+} RAW_SCSI_VIRTUAL_DISK_RESPONSE, *PRAW_SCSI_VIRTUAL_DISK_RESPONSE;
+DWORD
+WINAPI
+QueryChangesVirtualDisk (
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ PCWSTR ChangeTrackingId,
+    _In_ ULONG64 ByteOffset,
+    _In_ ULONG64 ByteLength,
+    _In_ QUERY_CHANGES_VIRTUAL_DISK_FLAG Flags,
+    _Out_writes_to_(*RangeCount, *RangeCount) PQUERY_CHANGES_VIRTUAL_DISK_RANGE Ranges,
+    _Inout_ PULONG RangeCount,
+    _Out_ PULONG64 ProcessedLength
+    );
+DWORD
+WINAPI
+TakeSnapshotVhdSet (
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ const PTAKE_SNAPSHOT_VHDSET_PARAMETERS Parameters,
+    _In_ TAKE_SNAPSHOT_VHDSET_FLAG Flags
+    );
+DWORD
+WINAPI
+DeleteSnapshotVhdSet (
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ const PDELETE_SNAPSHOT_VHDSET_PARAMETERS Parameters,
+    _In_ DELETE_SNAPSHOT_VHDSET_FLAG Flags
+    );
+DWORD
+WINAPI
+ModifyVhdSet (
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ const PMODIFY_VHDSET_PARAMETERS Parameters,
+    _In_ MODIFY_VHDSET_FLAG Flags
+    );
+DWORD
+WINAPI
+ApplySnapshotVhdSet (
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ const PAPPLY_SNAPSHOT_VHDSET_PARAMETERS Parameters,
+    _In_ APPLY_SNAPSHOT_VHDSET_FLAG Flags
+    );
+DWORD
+WINAPI
+RawSCSIVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ const PRAW_SCSI_VIRTUAL_DISK_PARAMETERS Parameters,
+    _In_ RAW_SCSI_VIRTUAL_DISK_FLAG Flags,
+    _Out_ PRAW_SCSI_VIRTUAL_DISK_RESPONSE Response
+    );
+typedef enum _FORK_VIRTUAL_DISK_VERSION
+{
+    FORK_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
+    FORK_VIRTUAL_DISK_VERSION_1 = 1,
+} FORK_VIRTUAL_DISK_VERSION;
+typedef struct _FORK_VIRTUAL_DISK_PARAMETERS
+{
+    FORK_VIRTUAL_DISK_VERSION Version;
+    union
+    {
+        struct
+        {
+            PCWSTR ForkedVirtualDiskPath;
+        } Version1;
+    };
+} FORK_VIRTUAL_DISK_PARAMETERS, *PFORK_VIRTUAL_DISK_PARAMETERS;
+typedef enum _FORK_VIRTUAL_DISK_FLAG
+{
+    FORK_VIRTUAL_DISK_FLAG_NONE = 0x00000000,
+    FORK_VIRTUAL_DISK_FLAG_EXISTING_FILE = 0x00000001,
+} FORK_VIRTUAL_DISK_FLAG;
+DEFINE_ENUM_FLAG_OPERATORS(FORK_VIRTUAL_DISK_FLAG);
+DWORD
+WINAPI
+ForkVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle,
+    _In_ FORK_VIRTUAL_DISK_FLAG Flags,
+    _In_ const FORK_VIRTUAL_DISK_PARAMETERS* Parameters,
+    _Inout_ LPOVERLAPPED Overlapped
+    );
+DWORD
+WINAPI
+CompleteForkVirtualDisk(
+    _In_ HANDLE VirtualDiskHandle
+    );
+}
+#endif
+#pragma endregion

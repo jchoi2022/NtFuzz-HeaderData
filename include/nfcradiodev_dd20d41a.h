@@ -1,0 +1,14 @@
+       
+extern "C" {
+DEFINE_GUID(GUID_NFC_RADIO_MEDIA_DEVICE_INTERFACE, 0x4d51e930, 0x750d, 0x4a36, 0xa9, 0xf7, 0x91, 0xdc, 0x54, 0x0f, 0xcd, 0x30);
+DEFINE_GUID(GUID_NFCSE_RADIO_MEDIA_DEVICE_INTERFACE, 0xef8ba08f, 0x148d, 0x4116, 0x83, 0xef, 0xa2, 0x67, 0x9d, 0xfc, 0x3f, 0xa5);
+#include <PSHPACK1.H>
+typedef struct _NFCRM_SET_RADIO_STATE {
+    BOOLEAN SystemStateUpdate;
+    BOOLEAN MediaRadioOn;
+} NFCRM_SET_RADIO_STATE, *PNFCRM_SET_RADIO_STATE;
+typedef struct _NFCRM_RADIO_STATE {
+    BOOLEAN MediaRadioOn;
+} NFCRM_RADIO_STATE, *PNFCRM_RADIO_STATE;
+#include <POPPACK.H>
+}

@@ -1,0 +1,33 @@
+       
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+EXTERN_C_START
+typedef enum _NET_PACKET_TX_CHECKSUM_ACTION
+{
+    NET_PACKET_TX_CHECKSUM_PASSTHROUGH = 0,
+    NET_PACKET_TX_CHECKSUM_REQUIRED = 2,
+} NET_PACKET_TX_CHECKSUM_ACTION;
+typedef enum _NET_PACKET_RX_CHECKSUM_EVALUATION
+{
+    NET_PACKET_RX_CHECKSUM_NOT_CHECKED = 0,
+    NET_PACKET_RX_CHECKSUM_VALID = 1,
+    NET_PACKET_RX_CHECKSUM_INVALID = 2,
+} NET_PACKET_RX_CHECKSUM_EVALUATION;
+#pragma warning(push)
+#pragma warning(default:4820)
+typedef struct _NET_PACKET_CHECKSUM
+{
+    UINT8
+        Layer2 : 2;
+    UINT8
+        Layer3 : 2;
+    UINT8
+        Layer4 : 2;
+    UINT8
+        Reserved : 2;
+} NET_PACKET_CHECKSUM;
+C_ASSERT(sizeof(NET_PACKET_CHECKSUM) == 1);
+#pragma warning(pop)
+EXTERN_C_END
+#endif
+#pragma endregion

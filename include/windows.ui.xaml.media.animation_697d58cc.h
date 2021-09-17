@@ -1,0 +1,10234 @@
+#pragma warning( disable: 4049 )
+#include <rpc.h>
+#include <rpcndr.h>
+#error this stub requires an updated version of <rpcndr.h>
+#include <windows.h>
+#include <ole2.h>
+       
+       
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+       
+#include "inspectable.h"
+#include "AsyncInfo.h"
+#include "EventToken.h"
+#include "windowscontracts.h"
+#include "Windows.Foundation.h"
+#include "Windows.UI.h"
+#include "Windows.UI.Composition.h"
+#include "Windows.UI.Xaml.h"
+#include "Windows.UI.Xaml.Controls.h"
+#include "Windows.UI.Xaml.Controls.Primitives.h"
+#include <windows.foundation.collections.h>
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2 __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2 __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory;
+typedef interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame;
+EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame;
+typedef struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * *current);
+                    HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * *items,
+                            __RPC__out unsigned int *actual);
+    END_INTERFACE
+} __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl;
+interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Current(This,current) )
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) )
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) )
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) )
+typedef interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame;
+EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame;
+typedef struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                                                       __RPC__out ULONG *iidCount,
+                                                                         __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame **first);
+    END_INTERFACE
+} __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl;
+interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> First(This,first) )
+typedef interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame;
+EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame;
+typedef struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * *current);
+                    HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * *items,
+                            __RPC__out unsigned int *actual);
+    END_INTERFACE
+} __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl;
+interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Current(This,current) )
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) )
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) )
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) )
+typedef interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame;
+EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame;
+typedef struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                                                       __RPC__out ULONG *iidCount,
+                                                                         __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame **first);
+    END_INTERFACE
+} __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl;
+interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> First(This,first) )
+typedef interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame;
+EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame;
+typedef struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * *current);
+                    HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * *items,
+                            __RPC__out unsigned int *actual);
+    END_INTERFACE
+} __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl;
+interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Current(This,current) )
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) )
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) )
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) )
+typedef interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame;
+EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame;
+typedef struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                                                       __RPC__out ULONG *iidCount,
+                                                                         __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame **first);
+    END_INTERFACE
+} __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl;
+interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> First(This,first) )
+typedef interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame;
+EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame;
+typedef struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * *current);
+                    HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * *items,
+                            __RPC__out unsigned int *actual);
+    END_INTERFACE
+} __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl;
+interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Current(This,current) )
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) )
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) )
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) )
+typedef interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame;
+EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame;
+typedef struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                                                       __RPC__out ULONG *iidCount,
+                                                                         __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame **first);
+    END_INTERFACE
+} __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl;
+interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> First(This,first) )
+typedef interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline;
+EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline;
+typedef struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * *current);
+                    HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * *items,
+                            __RPC__out unsigned int *actual);
+    END_INTERFACE
+} __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl;
+interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Current(This,current) )
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) )
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) )
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) )
+typedef interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline;
+EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline;
+typedef struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                                                       __RPC__out ULONG *iidCount,
+                                                                         __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline **first);
+    END_INTERFACE
+} __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl;
+interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> First(This,first) )
+typedef interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition;
+EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition;
+typedef struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * *current);
+                    HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * *items,
+                            __RPC__out unsigned int *actual);
+    END_INTERFACE
+} __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl;
+interface __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Current(This,current) )
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) )
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) )
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) )
+typedef interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition;
+EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition;
+typedef struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                                                       __RPC__out ULONG *iidCount,
+                                                                         __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition **first);
+    END_INTERFACE
+} __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl;
+interface __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> First(This,first) )
+typedef interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame;
+EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame;
+typedef struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                        __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                        __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(
+                                         __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                                                    unsigned int index,
+                                                             __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * *item);
+                        HRESULT ( STDMETHODCALLTYPE *get_Size )(
+            __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                                __RPC__out unsigned int *size);
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                       __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * item,
+                        __RPC__out unsigned int *index,
+                                __RPC__out boolean *found);
+        HRESULT ( STDMETHODCALLTYPE *GetMany )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                       unsigned int startIndex,
+                       unsigned int capacity,
+                                            __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * *items,
+                                __RPC__out unsigned int *actual);
+        END_INTERFACE
+} __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl;
+interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+typedef interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame;
+EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame;
+typedef struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                        __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                        __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(
+                                         __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                                                    unsigned int index,
+                                                             __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * *item);
+                        HRESULT ( STDMETHODCALLTYPE *get_Size )(
+            __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                                __RPC__out unsigned int *size);
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                       __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * item,
+                        __RPC__out unsigned int *index,
+                                __RPC__out boolean *found);
+        HRESULT ( STDMETHODCALLTYPE *GetMany )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                       unsigned int startIndex,
+                       unsigned int capacity,
+                                            __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * *items,
+                                __RPC__out unsigned int *actual);
+        END_INTERFACE
+} __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl;
+interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+typedef interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame;
+EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame;
+typedef struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                        __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                        __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(
+                                         __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                                                    unsigned int index,
+                                                             __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * *item);
+                        HRESULT ( STDMETHODCALLTYPE *get_Size )(
+            __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                                __RPC__out unsigned int *size);
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                       __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * item,
+                        __RPC__out unsigned int *index,
+                                __RPC__out boolean *found);
+        HRESULT ( STDMETHODCALLTYPE *GetMany )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                       unsigned int startIndex,
+                       unsigned int capacity,
+                                            __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * *items,
+                                __RPC__out unsigned int *actual);
+        END_INTERFACE
+} __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl;
+interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+typedef interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame;
+EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame;
+typedef struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                        __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                        __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(
+                                         __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                                                    unsigned int index,
+                                                             __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * *item);
+                        HRESULT ( STDMETHODCALLTYPE *get_Size )(
+            __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                                __RPC__out unsigned int *size);
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                       __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * item,
+                        __RPC__out unsigned int *index,
+                                __RPC__out boolean *found);
+        HRESULT ( STDMETHODCALLTYPE *GetMany )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                       unsigned int startIndex,
+                       unsigned int capacity,
+                                            __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * *items,
+                                __RPC__out unsigned int *actual);
+        END_INTERFACE
+} __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl;
+interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+typedef interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline;
+EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline;
+typedef struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                        __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                        __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(
+                                         __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                                                    unsigned int index,
+                                                             __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * *item);
+                        HRESULT ( STDMETHODCALLTYPE *get_Size )(
+            __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                                __RPC__out unsigned int *size);
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                       __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * item,
+                        __RPC__out unsigned int *index,
+                                __RPC__out boolean *found);
+        HRESULT ( STDMETHODCALLTYPE *GetMany )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                       unsigned int startIndex,
+                       unsigned int capacity,
+                                            __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * *items,
+                                __RPC__out unsigned int *actual);
+        END_INTERFACE
+} __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl;
+interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+typedef interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition;
+EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition;
+typedef struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                        __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+        __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                        __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(
+                                         __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                                                    unsigned int index,
+                                                             __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * *item);
+                        HRESULT ( STDMETHODCALLTYPE *get_Size )(
+            __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                                __RPC__out unsigned int *size);
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                       __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * item,
+                        __RPC__out unsigned int *index,
+                                __RPC__out boolean *found);
+        HRESULT ( STDMETHODCALLTYPE *GetMany )(
+                                               __RPC__in __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                       unsigned int startIndex,
+                       unsigned int capacity,
+                                            __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * *items,
+                                __RPC__out unsigned int *actual);
+        END_INTERFACE
+} __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl;
+interface __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+typedef interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame;
+EXTERN_C const IID IID___FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame;
+typedef struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                       __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   unsigned int index,
+                            __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * *item);
+                    HRESULT ( STDMETHODCALLTYPE *get_Size )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                            __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame **view);
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * item,
+                    __RPC__out unsigned int *index,
+                            __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This, __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   unsigned int startIndex,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * *items,
+                            __RPC__out unsigned int *actual);
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * This,
+                   unsigned int count,
+                            __RPC__in_ecount_full(count) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * *value);
+    END_INTERFACE
+} __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl;
+interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame
+{
+    CONST_VTBL struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> GetView(This,view) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> SetAt(This,index,item) )
+    ( (This)->lpVtbl -> InsertAt(This,index,item) )
+    ( (This)->lpVtbl -> RemoveAt(This,index) )
+    ( (This)->lpVtbl -> Append(This,item) )
+    ( (This)->lpVtbl -> RemoveAtEnd(This) )
+    ( (This)->lpVtbl -> Clear(This) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) )
+typedef interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame;
+EXTERN_C const IID IID___FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame;
+typedef struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                       __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   unsigned int index,
+                            __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * *item);
+                    HRESULT ( STDMETHODCALLTYPE *get_Size )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                            __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame **view);
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * item,
+                    __RPC__out unsigned int *index,
+                            __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This, __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   unsigned int startIndex,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * *items,
+                            __RPC__out unsigned int *actual);
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * This,
+                   unsigned int count,
+                            __RPC__in_ecount_full(count) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * *value);
+    END_INTERFACE
+} __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl;
+interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame
+{
+    CONST_VTBL struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> GetView(This,view) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> SetAt(This,index,item) )
+    ( (This)->lpVtbl -> InsertAt(This,index,item) )
+    ( (This)->lpVtbl -> RemoveAt(This,index) )
+    ( (This)->lpVtbl -> Append(This,item) )
+    ( (This)->lpVtbl -> RemoveAtEnd(This) )
+    ( (This)->lpVtbl -> Clear(This) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) )
+typedef interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame;
+EXTERN_C const IID IID___FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame;
+typedef struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                       __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   unsigned int index,
+                            __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * *item);
+                    HRESULT ( STDMETHODCALLTYPE *get_Size )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                            __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame **view);
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * item,
+                    __RPC__out unsigned int *index,
+                            __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This, __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   unsigned int startIndex,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * *items,
+                            __RPC__out unsigned int *actual);
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * This,
+                   unsigned int count,
+                            __RPC__in_ecount_full(count) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * *value);
+    END_INTERFACE
+} __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl;
+interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame
+{
+    CONST_VTBL struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> GetView(This,view) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> SetAt(This,index,item) )
+    ( (This)->lpVtbl -> InsertAt(This,index,item) )
+    ( (This)->lpVtbl -> RemoveAt(This,index) )
+    ( (This)->lpVtbl -> Append(This,item) )
+    ( (This)->lpVtbl -> RemoveAtEnd(This) )
+    ( (This)->lpVtbl -> Clear(This) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) )
+typedef interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame;
+EXTERN_C const IID IID___FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame;
+typedef struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                       __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   unsigned int index,
+                            __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * *item);
+                    HRESULT ( STDMETHODCALLTYPE *get_Size )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                            __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame **view);
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * item,
+                    __RPC__out unsigned int *index,
+                            __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This, __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   unsigned int startIndex,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * *items,
+                            __RPC__out unsigned int *actual);
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * This,
+                   unsigned int count,
+                            __RPC__in_ecount_full(count) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * *value);
+    END_INTERFACE
+} __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl;
+interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame
+{
+    CONST_VTBL struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrameVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> GetView(This,view) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> SetAt(This,index,item) )
+    ( (This)->lpVtbl -> InsertAt(This,index,item) )
+    ( (This)->lpVtbl -> RemoveAt(This,index) )
+    ( (This)->lpVtbl -> Append(This,item) )
+    ( (This)->lpVtbl -> RemoveAtEnd(This) )
+    ( (This)->lpVtbl -> Clear(This) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) )
+typedef interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline;
+EXTERN_C const IID IID___FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline;
+typedef struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                       __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   unsigned int index,
+                            __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * *item);
+                    HRESULT ( STDMETHODCALLTYPE *get_Size )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                            __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline **view);
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * item,
+                    __RPC__out unsigned int *index,
+                            __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * item);
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This, __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   unsigned int startIndex,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * *items,
+                            __RPC__out unsigned int *actual);
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * This,
+                   unsigned int count,
+                            __RPC__in_ecount_full(count) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * *value);
+    END_INTERFACE
+} __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl;
+interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline
+{
+    CONST_VTBL struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimelineVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> GetView(This,view) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> SetAt(This,index,item) )
+    ( (This)->lpVtbl -> InsertAt(This,index,item) )
+    ( (This)->lpVtbl -> RemoveAt(This,index) )
+    ( (This)->lpVtbl -> Append(This,item) )
+    ( (This)->lpVtbl -> RemoveAtEnd(This) )
+    ( (This)->lpVtbl -> Clear(This) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) )
+typedef interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition;
+EXTERN_C const IID IID___FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition;
+typedef struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                       __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   unsigned int index,
+                            __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * *item);
+                    HRESULT ( STDMETHODCALLTYPE *get_Size )(
+        __RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                            __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition **view);
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * item,
+                    __RPC__out unsigned int *index,
+                            __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * item);
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   unsigned int index,
+                   __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This, __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   unsigned int startIndex,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * *items,
+                            __RPC__out unsigned int *actual);
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition * This,
+                   unsigned int count,
+                            __RPC__in_ecount_full(count) __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * *value);
+    END_INTERFACE
+} __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl;
+interface __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransition
+{
+    CONST_VTBL struct __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTransitionVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> GetAt(This,index,item) )
+    ( (This)->lpVtbl -> get_Size(This,size) )
+    ( (This)->lpVtbl -> GetView(This,view) )
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) )
+    ( (This)->lpVtbl -> SetAt(This,index,item) )
+    ( (This)->lpVtbl -> InsertAt(This,index,item) )
+    ( (This)->lpVtbl -> RemoveAt(This,index) )
+    ( (This)->lpVtbl -> Append(This,item) )
+    ( (This)->lpVtbl -> RemoveAtEnd(This) )
+    ( (This)->lpVtbl -> Clear(This) )
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) )
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) )
+typedef interface __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable;
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable;
+typedef struct __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable * This);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable * This, __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * sender, __RPC__in_opt IInspectable * e);
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectableVtbl;
+interface __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectableVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> Invoke(This,sender,e) )
+struct __x_ABI_CWindows_CUI_CColor;
+typedef interface __FIReference_1_Windows__CUI__CColor __FIReference_1_Windows__CUI__CColor;
+EXTERN_C const IID IID___FIReference_1_Windows__CUI__CColor;
+typedef struct __FIReference_1_Windows__CUI__CColorVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_Windows__CUI__CColor * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_Windows__CUI__CColor * This );
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_Windows__CUI__CColor * This );
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_Windows__CUI__CColor * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_Windows__CUI__CColor * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_Windows__CUI__CColor * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_Windows__CUI__CColor * This, __RPC__out struct __x_ABI_CWindows_CUI_CColor *value);
+    END_INTERFACE
+} __FIReference_1_Windows__CUI__CColorVtbl;
+interface __FIReference_1_Windows__CUI__CColor
+{
+    CONST_VTBL struct __FIReference_1_Windows__CUI__CColorVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Value(This,value) )
+typedef interface __x_ABI_CWindows_CUI_CXaml_CIUIElement __x_ABI_CWindows_CUI_CXaml_CIUIElement;
+typedef interface __FIIterator_1_Windows__CUI__CXaml__CUIElement __FIIterator_1_Windows__CUI__CXaml__CUIElement;
+EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CXaml__CUIElement;
+typedef struct __FIIterator_1_Windows__CUI__CXaml__CUIElementVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This,
+                    __RPC__out ULONG *iidCount,
+                                      __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This, __RPC__out __x_ABI_CWindows_CUI_CXaml_CIUIElement * *current);
+                    HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This, __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CXaml__CUIElement * This,
+                   unsigned int capacity,
+                                        __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CXaml_CIUIElement * *items,
+                            __RPC__out unsigned int *actual);
+    END_INTERFACE
+} __FIIterator_1_Windows__CUI__CXaml__CUIElementVtbl;
+interface __FIIterator_1_Windows__CUI__CXaml__CUIElement
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CXaml__CUIElementVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Current(This,current) )
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) )
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) )
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) )
+typedef interface __FIIterable_1_Windows__CUI__CXaml__CUIElement __FIIterable_1_Windows__CUI__CXaml__CUIElement;
+EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CXaml__CUIElement;
+typedef struct __FIIterable_1_Windows__CUI__CXaml__CUIElementVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+        __RPC__in __FIIterable_1_Windows__CUI__CXaml__CUIElement * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CUIElement * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CUIElement * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CUIElement * This,
+                                                       __RPC__out ULONG *iidCount,
+                                                                         __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CUIElement * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CUIElement * This, __RPC__out TrustLevel *trustLevel);
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CXaml__CUIElement * This, __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CXaml__CUIElement **first);
+    END_INTERFACE
+} __FIIterable_1_Windows__CUI__CXaml__CUIElementVtbl;
+interface __FIIterable_1_Windows__CUI__CXaml__CUIElement
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CXaml__CUIElementVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> First(This,first) )
+typedef interface __FIReference_1_double __FIReference_1_double;
+EXTERN_C const IID IID___FIReference_1_double;
+typedef struct __FIReference_1_doubleVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_double * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_double * This );
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_double * This );
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_double * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_double * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_double * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_double * This, __RPC__out double *value);
+    END_INTERFACE
+} __FIReference_1_doubleVtbl;
+interface __FIReference_1_double
+{
+    CONST_VTBL struct __FIReference_1_doubleVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Value(This,value) )
+struct __x_ABI_CWindows_CFoundation_CPoint;
+typedef interface __FIReference_1_Windows__CFoundation__CPoint __FIReference_1_Windows__CFoundation__CPoint;
+EXTERN_C const IID IID___FIReference_1_Windows__CFoundation__CPoint;
+typedef struct __FIReference_1_Windows__CFoundation__CPointVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_Windows__CFoundation__CPoint * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_Windows__CFoundation__CPoint * This );
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_Windows__CFoundation__CPoint * This );
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_Windows__CFoundation__CPoint * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_Windows__CFoundation__CPoint * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_Windows__CFoundation__CPoint * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_Windows__CFoundation__CPoint * This, __RPC__out struct __x_ABI_CWindows_CFoundation_CPoint *value);
+    END_INTERFACE
+} __FIReference_1_Windows__CFoundation__CPointVtbl;
+interface __FIReference_1_Windows__CFoundation__CPoint
+{
+    CONST_VTBL struct __FIReference_1_Windows__CFoundation__CPointVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Value(This,value) )
+struct __x_ABI_CWindows_CFoundation_CTimeSpan;
+typedef interface __FIReference_1_Windows__CFoundation__CTimeSpan __FIReference_1_Windows__CFoundation__CTimeSpan;
+EXTERN_C const IID IID___FIReference_1_Windows__CFoundation__CTimeSpan;
+typedef struct __FIReference_1_Windows__CFoundation__CTimeSpanVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This );
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This );
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This,
+                                                        __RPC__out ULONG *iidCount,
+                                                                          __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This, __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This, __RPC__out TrustLevel *trustLevel);
+                    HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This, __RPC__out struct __x_ABI_CWindows_CFoundation_CTimeSpan *value);
+    END_INTERFACE
+} __FIReference_1_Windows__CFoundation__CTimeSpanVtbl;
+interface __FIReference_1_Windows__CFoundation__CTimeSpan
+{
+    CONST_VTBL struct __FIReference_1_Windows__CFoundation__CTimeSpanVtbl *lpVtbl;
+};
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+    ( (This)->lpVtbl -> AddRef(This) )
+    ( (This)->lpVtbl -> Release(This) )
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) )
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) )
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl -> get_Value(This,value) )
+typedef interface __FIEventHandler_1_IInspectable __FIEventHandler_1_IInspectable;
+EXTERN_C const IID IID___FIEventHandler_1_IInspectable;
+typedef struct __FIEventHandler_1_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIEventHandler_1_IInspectable * This,
+                   __RPC__in REFIID riid,
+        _COM_Outptr_ void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIEventHandler_1_IInspectable * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIEventHandler_1_IInspectable * This);
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIEventHandler_1_IInspectable * This, __RPC__in_opt IInspectable *sender, __RPC__in_opt IInspectable * *e);
+    END_INTERFACE
+} __FIEventHandler_1_IInspectableVtbl;
+interface __FIEventHandler_1_IInspectable
+{
+    CONST_VTBL struct __FIEventHandler_1_IInspectableVtbl *lpVtbl;
+};
+        ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl -> AddRef(This) )
+        ( (This)->lpVtbl -> Release(This) )
+        ( (This)->lpVtbl -> Invoke(This,sender,e) )
+typedef struct __x_ABI_CWindows_CFoundation_CPoint __x_ABI_CWindows_CFoundation_CPoint;
+typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
+typedef struct __x_ABI_CWindows_CUI_CColor __x_ABI_CWindows_CUI_CColor;
+typedef interface __x_ABI_CWindows_CUI_CComposition_CICompositionEasingFunction __x_ABI_CWindows_CUI_CComposition_CICompositionEasingFunction;
+typedef interface __x_ABI_CWindows_CUI_CComposition_CICompositionAnimationBase __x_ABI_CWindows_CUI_CComposition_CICompositionAnimationBase;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CControls_CIListViewBase __x_ABI_CWindows_CUI_CXaml_CControls_CIListViewBase;
+typedef enum __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CAnimationDirection __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CAnimationDirection;
+typedef enum __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CEdgeTransitionLocation __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CEdgeTransitionLocation;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CIDependencyObject __x_ABI_CWindows_CUI_CXaml_CIDependencyObject;
+typedef interface __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty;
+typedef struct __x_ABI_CWindows_CUI_CXaml_CDuration __x_ABI_CWindows_CUI_CXaml_CDuration;
+typedef enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CClockState __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CClockState;
+typedef enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CConnectedAnimationComponent __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CConnectedAnimationComponent;
+typedef enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CEasingMode __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CEasingMode;
+typedef enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CFillBehavior __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CFillBehavior;
+typedef enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehaviorType __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehaviorType;
+typedef enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CSlideNavigationTransitionEffect __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CSlideNavigationTransitionEffect;
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime;
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior;
+enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CClockState
+{
+    ClockState_Active = 0,
+    ClockState_Filling = 1,
+    ClockState_Stopped = 2,
+};
+enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CConnectedAnimationComponent
+{
+    ConnectedAnimationComponent_OffsetX = 0,
+    ConnectedAnimationComponent_OffsetY = 1,
+    ConnectedAnimationComponent_CrossFade = 2,
+    ConnectedAnimationComponent_Scale = 3,
+};
+enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CEasingMode
+{
+    EasingMode_EaseOut = 0,
+    EasingMode_EaseIn = 1,
+    EasingMode_EaseInOut = 2,
+};
+enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CFillBehavior
+{
+    FillBehavior_HoldEnd = 0,
+    FillBehavior_Stop = 1,
+};
+enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehaviorType
+{
+    RepeatBehaviorType_Count = 0,
+    RepeatBehaviorType_Duration = 1,
+    RepeatBehaviorType_Forever = 2,
+};
+enum __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CSlideNavigationTransitionEffect
+{
+    SlideNavigationTransitionEffect_FromBottom = 0,
+    SlideNavigationTransitionEffect_FromLeft = 1,
+    SlideNavigationTransitionEffect_FromRight = 2,
+};
+struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime
+{
+    __x_ABI_CWindows_CFoundation_CTimeSpan TimeSpan;
+};
+struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior
+{
+    DOUBLE Count;
+    __x_ABI_CWindows_CFoundation_CTimeSpan Duration;
+    __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehaviorType Type;
+};
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IAddDeleteThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.IAddDeleteThemeTransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIAddDeleteThemeTransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IBackEase[] = L"Windows.UI.Xaml.Media.Animation.IBackEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Amplitude )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Amplitude )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Amplitude(This,value) )
+    ( (This)->lpVtbl->put_Amplitude(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IBackEaseStatics[] = L"Windows.UI.Xaml.Media.Animation.IBackEaseStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_AmplitudeProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_AmplitudeProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBackEaseStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IBasicConnectedAnimationConfiguration[] = L"Windows.UI.Xaml.Media.Animation.IBasicConnectedAnimationConfiguration";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IBasicConnectedAnimationConfigurationFactory[] = L"Windows.UI.Xaml.Media.Animation.IBasicConnectedAnimationConfigurationFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory * This,
+                  __RPC__in_opt IInspectable * baseInterface,
+                   __RPC__deref_out_opt IInspectable * * innerInterface,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfiguration * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBasicConnectedAnimationConfigurationFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IBeginStoryboard[] = L"Windows.UI.Xaml.Media.Animation.IBeginStoryboard";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Storyboard )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Storyboard )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Storyboard(This,value) )
+    ( (This)->lpVtbl->put_Storyboard(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboard;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IBeginStoryboardStatics[] = L"Windows.UI.Xaml.Media.Animation.IBeginStoryboardStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_StoryboardProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_StoryboardProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBeginStoryboardStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IBounceEase[] = L"Windows.UI.Xaml.Media.Animation.IBounceEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Bounces )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This,
+                           __RPC__out INT32 * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Bounces )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This,
+                  INT32 value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_Bounciness )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Bounciness )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Bounces(This,value) )
+    ( (This)->lpVtbl->put_Bounces(This,value) )
+    ( (This)->lpVtbl->get_Bounciness(This,value) )
+    ( (This)->lpVtbl->put_Bounciness(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IBounceEaseStatics[] = L"Windows.UI.Xaml.Media.Animation.IBounceEaseStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_BouncesProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_BouncinessProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_BouncesProperty(This,value) )
+    ( (This)->lpVtbl->get_BouncinessProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIBounceEaseStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ICircleEase[] = L"Windows.UI.Xaml.Media.Animation.ICircleEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICircleEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IColorAnimation[] = L"Windows.UI.Xaml.Media.Animation.IColorAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_From )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                           __RPC__deref_out_opt __FIReference_1_Windows__CUI__CColor * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_From )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                  __RPC__in_opt __FIReference_1_Windows__CUI__CColor * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_To )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                           __RPC__deref_out_opt __FIReference_1_Windows__CUI__CColor * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_To )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                  __RPC__in_opt __FIReference_1_Windows__CUI__CColor * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_By )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                           __RPC__deref_out_opt __FIReference_1_Windows__CUI__CColor * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_By )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                  __RPC__in_opt __FIReference_1_Windows__CUI__CColor * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_From(This,value) )
+    ( (This)->lpVtbl->put_From(This,value) )
+    ( (This)->lpVtbl->get_To(This,value) )
+    ( (This)->lpVtbl->put_To(This,value) )
+    ( (This)->lpVtbl->get_By(This,value) )
+    ( (This)->lpVtbl->put_By(This,value) )
+    ( (This)->lpVtbl->get_EasingFunction(This,value) )
+    ( (This)->lpVtbl->put_EasingFunction(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimation(This,value) )
+    ( (This)->lpVtbl->put_EnableDependentAnimation(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IColorAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IColorAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_FromProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ToProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ByProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EasingFunctionProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimationProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_FromProperty(This,value) )
+    ( (This)->lpVtbl->get_ToProperty(This,value) )
+    ( (This)->lpVtbl->get_ByProperty(This,value) )
+    ( (This)->lpVtbl->get_EasingFunctionProperty(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimationProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IColorAnimationUsingKeyFrames[] = L"Windows.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFrames";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeyFrames )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames * This,
+                           __RPC__deref_out_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CColorKeyFrame * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeyFrames(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimation(This,value) )
+    ( (This)->lpVtbl->put_EnableDependentAnimation(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFrames;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IColorAnimationUsingKeyFramesStatics[] = L"Windows.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFramesStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimationProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EnableDependentAnimationProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorAnimationUsingKeyFramesStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IColorKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Value )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CColor * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Value )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This,
+                  __x_ABI_CWindows_CUI_CColor value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_KeyTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_KeyTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Value(This,value) )
+    ( (This)->lpVtbl->put_Value(This,value) )
+    ( (This)->lpVtbl->get_KeyTime(This,value) )
+    ( (This)->lpVtbl->put_KeyTime(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IColorKeyFrameFactory[] = L"Windows.UI.Xaml.Media.Animation.IColorKeyFrameFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory * This,
+                  __RPC__in_opt IInspectable * baseInterface,
+                   __RPC__deref_out_opt IInspectable * * innerInterface,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrame * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IColorKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.IColorKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_ValueProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_KeyTimeProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_ValueProperty(This,value) )
+    ( (This)->lpVtbl->get_KeyTimeProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIColorKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ICommonNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfo";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_IsStaggeringEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_IsStaggeringEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_IsStaggeringEnabled(This,value) )
+    ( (This)->lpVtbl->put_IsStaggeringEnabled(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfo;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ICommonNavigationTransitionInfoStatics[] = L"Windows.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_IsStaggeringEnabledProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_IsStaggerElementProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetIsStaggerElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * element,
+                           __RPC__out boolean * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetIsStaggerElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * element,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_IsStaggeringEnabledProperty(This,value) )
+    ( (This)->lpVtbl->get_IsStaggerElementProperty(This,value) )
+    ( (This)->lpVtbl->GetIsStaggerElement(This,element,result) )
+    ( (This)->lpVtbl->SetIsStaggerElement(This,element,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICommonNavigationTransitionInfoStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IConnectedAnimation[] = L"Windows.UI.Xaml.Media.Animation.IConnectedAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+                HRESULT ( STDMETHODCALLTYPE *add_Completed )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This,
+                  __RPC__in_opt __FITypedEventHandler_2_Windows__CUI__CXaml__CMedia__CAnimation__CConnectedAnimation_IInspectable * handler,
+                           __RPC__out EventRegistrationToken * token
+        );
+                       HRESULT ( STDMETHODCALLTYPE *remove_Completed )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This,
+                  EventRegistrationToken token
+        );
+                    HRESULT ( STDMETHODCALLTYPE *TryStart )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * destination,
+                           __RPC__out boolean * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *Cancel )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * This
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->add_Completed(This,handler,token) )
+    ( (This)->lpVtbl->remove_Completed(This,token) )
+    ( (This)->lpVtbl->TryStart(This,destination,result) )
+    ( (This)->lpVtbl->Cancel(This) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IConnectedAnimation2[] = L"Windows.UI.Xaml.Media.Animation.IConnectedAnimation2";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_IsScaleAnimationEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_IsScaleAnimationEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This,
+                  boolean value
+        );
+                    HRESULT ( STDMETHODCALLTYPE *TryStartWithCoordinatedElements )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * destination,
+                  __RPC__in_opt __FIIterable_1_Windows__CUI__CXaml__CUIElement * coordinatedElements,
+                           __RPC__out boolean * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetAnimationComponent )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2 * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CConnectedAnimationComponent component,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CComposition_CICompositionAnimationBase * animation
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2Vtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2Vtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_IsScaleAnimationEnabled(This,value) )
+    ( (This)->lpVtbl->put_IsScaleAnimationEnabled(This,value) )
+    ( (This)->lpVtbl->TryStartWithCoordinatedElements(This,destination,coordinatedElements,result) )
+    ( (This)->lpVtbl->SetAnimationComponent(This,component,animation) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation2;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IConnectedAnimation3[] = L"Windows.UI.Xaml.Media.Animation.IConnectedAnimation3";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Configuration )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Configuration )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3 * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3Vtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3Vtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Configuration(This,value) )
+    ( (This)->lpVtbl->put_Configuration(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation3;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IConnectedAnimationConfiguration[] = L"Windows.UI.Xaml.Media.Animation.IConnectedAnimationConfiguration";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfiguration;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IConnectedAnimationConfigurationFactory[] = L"Windows.UI.Xaml.Media.Animation.IConnectedAnimationConfigurationFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationConfigurationFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IConnectedAnimationService[] = L"Windows.UI.Xaml.Media.Animation.IConnectedAnimationService";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_DefaultDuration )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+                           __RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_DefaultDuration )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+                  __x_ABI_CWindows_CFoundation_CTimeSpan value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_DefaultEasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CComposition_CICompositionEasingFunction * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_DefaultEasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CComposition_CICompositionEasingFunction * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *PrepareToAnimate )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+                  __RPC__in HSTRING key,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * source,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * This,
+                  __RPC__in HSTRING key,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation * * result
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_DefaultDuration(This,value) )
+    ( (This)->lpVtbl->put_DefaultDuration(This,value) )
+    ( (This)->lpVtbl->get_DefaultEasingFunction(This,value) )
+    ( (This)->lpVtbl->put_DefaultEasingFunction(This,value) )
+    ( (This)->lpVtbl->PrepareToAnimate(This,key,source,result) )
+    ( (This)->lpVtbl->GetAnimation(This,key,result) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IConnectedAnimationServiceStatics[] = L"Windows.UI.Xaml.Media.Animation.IConnectedAnimationServiceStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetForCurrentView )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationService * * result
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->GetForCurrentView(This,result) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimationServiceStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IContentThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.IContentThemeTransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_HorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_HorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_VerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_VerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_HorizontalOffset(This,value) )
+    ( (This)->lpVtbl->put_HorizontalOffset(This,value) )
+    ( (This)->lpVtbl->get_VerticalOffset(This,value) )
+    ( (This)->lpVtbl->put_VerticalOffset(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IContentThemeTransitionStatics[] = L"Windows.UI.Xaml.Media.Animation.IContentThemeTransitionStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_HorizontalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_VerticalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_HorizontalOffsetProperty(This,value) )
+    ( (This)->lpVtbl->get_VerticalOffsetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContentThemeTransitionStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IContinuumNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfo";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_ExitElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ExitElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_ExitElement(This,value) )
+    ( (This)->lpVtbl->put_ExitElement(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfo;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IContinuumNavigationTransitionInfoStatics[] = L"Windows.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_ExitElementProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_IsEntranceElementProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetIsEntranceElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * element,
+                           __RPC__out boolean * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetIsEntranceElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * element,
+                  boolean value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_IsExitElementProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetIsExitElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * element,
+                           __RPC__out boolean * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetIsExitElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * element,
+                  boolean value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ExitElementContainerProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetExitElementContainer )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIListViewBase * element,
+                           __RPC__out boolean * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetExitElementContainer )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CControls_CIListViewBase * element,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_ExitElementProperty(This,value) )
+    ( (This)->lpVtbl->get_IsEntranceElementProperty(This,value) )
+    ( (This)->lpVtbl->GetIsEntranceElement(This,element,result) )
+    ( (This)->lpVtbl->SetIsEntranceElement(This,element,value) )
+    ( (This)->lpVtbl->get_IsExitElementProperty(This,value) )
+    ( (This)->lpVtbl->GetIsExitElement(This,element,result) )
+    ( (This)->lpVtbl->SetIsExitElement(This,element,value) )
+    ( (This)->lpVtbl->get_ExitElementContainerProperty(This,value) )
+    ( (This)->lpVtbl->GetExitElementContainer(This,element,result) )
+    ( (This)->lpVtbl->SetExitElementContainer(This,element,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIContinuumNavigationTransitionInfoStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ICubicEase[] = L"Windows.UI.Xaml.Media.Animation.ICubicEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CICubicEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDirectConnectedAnimationConfiguration[] = L"Windows.UI.Xaml.Media.Animation.IDirectConnectedAnimationConfiguration";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDirectConnectedAnimationConfigurationFactory[] = L"Windows.UI.Xaml.Media.Animation.IDirectConnectedAnimationConfigurationFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory * This,
+                  __RPC__in_opt IInspectable * baseInterface,
+                   __RPC__deref_out_opt IInspectable * * innerInterface,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfiguration * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDirectConnectedAnimationConfigurationFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDiscreteColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IDiscreteColorKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteColorKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDiscreteDoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IDiscreteDoubleKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteDoubleKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDiscreteObjectKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IDiscreteObjectKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscreteObjectKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDiscretePointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IDiscretePointKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDiscretePointKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDoubleAnimation[] = L"Windows.UI.Xaml.Media.Animation.IDoubleAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_From )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                           __RPC__deref_out_opt __FIReference_1_double * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_From )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                  __RPC__in_opt __FIReference_1_double * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_To )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                           __RPC__deref_out_opt __FIReference_1_double * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_To )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                  __RPC__in_opt __FIReference_1_double * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_By )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                           __RPC__deref_out_opt __FIReference_1_double * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_By )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                  __RPC__in_opt __FIReference_1_double * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_From(This,value) )
+    ( (This)->lpVtbl->put_From(This,value) )
+    ( (This)->lpVtbl->get_To(This,value) )
+    ( (This)->lpVtbl->put_To(This,value) )
+    ( (This)->lpVtbl->get_By(This,value) )
+    ( (This)->lpVtbl->put_By(This,value) )
+    ( (This)->lpVtbl->get_EasingFunction(This,value) )
+    ( (This)->lpVtbl->put_EasingFunction(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimation(This,value) )
+    ( (This)->lpVtbl->put_EnableDependentAnimation(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDoubleAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IDoubleAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_FromProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ToProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ByProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EasingFunctionProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimationProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_FromProperty(This,value) )
+    ( (This)->lpVtbl->get_ToProperty(This,value) )
+    ( (This)->lpVtbl->get_ByProperty(This,value) )
+    ( (This)->lpVtbl->get_EasingFunctionProperty(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimationProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDoubleAnimationUsingKeyFrames[] = L"Windows.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFrames";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeyFrames )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames * This,
+                           __RPC__deref_out_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CDoubleKeyFrame * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeyFrames(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimation(This,value) )
+    ( (This)->lpVtbl->put_EnableDependentAnimation(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFrames;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDoubleAnimationUsingKeyFramesStatics[] = L"Windows.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFramesStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimationProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EnableDependentAnimationProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleAnimationUsingKeyFramesStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Value )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Value )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_KeyTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_KeyTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Value(This,value) )
+    ( (This)->lpVtbl->put_Value(This,value) )
+    ( (This)->lpVtbl->get_KeyTime(This,value) )
+    ( (This)->lpVtbl->put_KeyTime(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDoubleKeyFrameFactory[] = L"Windows.UI.Xaml.Media.Animation.IDoubleKeyFrameFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory * This,
+                  __RPC__in_opt IInspectable * baseInterface,
+                   __RPC__deref_out_opt IInspectable * * innerInterface,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrame * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDoubleKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_ValueProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_KeyTimeProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_ValueProperty(This,value) )
+    ( (This)->lpVtbl->get_KeyTimeProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDoubleKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDragItemThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IDragItemThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDragItemThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IDragItemThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragItemThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDragOverThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IDragOverThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ToOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ToOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_Direction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CAnimationDirection * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Direction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation * This,
+                  __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CAnimationDirection value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+    ( (This)->lpVtbl->get_ToOffset(This,value) )
+    ( (This)->lpVtbl->put_ToOffset(This,value) )
+    ( (This)->lpVtbl->get_Direction(This,value) )
+    ( (This)->lpVtbl->put_Direction(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDragOverThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ToOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_DirectionProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_ToOffsetProperty(This,value) )
+    ( (This)->lpVtbl->get_DirectionProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDragOverThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDrillInNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.IDrillInNavigationTransitionInfo";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfoVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfoVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfoVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInNavigationTransitionInfo;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDrillInThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IDrillInThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EntranceTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EntranceTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EntranceTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EntranceTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ExitTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ExitTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ExitTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ExitTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EntranceTargetName(This,value) )
+    ( (This)->lpVtbl->put_EntranceTargetName(This,value) )
+    ( (This)->lpVtbl->get_EntranceTarget(This,value) )
+    ( (This)->lpVtbl->put_EntranceTarget(This,value) )
+    ( (This)->lpVtbl->get_ExitTargetName(This,value) )
+    ( (This)->lpVtbl->put_ExitTargetName(This,value) )
+    ( (This)->lpVtbl->get_ExitTarget(This,value) )
+    ( (This)->lpVtbl->put_ExitTarget(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDrillInThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EntranceTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EntranceTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ExitTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ExitTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EntranceTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_EntranceTargetProperty(This,value) )
+    ( (This)->lpVtbl->get_ExitTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_ExitTargetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillInThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDrillOutThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IDrillOutThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EntranceTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EntranceTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EntranceTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EntranceTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ExitTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ExitTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ExitTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ExitTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EntranceTargetName(This,value) )
+    ( (This)->lpVtbl->put_EntranceTargetName(This,value) )
+    ( (This)->lpVtbl->get_EntranceTarget(This,value) )
+    ( (This)->lpVtbl->put_EntranceTarget(This,value) )
+    ( (This)->lpVtbl->get_ExitTargetName(This,value) )
+    ( (This)->lpVtbl->put_ExitTargetName(This,value) )
+    ( (This)->lpVtbl->get_ExitTarget(This,value) )
+    ( (This)->lpVtbl->put_ExitTarget(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDrillOutThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EntranceTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EntranceTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ExitTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ExitTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EntranceTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_EntranceTargetProperty(This,value) )
+    ( (This)->lpVtbl->get_ExitTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_ExitTargetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDrillOutThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDropTargetItemThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IDropTargetItemThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIDropTargetItemThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEasingColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IEasingColorKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EasingFunction(This,value) )
+    ( (This)->lpVtbl->put_EasingFunction(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEasingColorKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.IEasingColorKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EasingFunctionProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EasingFunctionProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingColorKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEasingDoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IEasingDoubleKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EasingFunction(This,value) )
+    ( (This)->lpVtbl->put_EasingFunction(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEasingDoubleKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.IEasingDoubleKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EasingFunctionProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EasingFunctionProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingDoubleKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEasingFunctionBase[] = L"Windows.UI.Xaml.Media.Animation.IEasingFunctionBase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EasingMode )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CEasingMode * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EasingMode )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CEasingMode value
+        );
+    HRESULT ( STDMETHODCALLTYPE *Ease )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * This,
+                  DOUBLE normalizedTime,
+                           __RPC__out DOUBLE * result
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EasingMode(This,value) )
+    ( (This)->lpVtbl->put_EasingMode(This,value) )
+    ( (This)->lpVtbl->Ease(This,normalizedTime,result) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEasingFunctionBaseFactory[] = L"Windows.UI.Xaml.Media.Animation.IEasingFunctionBaseFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEasingFunctionBaseStatics[] = L"Windows.UI.Xaml.Media.Animation.IEasingFunctionBaseStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EasingModeProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EasingModeProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBaseStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEasingPointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IEasingPointKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EasingFunction(This,value) )
+    ( (This)->lpVtbl->put_EasingFunction(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEasingPointKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.IEasingPointKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EasingFunctionProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EasingFunctionProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingPointKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEdgeUIThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.IEdgeUIThemeTransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Edge )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CEdgeTransitionLocation * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Edge )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition * This,
+                  __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CEdgeTransitionLocation value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Edge(This,value) )
+    ( (This)->lpVtbl->put_Edge(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEdgeUIThemeTransitionStatics[] = L"Windows.UI.Xaml.Media.Animation.IEdgeUIThemeTransitionStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EdgeProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EdgeProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEdgeUIThemeTransitionStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IElasticEase[] = L"Windows.UI.Xaml.Media.Animation.IElasticEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Oscillations )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This,
+                           __RPC__out INT32 * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Oscillations )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This,
+                  INT32 value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_Springiness )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Springiness )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Oscillations(This,value) )
+    ( (This)->lpVtbl->put_Oscillations(This,value) )
+    ( (This)->lpVtbl->get_Springiness(This,value) )
+    ( (This)->lpVtbl->put_Springiness(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IElasticEaseStatics[] = L"Windows.UI.Xaml.Media.Animation.IElasticEaseStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_OscillationsProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_SpringinessProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_OscillationsProperty(This,value) )
+    ( (This)->lpVtbl->get_SpringinessProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIElasticEaseStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEntranceNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfo";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfo;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEntranceNavigationTransitionInfoStatics[] = L"Windows.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_IsTargetElementProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetIsTargetElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * element,
+                           __RPC__out boolean * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetIsTargetElement )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * element,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_IsTargetElementProperty(This,value) )
+    ( (This)->lpVtbl->GetIsTargetElement(This,element,result) )
+    ( (This)->lpVtbl->SetIsTargetElement(This,element,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceNavigationTransitionInfoStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEntranceThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.IEntranceThemeTransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_IsStaggeringEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_IsStaggeringEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromVerticalOffset(This,value) )
+    ( (This)->lpVtbl->get_IsStaggeringEnabled(This,value) )
+    ( (This)->lpVtbl->put_IsStaggeringEnabled(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IEntranceThemeTransitionStatics[] = L"Windows.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_IsStaggeringEnabledProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_FromHorizontalOffsetProperty(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffsetProperty(This,value) )
+    ( (This)->lpVtbl->get_IsStaggeringEnabledProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEntranceThemeTransitionStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IExponentialEase[] = L"Windows.UI.Xaml.Media.Animation.IExponentialEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Exponent )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Exponent )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Exponent(This,value) )
+    ( (This)->lpVtbl->put_Exponent(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IExponentialEaseStatics[] = L"Windows.UI.Xaml.Media.Animation.IExponentialEaseStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_ExponentProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_ExponentProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIExponentialEaseStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IFadeInThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IFadeInThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IFadeInThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IFadeInThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeInThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IFadeOutThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IFadeOutThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IFadeOutThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IFadeOutThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIFadeOutThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfiguration[] = L"Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfiguration2[] = L"Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration2";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_IsShadowEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_IsShadowEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2 * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2Vtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2Vtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_IsShadowEnabled(This,value) )
+    ( (This)->lpVtbl->put_IsShadowEnabled(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration2;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IGravityConnectedAnimationConfigurationFactory[] = L"Windows.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfigurationFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory * This,
+                  __RPC__in_opt IInspectable * baseInterface,
+                   __RPC__deref_out_opt IInspectable * * innerInterface,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfiguration * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIGravityConnectedAnimationConfigurationFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IKeySpline[] = L"Windows.UI.Xaml.Media.Animation.IKeySpline";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySplineVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_ControlPoint1 )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This,
+                           __RPC__out __x_ABI_CWindows_CFoundation_CPoint * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ControlPoint1 )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This,
+                  __x_ABI_CWindows_CFoundation_CPoint value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ControlPoint2 )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This,
+                           __RPC__out __x_ABI_CWindows_CFoundation_CPoint * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ControlPoint2 )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * This,
+                  __x_ABI_CWindows_CFoundation_CPoint value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySplineVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySplineVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_ControlPoint1(This,value) )
+    ( (This)->lpVtbl->put_ControlPoint1(This,value) )
+    ( (This)->lpVtbl->get_ControlPoint2(This,value) )
+    ( (This)->lpVtbl->put_ControlPoint2(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IKeyTimeHelper[] = L"Windows.UI.Xaml.Media.Animation.IKeyTimeHelper";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelper;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IKeyTimeHelperStatics[] = L"Windows.UI.Xaml.Media.Animation.IKeyTimeHelperStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *FromTimeSpan )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics * This,
+                  __x_ABI_CWindows_CFoundation_CTimeSpan timeSpan,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime * result
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->FromTimeSpan(This,timeSpan,result) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeyTimeHelperStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ILinearColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.ILinearColorKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearColorKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ILinearDoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.ILinearDoubleKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearDoubleKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ILinearPointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.ILinearPointKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CILinearPointKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_INavigationThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.INavigationThemeTransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_DefaultNavigationTransitionInfo )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_DefaultNavigationTransitionInfo )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_DefaultNavigationTransitionInfo(This,value) )
+    ( (This)->lpVtbl->put_DefaultNavigationTransitionInfo(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_INavigationThemeTransitionStatics[] = L"Windows.UI.Xaml.Media.Animation.INavigationThemeTransitionStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_DefaultNavigationTransitionInfoProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_DefaultNavigationTransitionInfoProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationThemeTransitionStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_INavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.INavigationTransitionInfo";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_INavigationTransitionInfoFactory[] = L"Windows.UI.Xaml.Media.Animation.INavigationTransitionInfoFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory * This,
+                  __RPC__in_opt IInspectable * baseInterface,
+                   __RPC__deref_out_opt IInspectable * * innerInterface,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfo * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_INavigationTransitionInfoOverrides[] = L"Windows.UI.Xaml.Media.Animation.INavigationTransitionInfoOverrides";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverridesVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetNavigationStateCore )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides * This,
+                           __RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetNavigationStateCore )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides * This,
+                  __RPC__in HSTRING navigationState
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverridesVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverridesVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->GetNavigationStateCore(This,result) )
+    ( (This)->lpVtbl->SetNavigationStateCore(This,navigationState) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CINavigationTransitionInfoOverrides;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IObjectAnimationUsingKeyFrames[] = L"Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeyFrames )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames * This,
+                           __RPC__deref_out_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CObjectKeyFrame * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeyFrames(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimation(This,value) )
+    ( (This)->lpVtbl->put_EnableDependentAnimation(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFrames;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IObjectAnimationUsingKeyFramesStatics[] = L"Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFramesStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimationProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EnableDependentAnimationProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectAnimationUsingKeyFramesStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IObjectKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IObjectKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Value )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This,
+                           __RPC__deref_out_opt IInspectable * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Value )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This,
+                  __RPC__in_opt IInspectable * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_KeyTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_KeyTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Value(This,value) )
+    ( (This)->lpVtbl->put_Value(This,value) )
+    ( (This)->lpVtbl->get_KeyTime(This,value) )
+    ( (This)->lpVtbl->put_KeyTime(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IObjectKeyFrameFactory[] = L"Windows.UI.Xaml.Media.Animation.IObjectKeyFrameFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory * This,
+                  __RPC__in_opt IInspectable * baseInterface,
+                   __RPC__deref_out_opt IInspectable * * innerInterface,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrame * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IObjectKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.IObjectKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_ValueProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_KeyTimeProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_ValueProperty(This,value) )
+    ( (This)->lpVtbl->get_KeyTimeProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIObjectKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPaneThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.IPaneThemeTransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Edge )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CEdgeTransitionLocation * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Edge )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition * This,
+                  __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CEdgeTransitionLocation value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Edge(This,value) )
+    ( (This)->lpVtbl->put_Edge(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPaneThemeTransitionStatics[] = L"Windows.UI.Xaml.Media.Animation.IPaneThemeTransitionStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EdgeProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EdgeProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPaneThemeTransitionStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointAnimation[] = L"Windows.UI.Xaml.Media.Animation.IPointAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_From )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                           __RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CPoint * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_From )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                  __RPC__in_opt __FIReference_1_Windows__CFoundation__CPoint * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_To )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                           __RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CPoint * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_To )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                  __RPC__in_opt __FIReference_1_Windows__CFoundation__CPoint * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_By )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                           __RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CPoint * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_By )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                  __RPC__in_opt __FIReference_1_Windows__CFoundation__CPoint * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EasingFunction )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIEasingFunctionBase * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_From(This,value) )
+    ( (This)->lpVtbl->put_From(This,value) )
+    ( (This)->lpVtbl->get_To(This,value) )
+    ( (This)->lpVtbl->put_To(This,value) )
+    ( (This)->lpVtbl->get_By(This,value) )
+    ( (This)->lpVtbl->put_By(This,value) )
+    ( (This)->lpVtbl->get_EasingFunction(This,value) )
+    ( (This)->lpVtbl->put_EasingFunction(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimation(This,value) )
+    ( (This)->lpVtbl->put_EnableDependentAnimation(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IPointAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_FromProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ToProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ByProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EasingFunctionProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimationProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_FromProperty(This,value) )
+    ( (This)->lpVtbl->get_ToProperty(This,value) )
+    ( (This)->lpVtbl->get_ByProperty(This,value) )
+    ( (This)->lpVtbl->get_EasingFunctionProperty(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimationProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointAnimationUsingKeyFrames[] = L"Windows.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFrames";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeyFrames )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames * This,
+                           __RPC__deref_out_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CPointKeyFrame * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_EnableDependentAnimation )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeyFrames(This,value) )
+    ( (This)->lpVtbl->get_EnableDependentAnimation(This,value) )
+    ( (This)->lpVtbl->put_EnableDependentAnimation(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFrames;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointAnimationUsingKeyFramesStatics[] = L"Windows.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFramesStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EnableDependentAnimationProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EnableDependentAnimationProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointAnimationUsingKeyFramesStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.IPointKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Value )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This,
+                           __RPC__out __x_ABI_CWindows_CFoundation_CPoint * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Value )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This,
+                  __x_ABI_CWindows_CFoundation_CPoint value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_KeyTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_KeyTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CKeyTime value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Value(This,value) )
+    ( (This)->lpVtbl->put_Value(This,value) )
+    ( (This)->lpVtbl->get_KeyTime(This,value) )
+    ( (This)->lpVtbl->put_KeyTime(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointKeyFrameFactory[] = L"Windows.UI.Xaml.Media.Animation.IPointKeyFrameFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory * This,
+                  __RPC__in_opt IInspectable * baseInterface,
+                   __RPC__deref_out_opt IInspectable * * innerInterface,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrame * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.IPointKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_ValueProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_KeyTimeProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_ValueProperty(This,value) )
+    ( (This)->lpVtbl->get_KeyTimeProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointerDownThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IPointerDownThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointerDownThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IPointerDownThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerDownThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointerUpThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IPointerUpThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPointerUpThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IPointerUpThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPointerUpThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPopInThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IPopInThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+    ( (This)->lpVtbl->get_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromVerticalOffset(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPopInThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_FromHorizontalOffsetProperty(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffsetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopInThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPopOutThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IPopOutThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPopOutThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IPopOutThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopOutThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPopupThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.IPopupThemeTransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromVerticalOffset(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPopupThemeTransitionStatics[] = L"Windows.UI.Xaml.Media.Animation.IPopupThemeTransitionStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_FromHorizontalOffsetProperty(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffsetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPopupThemeTransitionStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPowerEase[] = L"Windows.UI.Xaml.Media.Animation.IPowerEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Power )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Power )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Power(This,value) )
+    ( (This)->lpVtbl->put_Power(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IPowerEaseStatics[] = L"Windows.UI.Xaml.Media.Animation.IPowerEaseStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_PowerProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_PowerProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIPowerEaseStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IQuadraticEase[] = L"Windows.UI.Xaml.Media.Animation.IQuadraticEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuadraticEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IQuarticEase[] = L"Windows.UI.Xaml.Media.Animation.IQuarticEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuarticEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IQuinticEase[] = L"Windows.UI.Xaml.Media.Animation.IQuinticEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIQuinticEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IReorderThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.IReorderThemeTransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIReorderThemeTransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IRepeatBehaviorHelper[] = L"Windows.UI.Xaml.Media.Animation.IRepeatBehaviorHelper";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelper;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IRepeatBehaviorHelperStatics[] = L"Windows.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Forever )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *FromCount )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+                  DOUBLE count,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *FromDuration )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+                  __x_ABI_CWindows_CFoundation_CTimeSpan duration,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetHasCount )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior target,
+                           __RPC__out boolean * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetHasDuration )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior target,
+                           __RPC__out boolean * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *Equals )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior target,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior value,
+                           __RPC__out boolean * result
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Forever(This,value) )
+    ( (This)->lpVtbl->FromCount(This,count,result) )
+    ( (This)->lpVtbl->FromDuration(This,duration,result) )
+    ( (This)->lpVtbl->GetHasCount(This,target,result) )
+    ( (This)->lpVtbl->GetHasDuration(This,target,result) )
+    ( (This)->lpVtbl->Equals(This,target,value,result) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepeatBehaviorHelperStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IRepositionThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+    ( (This)->lpVtbl->get_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromVerticalOffset(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IRepositionThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_FromHorizontalOffsetProperty(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffsetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IRepositionThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.IRepositionThemeTransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IRepositionThemeTransition2[] = L"Windows.UI.Xaml.Media.Animation.IRepositionThemeTransition2";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_IsStaggeringEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_IsStaggeringEnabled )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2 * This,
+                  boolean value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2Vtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2Vtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_IsStaggeringEnabled(This,value) )
+    ( (This)->lpVtbl->put_IsStaggeringEnabled(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransition2;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IRepositionThemeTransitionStatics2[] = L"Windows.UI.Xaml.Media.Animation.IRepositionThemeTransitionStatics2";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2 * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2 * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2 * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2 * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2 * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2 * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_IsStaggeringEnabledProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2 * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2Vtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2Vtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_IsStaggeringEnabledProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIRepositionThemeTransitionStatics2;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISineEase[] = L"Windows.UI.Xaml.Media.Animation.ISineEase";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEaseVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEaseVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEaseVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISineEase;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISlideNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfo";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISlideNavigationTransitionInfo2[] = L"Windows.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfo2";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Effect )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CSlideNavigationTransitionEffect * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Effect )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2 * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CSlideNavigationTransitionEffect value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2Vtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2Vtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Effect(This,value) )
+    ( (This)->lpVtbl->put_Effect(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfo2;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISlideNavigationTransitionInfoStatics2[] = L"Windows.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfoStatics2";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2Vtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2 * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2 * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2 * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2 * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2 * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2 * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_EffectProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2 * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2Vtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2Vtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_EffectProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISlideNavigationTransitionInfoStatics2;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplineColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.ISplineColorKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeySpline )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_KeySpline )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeySpline(This,value) )
+    ( (This)->lpVtbl->put_KeySpline(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplineColorKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.ISplineColorKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeySplineProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeySplineProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineColorKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplineDoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.ISplineDoubleKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeySpline )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_KeySpline )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeySpline(This,value) )
+    ( (This)->lpVtbl->put_KeySpline(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplineDoubleKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.ISplineDoubleKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeySplineProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeySplineProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplineDoubleKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplinePointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.ISplinePointKeyFrame";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeySpline )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_KeySpline )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIKeySpline * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeySpline(This,value) )
+    ( (This)->lpVtbl->put_KeySpline(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrame;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplinePointKeyFrameStatics[] = L"Windows.UI.Xaml.Media.Animation.ISplinePointKeyFrameStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_KeySplineProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_KeySplineProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplinePointKeyFrameStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplitCloseThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_OpenedTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_OpenedTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OpenedTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_OpenedTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ClosedTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ClosedTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ContentTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ContentTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OpenedLength )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_OpenedLength )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedLength )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ClosedLength )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OffsetFromCenter )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_OffsetFromCenter )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTranslationDirection )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CAnimationDirection * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ContentTranslationDirection )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CAnimationDirection value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTranslationOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ContentTranslationOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_OpenedTargetName(This,value) )
+    ( (This)->lpVtbl->put_OpenedTargetName(This,value) )
+    ( (This)->lpVtbl->get_OpenedTarget(This,value) )
+    ( (This)->lpVtbl->put_OpenedTarget(This,value) )
+    ( (This)->lpVtbl->get_ClosedTargetName(This,value) )
+    ( (This)->lpVtbl->put_ClosedTargetName(This,value) )
+    ( (This)->lpVtbl->get_ClosedTarget(This,value) )
+    ( (This)->lpVtbl->put_ClosedTarget(This,value) )
+    ( (This)->lpVtbl->get_ContentTargetName(This,value) )
+    ( (This)->lpVtbl->put_ContentTargetName(This,value) )
+    ( (This)->lpVtbl->get_ContentTarget(This,value) )
+    ( (This)->lpVtbl->put_ContentTarget(This,value) )
+    ( (This)->lpVtbl->get_OpenedLength(This,value) )
+    ( (This)->lpVtbl->put_OpenedLength(This,value) )
+    ( (This)->lpVtbl->get_ClosedLength(This,value) )
+    ( (This)->lpVtbl->put_ClosedLength(This,value) )
+    ( (This)->lpVtbl->get_OffsetFromCenter(This,value) )
+    ( (This)->lpVtbl->put_OffsetFromCenter(This,value) )
+    ( (This)->lpVtbl->get_ContentTranslationDirection(This,value) )
+    ( (This)->lpVtbl->put_ContentTranslationDirection(This,value) )
+    ( (This)->lpVtbl->get_ContentTranslationOffset(This,value) )
+    ( (This)->lpVtbl->put_ContentTranslationOffset(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplitCloseThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_OpenedTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OpenedTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OpenedLengthProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedLengthProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OffsetFromCenterProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTranslationDirectionProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTranslationOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_OpenedTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_OpenedTargetProperty(This,value) )
+    ( (This)->lpVtbl->get_ClosedTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_ClosedTargetProperty(This,value) )
+    ( (This)->lpVtbl->get_ContentTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_ContentTargetProperty(This,value) )
+    ( (This)->lpVtbl->get_OpenedLengthProperty(This,value) )
+    ( (This)->lpVtbl->get_ClosedLengthProperty(This,value) )
+    ( (This)->lpVtbl->get_OffsetFromCenterProperty(This,value) )
+    ( (This)->lpVtbl->get_ContentTranslationDirectionProperty(This,value) )
+    ( (This)->lpVtbl->get_ContentTranslationOffsetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitCloseThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplitOpenThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_OpenedTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_OpenedTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OpenedTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_OpenedTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ClosedTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ClosedTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ContentTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ContentTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OpenedLength )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_OpenedLength )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedLength )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ClosedLength )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OffsetFromCenter )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_OffsetFromCenter )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTranslationDirection )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CAnimationDirection * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ContentTranslationDirection )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  __x_ABI_CWindows_CUI_CXaml_CControls_CPrimitives_CAnimationDirection value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTranslationOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ContentTranslationOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_OpenedTargetName(This,value) )
+    ( (This)->lpVtbl->put_OpenedTargetName(This,value) )
+    ( (This)->lpVtbl->get_OpenedTarget(This,value) )
+    ( (This)->lpVtbl->put_OpenedTarget(This,value) )
+    ( (This)->lpVtbl->get_ClosedTargetName(This,value) )
+    ( (This)->lpVtbl->put_ClosedTargetName(This,value) )
+    ( (This)->lpVtbl->get_ClosedTarget(This,value) )
+    ( (This)->lpVtbl->put_ClosedTarget(This,value) )
+    ( (This)->lpVtbl->get_ContentTargetName(This,value) )
+    ( (This)->lpVtbl->put_ContentTargetName(This,value) )
+    ( (This)->lpVtbl->get_ContentTarget(This,value) )
+    ( (This)->lpVtbl->put_ContentTarget(This,value) )
+    ( (This)->lpVtbl->get_OpenedLength(This,value) )
+    ( (This)->lpVtbl->put_OpenedLength(This,value) )
+    ( (This)->lpVtbl->get_ClosedLength(This,value) )
+    ( (This)->lpVtbl->put_ClosedLength(This,value) )
+    ( (This)->lpVtbl->get_OffsetFromCenter(This,value) )
+    ( (This)->lpVtbl->put_OffsetFromCenter(This,value) )
+    ( (This)->lpVtbl->get_ContentTranslationDirection(This,value) )
+    ( (This)->lpVtbl->put_ContentTranslationDirection(This,value) )
+    ( (This)->lpVtbl->get_ContentTranslationOffset(This,value) )
+    ( (This)->lpVtbl->put_ContentTranslationOffset(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISplitOpenThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_OpenedTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OpenedTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OpenedLengthProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ClosedLengthProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_OffsetFromCenterProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTranslationDirectionProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ContentTranslationOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_OpenedTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_OpenedTargetProperty(This,value) )
+    ( (This)->lpVtbl->get_ClosedTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_ClosedTargetProperty(This,value) )
+    ( (This)->lpVtbl->get_ContentTargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_ContentTargetProperty(This,value) )
+    ( (This)->lpVtbl->get_OpenedLengthProperty(This,value) )
+    ( (This)->lpVtbl->get_ClosedLengthProperty(This,value) )
+    ( (This)->lpVtbl->get_OffsetFromCenterProperty(This,value) )
+    ( (This)->lpVtbl->get_ContentTranslationDirectionProperty(This,value) )
+    ( (This)->lpVtbl->get_ContentTranslationOffsetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISplitOpenThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IStoryboard[] = L"Windows.UI.Xaml.Media.Animation.IStoryboard";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_Children )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This,
+                           __RPC__deref_out_opt __FIVector_1_Windows__CUI__CXaml__CMedia__CAnimation__CTimeline * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *Seek )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This,
+                  __x_ABI_CWindows_CFoundation_CTimeSpan offset
+        );
+    HRESULT ( STDMETHODCALLTYPE *Stop )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This
+        );
+    HRESULT ( STDMETHODCALLTYPE *Begin )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This
+        );
+    HRESULT ( STDMETHODCALLTYPE *Pause )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This
+        );
+    HRESULT ( STDMETHODCALLTYPE *Resume )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetCurrentState )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CClockState * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetCurrentTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This,
+                           __RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SeekAlignedToLastTick )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This,
+                  __x_ABI_CWindows_CFoundation_CTimeSpan offset
+        );
+    HRESULT ( STDMETHODCALLTYPE *SkipToFill )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard * This
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_Children(This,value) )
+    ( (This)->lpVtbl->Seek(This,offset) )
+    ( (This)->lpVtbl->Stop(This) )
+    ( (This)->lpVtbl->Begin(This) )
+    ( (This)->lpVtbl->Pause(This) )
+    ( (This)->lpVtbl->Resume(This) )
+    ( (This)->lpVtbl->GetCurrentState(This,result) )
+    ( (This)->lpVtbl->GetCurrentTime(This,result) )
+    ( (This)->lpVtbl->SeekAlignedToLastTick(This,offset) )
+    ( (This)->lpVtbl->SkipToFill(This) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboard;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_IStoryboardStatics[] = L"Windows.UI.Xaml.Media.Animation.IStoryboardStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetPropertyProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * element,
+                           __RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetTargetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * element,
+                  __RPC__in HSTRING path
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * element,
+                           __RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetTargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * element,
+                  __RPC__in HSTRING name
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetTarget )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics * This,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * timeline,
+                  __RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyObject * target
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetPropertyProperty(This,value) )
+    ( (This)->lpVtbl->GetTargetProperty(This,element,result) )
+    ( (This)->lpVtbl->SetTargetProperty(This,element,path) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+    ( (This)->lpVtbl->GetTargetName(This,element,result) )
+    ( (This)->lpVtbl->SetTargetName(This,element,name) )
+    ( (This)->lpVtbl->SetTarget(This,timeline,target) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CIStoryboardStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISuppressNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.ISuppressNavigationTransitionInfo";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfoVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfoVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfoVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISuppressNavigationTransitionInfo;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISwipeBackThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FromVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+    ( (This)->lpVtbl->get_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffset(This,value) )
+    ( (This)->lpVtbl->put_FromVerticalOffset(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISwipeBackThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromHorizontalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FromVerticalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_FromHorizontalOffsetProperty(This,value) )
+    ( (This)->lpVtbl->get_FromVerticalOffsetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeBackThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISwipeHintThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+                           __RPC__deref_out_opt HSTRING * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_TargetName )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+                  __RPC__in HSTRING value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ToHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ToHorizontalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ToVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_ToVerticalOffset )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation * This,
+                  DOUBLE value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetName(This,value) )
+    ( (This)->lpVtbl->put_TargetName(This,value) )
+    ( (This)->lpVtbl->get_ToHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->put_ToHorizontalOffset(This,value) )
+    ( (This)->lpVtbl->get_ToVerticalOffset(This,value) )
+    ( (This)->lpVtbl->put_ToVerticalOffset(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimation;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ISwipeHintThemeAnimationStatics[] = L"Windows.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_TargetNameProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ToHorizontalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_ToVerticalOffsetProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_TargetNameProperty(This,value) )
+    ( (This)->lpVtbl->get_ToHorizontalOffsetProperty(This,value) )
+    ( (This)->lpVtbl->get_ToVerticalOffsetProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CISwipeHintThemeAnimationStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ITimeline[] = L"Windows.UI.Xaml.Media.Animation.ITimeline";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_AutoReverse )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_AutoReverse )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                  boolean value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_BeginTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                           __RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CTimeSpan * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_BeginTime )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                  __RPC__in_opt __FIReference_1_Windows__CFoundation__CTimeSpan * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_Duration )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CDuration * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_Duration )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                  __x_ABI_CWindows_CUI_CXaml_CDuration value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_SpeedRatio )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                           __RPC__out DOUBLE * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_SpeedRatio )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                  DOUBLE value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FillBehavior )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CFillBehavior * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_FillBehavior )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CFillBehavior value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_RepeatBehavior )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                           __RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_RepeatBehavior )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                  __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CRepeatBehavior value
+        );
+                    HRESULT ( STDMETHODCALLTYPE *add_Completed )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                  __RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                           __RPC__out EventRegistrationToken * token
+        );
+                       HRESULT ( STDMETHODCALLTYPE *remove_Completed )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * This,
+                  EventRegistrationToken token
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_AutoReverse(This,value) )
+    ( (This)->lpVtbl->put_AutoReverse(This,value) )
+    ( (This)->lpVtbl->get_BeginTime(This,value) )
+    ( (This)->lpVtbl->put_BeginTime(This,value) )
+    ( (This)->lpVtbl->get_Duration(This,value) )
+    ( (This)->lpVtbl->put_Duration(This,value) )
+    ( (This)->lpVtbl->get_SpeedRatio(This,value) )
+    ( (This)->lpVtbl->put_SpeedRatio(This,value) )
+    ( (This)->lpVtbl->get_FillBehavior(This,value) )
+    ( (This)->lpVtbl->put_FillBehavior(This,value) )
+    ( (This)->lpVtbl->get_RepeatBehavior(This,value) )
+    ( (This)->lpVtbl->put_RepeatBehavior(This,value) )
+    ( (This)->lpVtbl->add_Completed(This,handler,token) )
+    ( (This)->lpVtbl->remove_Completed(This,token) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ITimelineFactory[] = L"Windows.UI.Xaml.Media.Animation.ITimelineFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory * This,
+                  __RPC__in_opt IInspectable * baseInterface,
+                   __RPC__deref_out_opt IInspectable * * innerInterface,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimeline * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->CreateInstance(This,baseInterface,innerInterface,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ITimelineStatics[] = L"Windows.UI.Xaml.Media.Animation.ITimelineStatics";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStaticsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+               HRESULT ( STDMETHODCALLTYPE *get_AllowDependentAnimations )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                           __RPC__out boolean * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *put_AllowDependentAnimations )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                  boolean value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_AutoReverseProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_BeginTimeProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_DurationProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_SpeedRatioProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_FillBehaviorProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+                   HRESULT ( STDMETHODCALLTYPE *get_RepeatBehaviorProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics * This,
+                           __RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStaticsVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStaticsVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+    ( (This)->lpVtbl->get_AllowDependentAnimations(This,value) )
+    ( (This)->lpVtbl->put_AllowDependentAnimations(This,value) )
+    ( (This)->lpVtbl->get_AutoReverseProperty(This,value) )
+    ( (This)->lpVtbl->get_BeginTimeProperty(This,value) )
+    ( (This)->lpVtbl->get_DurationProperty(This,value) )
+    ( (This)->lpVtbl->get_SpeedRatioProperty(This,value) )
+    ( (This)->lpVtbl->get_FillBehaviorProperty(This,value) )
+    ( (This)->lpVtbl->get_RepeatBehaviorProperty(This,value) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITimelineStatics;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ITransition[] = L"Windows.UI.Xaml.Media.Animation.ITransition";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransition;
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Media_Animation_ITransitionFactory[] = L"Windows.UI.Xaml.Media.Animation.ITransitionFactory";
+typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactoryVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory * This,
+               __RPC__in REFIID riid,
+    _COM_Outptr_ void **ppvObject
+    );
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory * This
+    );
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory * This
+    );
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory * This,
+                __RPC__out ULONG *iidCount,
+                                  __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory * This,
+                __RPC__deref_out_opt HSTRING *className
+    );
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory * This,
+                 __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+} __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactoryVtbl;
+interface __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactoryVtbl *lpVtbl;
+};
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+        ( (This)->lpVtbl->AddRef(This) )
+        ( (This)->lpVtbl->Release(This) )
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CAnimation_CITransitionFactory;
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_AddDeleteThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_BackEase[] = L"Windows.UI.Xaml.Media.Animation.BackEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_BasicConnectedAnimationConfiguration[] = L"Windows.UI.Xaml.Media.Animation.BasicConnectedAnimationConfiguration";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_BeginStoryboard[] = L"Windows.UI.Xaml.Media.Animation.BeginStoryboard";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_BounceEase[] = L"Windows.UI.Xaml.Media.Animation.BounceEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_CircleEase[] = L"Windows.UI.Xaml.Media.Animation.CircleEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ColorAnimation[] = L"Windows.UI.Xaml.Media.Animation.ColorAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ColorAnimationUsingKeyFrames[] = L"Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ColorKeyFrameCollection[] = L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_CommonNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ConnectedAnimation[] = L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ConnectedAnimationConfiguration[] = L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationConfiguration";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ConnectedAnimationService[] = L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ContentThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ContinuumNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_CubicEase[] = L"Windows.UI.Xaml.Media.Animation.CubicEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DirectConnectedAnimationConfiguration[] = L"Windows.UI.Xaml.Media.Animation.DirectConnectedAnimationConfiguration";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DiscreteColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.DiscreteColorKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DiscreteDoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.DiscreteDoubleKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DiscreteObjectKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DiscretePointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.DiscretePointKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DoubleAnimation[] = L"Windows.UI.Xaml.Media.Animation.DoubleAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DoubleAnimationUsingKeyFrames[] = L"Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DoubleKeyFrameCollection[] = L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DragItemThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DragOverThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DrillInNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.DrillInNavigationTransitionInfo";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DrillInThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DrillOutThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_DropTargetItemThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_EasingColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_EasingDoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_EasingFunctionBase[] = L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_EasingPointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_EdgeUIThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ElasticEase[] = L"Windows.UI.Xaml.Media.Animation.ElasticEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_EntranceNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_EntranceThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ExponentialEase[] = L"Windows.UI.Xaml.Media.Animation.ExponentialEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_FadeInThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_FadeOutThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_GravityConnectedAnimationConfiguration[] = L"Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_KeySpline[] = L"Windows.UI.Xaml.Media.Animation.KeySpline";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_KeyTimeHelper[] = L"Windows.UI.Xaml.Media.Animation.KeyTimeHelper";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_LinearColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.LinearColorKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_LinearDoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.LinearDoubleKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_LinearPointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.LinearPointKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_NavigationThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.NavigationThemeTransition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_NavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ObjectAnimationUsingKeyFrames[] = L"Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ObjectKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ObjectKeyFrameCollection[] = L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PaneThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.PaneThemeTransition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PointAnimation[] = L"Windows.UI.Xaml.Media.Animation.PointAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PointAnimationUsingKeyFrames[] = L"Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.PointKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PointKeyFrameCollection[] = L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PointerDownThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PointerUpThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PopInThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PopOutThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PopupThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_PowerEase[] = L"Windows.UI.Xaml.Media.Animation.PowerEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_QuadraticEase[] = L"Windows.UI.Xaml.Media.Animation.QuadraticEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_QuarticEase[] = L"Windows.UI.Xaml.Media.Animation.QuarticEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_QuinticEase[] = L"Windows.UI.Xaml.Media.Animation.QuinticEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_ReorderThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.ReorderThemeTransition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_RepeatBehaviorHelper[] = L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_RepositionThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_RepositionThemeTransition[] = L"Windows.UI.Xaml.Media.Animation.RepositionThemeTransition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SineEase[] = L"Windows.UI.Xaml.Media.Animation.SineEase";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SlideNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SplineColorKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SplineDoubleKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SplinePointKeyFrame[] = L"Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SplitCloseThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SplitOpenThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_Storyboard[] = L"Windows.UI.Xaml.Media.Animation.Storyboard";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SuppressNavigationTransitionInfo[] = L"Windows.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SwipeBackThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_SwipeHintThemeAnimation[] = L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_Timeline[] = L"Windows.UI.Xaml.Media.Animation.Timeline";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_TimelineCollection[] = L"Windows.UI.Xaml.Media.Animation.TimelineCollection";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_Transition[] = L"Windows.UI.Xaml.Media.Animation.Transition";
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Media_Animation_TransitionCollection[] = L"Windows.UI.Xaml.Media.Animation.TransitionCollection";
+       
+       
+#pragma clang diagnostic pop

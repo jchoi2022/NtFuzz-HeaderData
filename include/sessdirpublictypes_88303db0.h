@@ -1,0 +1,200 @@
+#include "rpc.h"
+#include "rpcndr.h"
+#error this stub requires an updated version of <rpcndr.h>
+#include "oaidl.h"
+extern "C"{
+#include <winapifamily.h>
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+typedef
+enum _TSSD_AddrV46Type
+    {
+        TSSD_ADDR_UNDEFINED = 0,
+        TSSD_ADDR_IPv4 = 4,
+        TSSD_ADDR_IPv6 = 6
+    } TSSD_AddrV46Type;
+typedef
+enum _TSSB_NOTIFICATION_TYPE
+    {
+        TSSB_NOTIFY_INVALID = 0,
+        TSSB_NOTIFY_TARGET_CHANGE = 0x1,
+        TSSB_NOTIFY_SESSION_CHANGE = 0x2,
+        TSSB_NOTIFY_CONNECTION_REQUEST_CHANGE = 0x4
+    } TSSB_NOTIFICATION_TYPE;
+typedef
+enum _TARGET_STATE
+    {
+        TARGET_UNKNOWN = 0x1,
+        TARGET_INITIALIZING = ( TARGET_UNKNOWN + 1 ) ,
+        TARGET_RUNNING = ( TARGET_INITIALIZING + 1 ) ,
+        TARGET_DOWN = ( TARGET_RUNNING + 1 ) ,
+        TARGET_HIBERNATED = ( TARGET_DOWN + 1 ) ,
+        TARGET_CHECKED_OUT = ( TARGET_HIBERNATED + 1 ) ,
+        TARGET_STOPPED = ( TARGET_CHECKED_OUT + 1 ) ,
+        TARGET_INVALID = ( TARGET_STOPPED + 1 ) ,
+        TARGET_STARTING = ( TARGET_INVALID + 1 ) ,
+        TARGET_STOPPING = ( TARGET_STARTING + 1 ) ,
+        TARGET_MAXSTATE = ( TARGET_STOPPING + 1 )
+    } TARGET_STATE;
+typedef
+enum _TARGET_CHANGE_TYPE
+    {
+        TARGET_CHANGE_UNSPEC = 0x1,
+        TARGET_EXTERNALIP_CHANGED = 0x2,
+        TARGET_INTERNALIP_CHANGED = 0x4,
+        TARGET_JOINED = 0x8,
+        TARGET_REMOVED = 0x10,
+        TARGET_STATE_CHANGED = 0x20,
+        TARGET_IDLE = 0x40,
+        TARGET_PENDING = 0x80,
+        TARGET_INUSE = 0x100,
+        TARGET_PATCH_STATE_CHANGED = 0x200,
+        TARGET_FARM_MEMBERSHIP_CHANGED = 0x400
+    } TARGET_CHANGE_TYPE;
+typedef
+enum _TARGET_TYPE
+    {
+        UNKNOWN = 0,
+        FARM = 1,
+        NONFARM = 2
+    } TARGET_TYPE;
+typedef
+enum _TARGET_PATCH_STATE
+    {
+        TARGET_PATCH_UNKNOWN = 0,
+        TARGET_PATCH_NOT_STARTED = 1,
+        TARGET_PATCH_IN_PROGRESS = 2,
+        TARGET_PATCH_COMPLETED = 3,
+        TARGET_PATCH_FAILED = 4
+    } TARGET_PATCH_STATE;
+typedef
+enum _CLIENT_MESSAGE_TYPE
+    {
+        CLIENT_MESSAGE_CONNECTION_INVALID = 0,
+        CLIENT_MESSAGE_CONNECTION_STATUS = ( CLIENT_MESSAGE_CONNECTION_INVALID + 1 ) ,
+        CLIENT_MESSAGE_CONNECTION_ERROR = ( CLIENT_MESSAGE_CONNECTION_STATUS + 1 )
+    } CLIENT_MESSAGE_TYPE;
+typedef
+enum _CONNECTION_CHANGE_NOTIFICATION
+    {
+        CONNECTION_REQUEST_INVALID = 0,
+        CONNECTION_REQUEST_PENDING = ( CONNECTION_REQUEST_INVALID + 1 ) ,
+        CONNECTION_REQUEST_FAILED = ( CONNECTION_REQUEST_PENDING + 1 ) ,
+        CONNECTION_REQUEST_TIMEDOUT = ( CONNECTION_REQUEST_FAILED + 1 ) ,
+        CONNECTION_REQUEST_SUCCEEDED = ( CONNECTION_REQUEST_TIMEDOUT + 1 ) ,
+        CONNECTION_REQUEST_CANCELLED = ( CONNECTION_REQUEST_SUCCEEDED + 1 ) ,
+        CONNECTION_REQUEST_LB_COMPLETED = ( CONNECTION_REQUEST_CANCELLED + 1 ) ,
+        CONNECTION_REQUEST_QUERY_PL_COMPLETED = ( CONNECTION_REQUEST_LB_COMPLETED + 1 ) ,
+        CONNECTION_REQUEST_ORCH_COMPLETED = ( CONNECTION_REQUEST_QUERY_PL_COMPLETED + 1 )
+    } CONNECTION_CHANGE_NOTIFICATION;
+typedef
+enum _RD_FARM_TYPE
+    {
+        RD_FARM_RDSH = 0,
+        RD_FARM_TEMP_VM = 1,
+        RD_FARM_MANUAL_PERSONAL_VM = 2,
+        RD_FARM_AUTO_PERSONAL_VM = 3,
+        RD_FARM_MANUAL_PERSONAL_RDSH = 4,
+        RD_FARM_AUTO_PERSONAL_RDSH = 5,
+        RD_FARM_TYPE_UNKNOWN = 0xffffffff
+    } RD_FARM_TYPE;
+typedef
+enum _PLUGIN_TYPE
+    {
+        UNKNOWN_PLUGIN = 0,
+        POLICY_PLUGIN = 0x1,
+        RESOURCE_PLUGIN = 0x2,
+        LOAD_BALANCING_PLUGIN = 0x4,
+        PLACEMENT_PLUGIN = 0x8,
+        ORCHESTRATION_PLUGIN = 0x10,
+        PROVISIONING_PLUGIN = 0x20,
+        TASK_PLUGIN = 0x40
+    } PLUGIN_TYPE;
+typedef
+enum _TSSESSION_STATE
+    {
+        STATE_INVALID = -1,
+        STATE_ACTIVE = ( STATE_INVALID + 1 ) ,
+        STATE_CONNECTED = ( STATE_ACTIVE + 1 ) ,
+        STATE_CONNECTQUERY = ( STATE_CONNECTED + 1 ) ,
+        STATE_SHADOW = ( STATE_CONNECTQUERY + 1 ) ,
+        STATE_DISCONNECTED = ( STATE_SHADOW + 1 ) ,
+        STATE_IDLE = ( STATE_DISCONNECTED + 1 ) ,
+        STATE_LISTEN = ( STATE_IDLE + 1 ) ,
+        STATE_RESET = ( STATE_LISTEN + 1 ) ,
+        STATE_DOWN = ( STATE_RESET + 1 ) ,
+        STATE_INIT = ( STATE_DOWN + 1 ) ,
+        STATE_MAX = ( STATE_INIT + 1 )
+    } TSSESSION_STATE;
+typedef
+enum _TARGET_OWNER
+    {
+        OWNER_UNKNOWN = 0,
+        OWNER_MS_TS_PLUGIN = 0x1,
+        OWNER_MS_VM_PLUGIN = 0x2
+    } TARGET_OWNER;
+typedef struct __MIDL___MIDL_itf_sessdirpublictypes_0000_0000_0001
+    {
+    DWORD HorizontalResolution;
+    DWORD VerticalResolution;
+    DWORD ColorDepth;
+    } CLIENT_DISPLAY;
+typedef struct __MIDL___MIDL_itf_sessdirpublictypes_0000_0000_0001 *PCLIENT_DISPLAY;
+typedef struct __MIDL___MIDL_itf_sessdirpublictypes_0000_0000_0002
+    {
+    byte ServerAddressB[ 16 ];
+    TSSD_AddrV46Type AddressType;
+    USHORT PortNumber;
+    ULONG AddressScope;
+    } TSSD_ConnectionPoint;
+typedef struct __MIDL___MIDL_itf_sessdirpublictypes_0000_0000_0002 *PTSSD_ConnectionPoint;
+typedef
+enum _VM_NOTIFY_STATUS
+    {
+        VM_NOTIFY_STATUS_PENDING = 0,
+        VM_NOTIFY_STATUS_IN_PROGRESS = 1,
+        VM_NOTIFY_STATUS_COMPLETE = 2,
+        VM_NOTIFY_STATUS_FAILED = 3,
+        VM_NOTIFY_STATUS_CANCELED = 4
+    } VM_NOTIFY_STATUS;
+typedef struct _VM_NOTIFY_ENTRY
+    {
+    WCHAR VmName[ 128 ];
+    WCHAR VmHost[ 128 ];
+    } VM_NOTIFY_ENTRY;
+typedef struct _VM_PATCH_INFO
+    {
+    DWORD dwNumEntries;
+                    LPWSTR *pVmNames;
+    } VM_PATCH_INFO;
+typedef struct _VM_NOTIFY_INFO
+    {
+    DWORD dwNumEntries;
+                    VM_NOTIFY_ENTRY **ppVmEntries;
+    } VM_NOTIFY_INFO;
+typedef
+enum _VM_HOST_NOTIFY_STATUS
+    {
+        VM_HOST_STATUS_INIT_PENDING = 0,
+        VM_HOST_STATUS_INIT_IN_PROGRESS = 1,
+        VM_HOST_STATUS_INIT_COMPLETE = 2,
+        VM_HOST_STATUS_INIT_FAILED = 3
+    } VM_HOST_NOTIFY_STATUS;
+typedef
+enum _RDV_TASK_STATUS
+    {
+        RDV_TASK_STATUS_UNKNOWN = 0,
+        RDV_TASK_STATUS_SEARCHING = ( RDV_TASK_STATUS_UNKNOWN + 1 ) ,
+        RDV_TASK_STATUS_DOWNLOADING = ( RDV_TASK_STATUS_SEARCHING + 1 ) ,
+        RDV_TASK_STATUS_APPLYING = ( RDV_TASK_STATUS_DOWNLOADING + 1 ) ,
+        RDV_TASK_STATUS_REBOOTING = ( RDV_TASK_STATUS_APPLYING + 1 ) ,
+        RDV_TASK_STATUS_REBOOTED = ( RDV_TASK_STATUS_REBOOTING + 1 ) ,
+        RDV_TASK_STATUS_SUCCESS = ( RDV_TASK_STATUS_REBOOTED + 1 ) ,
+        RDV_TASK_STATUS_FAILED = ( RDV_TASK_STATUS_SUCCESS + 1 ) ,
+        RDV_TASK_STATUS_TIMEOUT = ( RDV_TASK_STATUS_FAILED + 1 )
+    } RDV_TASK_STATUS;
+#endif
+#pragma endregion
+extern RPC_IF_HANDLE __MIDL_itf_sessdirpublictypes_0000_0000_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_sessdirpublictypes_0000_0000_v0_0_s_ifspec;
+}

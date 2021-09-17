@@ -1,0 +1,40 @@
+#include <winapifamily.h>
+#include <sdkddkver.h>
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#include <excpt.h>
+#include <stdarg.h>
+#include <windef.h>
+#include <winbase.h>
+#include <wingdi.h>
+#include <winuser.h>
+#include <winnls.h>
+#include <wincon.h>
+#include <winver.h>
+#include <winreg.h>
+#include <winnetwk.h>
+#include <cderr.h>
+#include <dde.h>
+#include <ddeml.h>
+#include <dlgs.h>
+#include <lzexpand.h>
+#include <mmsystem.h>
+#include <nb30.h>
+#include <rpc.h>
+#include <shellapi.h>
+#include <winperf.h>
+#include <winsock.h>
+#include <wincrypt.h>
+#include <winefs.h>
+#include <winscard.h>
+#include <winspool.h>
+#include <ole.h>
+#include <commdlg.h>
+#include <stralign.h>
+#include <winwlm.h>
+#include <ole2.h>
+#include <winsvc.h>
+#include <mcx.h>
+#include <imm.h>
+#endif
+#pragma endregion

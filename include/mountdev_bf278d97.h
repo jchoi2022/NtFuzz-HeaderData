@@ -1,0 +1,13 @@
+#include <mountmgr.h>
+typedef struct _MOUNTDEV_UNIQUE_ID {
+    USHORT UniqueIdLength;
+    UCHAR UniqueId[1];
+} MOUNTDEV_UNIQUE_ID, *PMOUNTDEV_UNIQUE_ID;
+typedef struct _MOUNTDEV_SUGGESTED_LINK_NAME {
+    BOOLEAN UseOnlyIfThereAreNoOtherLinks;
+    USHORT NameLength;
+    WCHAR Name[1];
+} MOUNTDEV_SUGGESTED_LINK_NAME, *PMOUNTDEV_SUGGESTED_LINK_NAME;
+typedef struct _MOUNTDEV_STABLE_GUID {
+    GUID StableGuid;
+} MOUNTDEV_STABLE_GUID, *PMOUNTDEV_STABLE_GUID;

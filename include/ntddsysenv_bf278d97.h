@@ -1,0 +1,33 @@
+       
+DEFINE_GUID( GUID_SYSENV_INTERFACE ,
+             0xa942b3d9, 0xec95, 0x4754, 0xae, 0x45, 0x49, 0xc4, 0x87, 0x35, 0xb8, 0x93);
+typedef struct _SYSENV_VARIABLE {
+    GUID VendorGuid;
+    ULONG VariableNameLength;
+    WCHAR VariableName[ANYSIZE_ARRAY];
+} SYSENV_VARIABLE, *PSYSENV_VARIABLE;
+typedef struct _SYSENV_VALUE {
+    ULONG Attributes;
+    ULONG ValueLength;
+    UCHAR ValueData[ANYSIZE_ARRAY];
+} SYSENV_VALUE, *PSYSENV_VALUE;
+typedef struct _XVARIABLE_NAME_AND_VALUE {
+    ULONG NextEntryOffset;
+    ULONG ValueOffset;
+    ULONG ValueLength;
+    ULONG Attributes;
+    GUID VendorGuid;
+    WCHAR Name[ANYSIZE_ARRAY];
+} XVARIABLE_NAME_AND_VALUE, *PXVARIABLE_NAME_AND_VALUE;
+typedef XVARIABLE_NAME_AND_VALUE SYSENV_VARIABLE_AND_VALUE, *PSYSENV_VARIABLE_AND_VALUE;
+typedef struct _XVARIABLE_NAME {
+    ULONG NextEntryOffset;
+    GUID VendorGuid;
+    WCHAR Name[ANYSIZE_ARRAY];
+} XVARIABLE_NAME, *PXVARIABLE_NAME;
+typedef XVARIABLE_NAME SYSENV_VARIABLE_NAME, *PSYSENV_VARIABLE_NAME;
+typedef struct _SYSENV_VARIABLE_INFO {
+    ULONGLONG MaximumVariableStorageSize;
+    ULONGLONG RemainingVariableStorageSize;
+    ULONGLONG MaximumVariableSize;
+} SYSENV_VARIABLE_INFO, *PSYSENV_VARIABLE_INFO;

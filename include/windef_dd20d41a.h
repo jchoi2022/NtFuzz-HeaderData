@@ -1,0 +1,114 @@
+#include <winapifamily.h>
+       
+extern "C" {
+#include <minwindef.h>
+#include <winnt.h>
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+DECLARE_HANDLE (HWND);
+DECLARE_HANDLE (HHOOK);
+#endif
+#pragma endregion
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+DECLARE_HANDLE (HEVENT);
+#endif
+#pragma endregion
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+typedef void NEAR* HGDIOBJ;
+DECLARE_HANDLE(HACCEL);
+DECLARE_HANDLE(HBITMAP);
+DECLARE_HANDLE(HBRUSH);
+DECLARE_HANDLE(HCOLORSPACE);
+DECLARE_HANDLE(HDC);
+DECLARE_HANDLE(HGLRC);
+DECLARE_HANDLE(HDESK);
+DECLARE_HANDLE(HENHMETAFILE);
+DECLARE_HANDLE(HFONT);
+DECLARE_HANDLE(HICON);
+DECLARE_HANDLE(HMENU);
+DECLARE_HANDLE(HPALETTE);
+DECLARE_HANDLE(HPEN);
+DECLARE_HANDLE(HWINEVENTHOOK);
+#endif
+#pragma endregion
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+DECLARE_HANDLE(HMONITOR);
+#endif
+#pragma endregion
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+DECLARE_HANDLE(HUMPD);
+#endif
+#pragma endregion
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+typedef HICON HCURSOR;
+typedef DWORD COLORREF;
+#endif
+#pragma endregion
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+typedef DWORD *LPCOLORREF;
+#endif
+#pragma endregion
+#pragma region Application Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+typedef struct tagRECT
+{
+    LONG left;
+    LONG top;
+    LONG right;
+    LONG bottom;
+} RECT, *PRECT, NEAR *NPRECT, FAR *LPRECT;
+typedef const RECT FAR* LPCRECT;
+typedef struct _RECTL
+{
+    LONG left;
+    LONG top;
+    LONG right;
+    LONG bottom;
+} RECTL, *PRECTL, *LPRECTL;
+typedef const RECTL FAR* LPCRECTL;
+typedef struct tagPOINT
+{
+    LONG x;
+    LONG y;
+} POINT, *PPOINT, NEAR *NPPOINT, FAR *LPPOINT;
+typedef struct _POINTL
+{
+    LONG x;
+    LONG y;
+} POINTL, *PPOINTL;
+typedef struct tagSIZE
+{
+    LONG cx;
+    LONG cy;
+} SIZE, *PSIZE, *LPSIZE;
+typedef SIZE SIZEL;
+typedef SIZE *PSIZEL, *LPSIZEL;
+typedef struct tagPOINTS
+{
+    SHORT x;
+    SHORT y;
+} POINTS, *PPOINTS, *LPPOINTS;
+#endif
+#pragma endregion
+}
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+DECLARE_HANDLE(DPI_AWARENESS_CONTEXT);
+typedef enum DPI_AWARENESS {
+    DPI_AWARENESS_INVALID = -1,
+    DPI_AWARENESS_UNAWARE = 0,
+    DPI_AWARENESS_SYSTEM_AWARE = 1,
+    DPI_AWARENESS_PER_MONITOR_AWARE = 2
+} DPI_AWARENESS;
+typedef enum DPI_HOSTING_BEHAVIOR {
+    DPI_HOSTING_BEHAVIOR_INVALID = -1,
+    DPI_HOSTING_BEHAVIOR_DEFAULT = 0,
+    DPI_HOSTING_BEHAVIOR_MIXED = 1
+} DPI_HOSTING_BEHAVIOR;
+#endif

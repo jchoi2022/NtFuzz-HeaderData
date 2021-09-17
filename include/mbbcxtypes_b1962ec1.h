@@ -1,0 +1,13 @@
+    #define WDF_EXTERN_C extern "C"
+    #define WDF_EXTERN_C_START extern "C" {
+    #define WDF_EXTERN_C_END }
+WDF_EXTERN_C_START
+DECLARE_HANDLE( MBBREQUEST );
+typedef ULONG DSS_SESSION_ID;
+typedef struct _MBB_DRIVER_GLOBALS
+{
+    ULONG Unused;
+} MBB_DRIVER_GLOBALS, *PMBB_DRIVER_GLOBALS;
+typedef VOID (*MBBFUNC) (VOID);
+extern MBBFUNC MbbFunctions[];
+WDF_EXTERN_C_END

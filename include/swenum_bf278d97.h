@@ -1,0 +1,7 @@
+typedef struct _SWENUM_INSTALL_INTERFACE {
+    GUID DeviceId;
+    GUID InterfaceId;
+    WCHAR ReferenceString[1];
+} SWENUM_INSTALL_INTERFACE, *PSWENUM_INSTALL_INTERFACE;
+    0x4747B320L, 0x62CE, 0x11CF, 0xA5, 0xD6, 0x28, 0xDB, 0x04, 0xC1, 0x00, 0x00
+DEFINE_GUIDEX(BUSID_SoftwareDeviceEnumerator);

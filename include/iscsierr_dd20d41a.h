@@ -1,0 +1,1 @@
+typedef ULONG ISDSC_STATUS;

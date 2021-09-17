@@ -1,0 +1,270 @@
+       
+DEFINE_GUID(GUID_DEVINTERFACE_NFCDTA, 0x7fd3f30b, 0x5e49, 0x4be1, 0xb3, 0xaa, 0xaf, 0x06, 0x26, 0x0d, 0x23, 0x6a);
+typedef enum _NFC_RF_DISCOVERY_MODE {
+    RfDiscoveryConfig,
+    RfDiscoveryStart,
+    RFDiscoveryResume
+} NFC_RF_DISCOVERY_MODE, *PNFC_RF_DISCOVERY_MODE;
+typedef struct _NFC_RF_DISCOVERY_CONFIG {
+    USHORT usTotalDuration;
+    ULONG ulPollConfig;
+    BOOLEAN fDisableCardEmulation;
+    UCHAR ucNfcIPMode;
+    BOOLEAN fNfcIPTgtModeDisable;
+    UCHAR ucNfcIPTgtMode;
+    UCHAR ucNfcCEMode;
+    UCHAR ucBailoutConfig;
+    UCHAR ucSystemCode[2];
+    UCHAR ucRequestCode;
+    UCHAR ucTimeSlotNumber;
+    NFC_RF_DISCOVERY_MODE eRfDiscoveryMode;
+} NFC_RF_DISCOVERY_CONFIG, *PNFC_RF_DISCOVERY_CONFIG;
+typedef enum _NFC_P2P_MODE {
+    NfcDepDefault,
+    NfcDepPoll,
+    NfcDepListen
+} NFC_P2P_MODE, *PNFC_P2P_MODE;
+typedef struct _NFC_P2P_PARAM_CONFIG {
+    NFC_P2P_MODE eP2pMode;
+    _Field_range_(<= , MAX_ATR_LENGTH) BYTE cbGeneralBytes;
+    _Field_size_bytes_(cbGeneralBytes) BYTE pbGeneralBytes[MAX_ATR_LENGTH];
+} NFC_P2P_PARAM_CONFIG, *PNFC_P2P_PARAM_CONFIG;
+typedef enum _NFC_DEVICE_TYPE {
+    NfcType1Tag,
+    NfcType2Tag,
+    NfcType3Tag,
+    NfcType4Tag,
+    NfcIP1Target,
+    NfcIP1Initiator,
+    NfcReader
+} NFC_DEVICE_TYPE, *PNFC_DEVICE_TYPE;
+typedef BYTE NFC_RF_TECHNOLOGY;
+typedef BYTE NFC_RF_PROTOCOL;
+typedef HANDLE NFC_REMOTE_DEV_HANDLE, *PNFC_REMOTE_DEV_HANDLE;
+typedef struct _NFC_REMOTE_DEV_INFO {
+    NFC_REMOTE_DEV_HANDLE hRemoteDev;
+    NFC_DEVICE_TYPE eType;
+    NFC_RF_TECHNOLOGY eRFTech;
+    NFC_RF_PROTOCOL eProtocol;
+    _Field_range_(<= , MAX_UID_SIZE) BYTE cbUid;
+    _Field_size_bytes_(cbUid) BYTE pbUid[MAX_UID_SIZE];
+} NFC_REMOTE_DEV_INFO, *PNFC_REMOTE_DEV_INFO;
+typedef enum _NFC_RELEASE_TYPE {
+    IdleMode,
+    SleepMode,
+    Discovery,
+} NFC_RELEASE_TYPE, *PNFC_RELEASE_TYPE;
+typedef struct _NFC_REMOTE_DEVICE_DISCONNET {
+    NFC_REMOTE_DEV_HANDLE hRemoteDev;
+    NFC_RELEASE_TYPE eReleaseType;
+} NFC_REMOTE_DEVICE_DISCONNET, *PNFC_REMOTE_DEVICE_DISCONNET;
+typedef struct _NFC_DATA_BUFFER {
+    USHORT cbBuffer;
+    _Field_size_bytes_(cbBuffer) BYTE pbBuffer[ANYSIZE_ARRAY];
+} NFC_DATA_BUFFER, *PNFC_DATA_BUFFER;
+typedef struct _NFC_REMOTE_DEV_SEND_INFO {
+    NFC_REMOTE_DEV_HANDLE hRemoteDev;
+    USHORT usTimeOut;
+    NFC_DATA_BUFFER sSendBuffer;
+} NFC_REMOTE_DEV_SEND_INFO, *PNFC_REMOTE_DEV_SEND_INFO;
+typedef struct _NFC_REMOTE_DEV_RECV_INFO {
+    NFC_REMOTE_DEV_HANDLE hRemoteDev;
+    NFC_DATA_BUFFER sRecvBuffer;
+} NFC_REMOTE_DEV_RECV_INFO, *PNFC_REMOTE_DEV_RECV_INFO;
+typedef struct _NFC_NDEF_INFO {
+    BOOLEAN fIsNdefFormatted;
+    BOOLEAN fIsReadOnly;
+    DWORD dwActualMessageLength;
+    DWORD dwMaxMessageLength;
+} NFC_NDEF_INFO, *PNFC_NDEF_INFO;
+typedef struct _LLCP_SOCKET_OPTION {
+    USHORT uMIUX;
+    BYTE bRW;
+} NFC_LLCP_SOCKET_OPTION, *PNFC_LLCP_SOCKET_OPTION;
+typedef struct _NFC_LLCP_CONFIG {
+    USHORT uMIU;
+    USHORT uWKS;
+    BYTE bLTO;
+    BYTE bOptions;
+    BOOLEAN fAutoActivate;
+} NFC_LLCP_CONFIG, *PNFC_LLCP_CONFIG;
+typedef struct _NFC_LLCP_SERVICE_NAME_ENTRY {
+    _Field_range_(<= , MAX_LLCP_SERVICE_NAME_SIZE) DWORD cbServiceName;
+    _Field_size_bytes_(cbServiceName) BYTE pbServiceName[ANYSIZE_ARRAY];
+} NFC_LLCP_SERVICE_NAME_ENTRY, *PNFC_LLCP_SERVICE_NAME_ENTRY;
+typedef struct _NFC_LLCP_SERVICE_DISCOVER_REQUEST {
+    NFC_REMOTE_DEV_HANDLE hRemoteDev;
+    DWORD NumberOfEntries;
+    _Field_size_(NumberOfEntries) NFC_LLCP_SERVICE_NAME_ENTRY ServiceNameEntries[ANYSIZE_ARRAY];
+} NFC_LLCP_SERVICE_DISCOVER_REQUEST, *PNFC_LLCP_SERVICE_DISCOVER_REQUEST;
+typedef struct _NFC_LLCP_SERVICE_DISCOVER_SAP {
+    DWORD NumberOfEntries;
+    _Field_size_(NumberOfEntries) BYTE SAPEntries[ANYSIZE_ARRAY];
+} NFC_LLCP_SERVICE_DISCOVER_SAP, *PNFC_LLCP_SERVICE_DISCOVER_SAP;
+typedef enum _NFC_LLCP_SOCKET_TYPE {
+    ConnectionOriented,
+    Connectionless,
+} NFC_LLCP_SOCKET_TYPE, *PNFC_LLCP_SOCKET_TYPE;
+typedef enum _NFC_LLCP_LINK_STATUS {
+    LinkActivated,
+    LinkDeactivated
+} NFC_LLCP_LINK_STATUS, *PNFC_LLCP_LINK_STATUS;
+typedef HANDLE NFC_LLCP_SOCKET_HANDLE, *PNFC_LLCP_SOCKET_HANDLE;
+typedef struct _NFC_LLCP_SOCKET_INFO {
+    NFC_LLCP_SOCKET_TYPE eSocketType;
+    NFC_LLCP_SOCKET_OPTION sSocketOption;
+} NFC_LLCP_SOCKET_INFO, *PNFC_LLCP_SOCKET_INFO;
+typedef struct _NFC_LLCP_SOCKET_SERVICE_INFO {
+    NFC_LLCP_SOCKET_HANDLE hSocket;
+    BYTE bSAP;
+    NFC_LLCP_SERVICE_NAME_ENTRY sServiceName;
+} NFC_LLCP_SOCKET_SERVICE_INFO, *PNFC_LLCP_SOCKET_SERVICE_INFO;
+typedef struct _NFC_LLCP_SOCKET_PAYLOAD {
+    NFC_LLCP_SOCKET_HANDLE hSocket;
+    BYTE bSAP;
+    NFC_DATA_BUFFER sPayload;
+} NFC_LLCP_SOCKET_PAYLOAD, *PNFC_LLCP_SOCKET_PAYLOAD;
+typedef struct _NFC_LLCP_SOCKET_ACCEPT_INFO {
+    NFC_LLCP_SOCKET_HANDLE hSocket;
+    NFC_LLCP_SOCKET_OPTION sSocketOption;
+} NFC_LLCP_SOCKET_ACCEPT_INFO, *PNFC_LLCP_SOCKET_ACCEPT_INFO;
+typedef enum _NFC_LLCP_SOCKET_CONNECT_TYPE {
+    NfcConnectBySap,
+    NfcConnectByUri
+} NFC_LLCP_SOCKET_CONNECT_TYPE, *PNFC_LLCP_SOCKET_CONNECT_TYPE;
+typedef struct _NFC_LLCP_SOCKET_CONNECT_INFO {
+    NFC_REMOTE_DEV_HANDLE hRemoteDev;
+    NFC_LLCP_SOCKET_HANDLE hSocket;
+    NFC_LLCP_SOCKET_CONNECT_TYPE eConnectType;
+    union {
+        BYTE bSAP;
+        NFC_LLCP_SERVICE_NAME_ENTRY sServiceName;
+    };
+} NFC_LLCP_SOCKET_CONNECT_INFO, *PNFC_LLCP_SOCKET_CONNECT_INFO;
+typedef struct _NFC_LLCP_SOCKET_CL_PAYLOAD {
+    NFC_LLCP_SOCKET_HANDLE hSocket;
+    BYTE bSAP;
+    NFC_DATA_BUFFER sPayload;
+} NFC_LLCP_SOCKET_CL_PAYLOAD, *PNFC_LLCP_SOCKET_CL_PAYLOAD;
+typedef enum _NFC_LLCP_SOCKET_ERROR {
+    NfcLlcpErrorDisconnected,
+    NfcLlcpErrorFrameRejected,
+    NfcLlcpErrorBusyCondition,
+    NfcLlcpErrorNotBusyCondition,
+} NFC_LLCP_SOCKET_ERROR, *PNFC_LLCP_SOCKET_ERROR;
+typedef struct _NFC_LLCP_SOCKET_ERROR_INFO {
+    NFC_LLCP_SOCKET_HANDLE hSocket;
+    NFC_LLCP_SOCKET_ERROR eSocketError;
+} NFC_LLCP_SOCKET_ERROR_INFO, *PNFC_LLCP_SOCKET_ERROR_INFO;
+typedef enum _NFC_SNEP_SERVER_TYPE {
+    DefaultSnepServer = 0,
+    ExtendedSnepServer
+} NFC_SNEP_SERVER_TYPE, *PNFC_SNEP_SERVER_TYPE;
+typedef enum _NFC_SNEP_REQUEST_TYPE {
+    SnepRequestGet = 0,
+    SnepRequestPut,
+} NFC_SNEP_REQUEST_TYPE, *PNFC_SNEP_REQUEST_TYPE;
+typedef HANDLE NFC_SNEP_SERVER_HANDLE, *PNFC_SNEP_SERVER_HANDLE;
+typedef HANDLE NFC_SNEP_SERVER_CONNECTION_HANDLE, *PNFC_SNEP_SERVER_CONNECTION_HANDLE;
+typedef NFC_LLCP_SOCKET_OPTION NFC_SNEP_SOCKET_OPTION, *PNFC_SNEP_SOCKET_OPTION;
+typedef _NFC_LLCP_SERVICE_NAME_ENTRY NFC_SNEP_SERVICE_NAME, *PNFC_SNEP_SERVICE_NAME;
+typedef struct _NFC_SNEP_SERVER_INFO {
+    NFC_SNEP_SERVER_TYPE eServerType;
+    NFC_SNEP_SOCKET_OPTION sSocketOption;
+    USHORT usInboxSize;
+    BYTE bSAP;
+    NFC_SNEP_SERVICE_NAME sService;
+} NFC_SNEP_SERVER_INFO, *PNFC_SNEP_SERVER_INFO;
+typedef struct _NFC_SNEP_SERVER_ACCEPT_INFO {
+    NFC_SNEP_SERVER_HANDLE hSnepServer;
+    NFC_SNEP_SERVER_CONNECTION_HANDLE hConnection;
+    NFC_SNEP_SOCKET_OPTION sSocketOption;
+} NFC_SNEP_SERVER_ACCEPT_INFO, *PNFC_SNEP_SERVER_ACCEPT_INFO;
+typedef struct _NFC_SNEP_SERVER_REQUEST {
+    NFC_SNEP_SERVER_HANDLE hSnepServer;
+    NFC_SNEP_SERVER_CONNECTION_HANDLE hConnection;
+    NFC_SNEP_REQUEST_TYPE eRequestType;
+    NFC_DATA_BUFFER sRequestPayload;
+} NFC_SNEP_SERVER_REQUEST, *PNFC_SNEP_SERVER_REQUEST;
+typedef struct _NFC_SNEP_SERVER_RESPONSE_INFO {
+    NFC_SNEP_SERVER_HANDLE hSnepServer;
+    NFC_SNEP_SERVER_CONNECTION_HANDLE hConnection;
+    DWORD dwResponseStatus;
+    NFC_DATA_BUFFER sResponsePayload;
+} NFC_SNEP_SERVER_RESPONSE_INFO, *PNFC_SNEP_SERVER_RESPONSE_INFO;
+typedef HANDLE NFC_SNEP_CLIENT_HANDLE, *PNFC_SNEP_CLIENT_HANDLE;
+typedef NFC_DATA_BUFFER NFC_SNEP_CLIENT_DATA_BUFFER, *PNFC_SNEP_CLIENT_DATA_BUFFER;
+typedef struct _NFC_SNEP_CLIENT_INFO {
+    NFC_REMOTE_DEV_HANDLE hRemoteDev;
+    NFC_SNEP_SERVER_TYPE eServerType;
+    NFC_SNEP_SOCKET_OPTION sSocketOption;
+    NFC_SNEP_SERVICE_NAME sService;
+} NFC_SNEP_CLIENT_INFO, *PNFC_SNEP_CLIENT_INFO;
+typedef struct _NFC_SNEP_CLIENT_PUT_INFO {
+    NFC_SNEP_CLIENT_HANDLE hSnepClient;
+    NFC_DATA_BUFFER sPutPayload;
+} NFC_SNEP_CLIENT_PUT_INFO, *PNFC_SNEP_CLIENT_PUT_INFO;
+typedef struct _NFC_SNEP_CLIENT_GET_INFO {
+    NFC_SNEP_CLIENT_HANDLE hSnepClient;
+    NFC_DATA_BUFFER sGetPayload;
+} NFC_SNEP_CLIENT_GET_INFO, *PNFC_SNEP_CLIENT_GET_INFO;
+typedef SECURE_ELEMENT_TYPE NFC_SE_TYPE;
+typedef HANDLE NFC_SE_HANDLE;
+typedef SECURE_ELEMENT_EVENT_TYPE NFC_SE_EVENT_TYPE;
+typedef enum _NFC_SE_EMULATION_MODE {
+    EmulationDisabled = 0,
+    EmulationEnabled = 1,
+} NFC_SE_EMULATION_MODE, *PNFC_SE_EMULATION_MODE;
+typedef struct _NFC_SE_INFO {
+    NFC_SE_HANDLE hSecureElement;
+    NFC_SE_TYPE eSecureElementType;
+} NFC_SE_INFO, *PNFC_SE_INFO;
+typedef struct _NFC_SE_LIST {
+    DWORD NumberOfEndpoints;
+    _Field_size_(NumberOfEndpoints)
+    NFC_SE_INFO EndpointList[ANYSIZE_ARRAY];
+} NFC_SE_LIST, *PNFC_SE_LIST;
+typedef struct _NFC_SE_EMULATION_MODE_INFO {
+    NFC_SE_HANDLE hSecureElement;
+    NFC_SE_EMULATION_MODE eMode;
+} NFC_SE_EMULATION_MODE_INFO, *PNFC_SE_EMULATION_MODE_INFO;
+typedef SECURE_ELEMENT_ROUTING_TYPE NFC_SE_ROUTING_TABLE_TYPE;
+typedef struct _NFC_SE_TECH_ROUTING_INFO {
+    NFC_SE_HANDLE hSecureElement;
+    BYTE bPowerState;
+    BYTE eRfTechType;
+} NFC_SE_TECH_ROUTING_INFO, *PNFC_SE_TECH_ROUTING_INFO;
+typedef struct _NFC_SE_PROTO_ROUTING_INFO {
+    NFC_SE_HANDLE hSecureElement;
+    BYTE bPowerState;
+    BYTE eRfProtocolType;
+} NFC_SE_PROTO_ROUTING_INFO, *PNFC_SE_PROTO_ROUTING_INFO;
+typedef struct _NFC_SE_AID_ROUTING_INFO {
+    NFC_SE_HANDLE hSecureElement;
+    BYTE bPowerState;
+    _Field_range_(<= , ISO_7816_MAXIMUM_AID_LENGTH) DWORD cbAid;
+    _Field_size_bytes_(cbAid) BYTE pbAid[ISO_7816_MAXIMUM_AID_LENGTH];
+} NFC_SE_AID_ROUTING_INFO, *PNFC_SE_AID_ROUTING_INFO;
+typedef struct _NFC_SE_ROUTING_TABLE_ENTRY {
+    NFC_SE_ROUTING_TABLE_TYPE eRoutingType;
+    union {
+        NFC_SE_TECH_ROUTING_INFO TechRoutingInfo;
+        NFC_SE_PROTO_ROUTING_INFO ProtoRoutingInfo;
+        NFC_SE_AID_ROUTING_INFO AidRoutingInfo;
+    };
+} NFC_SE_ROUTING_TABLE_ENTRY, *PNFC_SE_ROUTING_TABLE_ENTRY;
+typedef struct _NFC_SE_ROUTING_TABLE {
+    DWORD NumberOfEntries;
+    _Field_size_(NumberOfEntries)
+    NFC_SE_ROUTING_TABLE_ENTRY TableEntries[ANYSIZE_ARRAY];
+} NFC_SE_ROUTING_TABLE, *PNFC_SE_ROUTING_TABLE;
+    NFC_SE_ROUTING_TABLE Table; \
+    NFC_SE_ROUTING_TABLE_ENTRY ExtraEntries[n-1]; \
+}
+typedef struct _NFC_SE_EVENT_INFO {
+    NFC_SE_HANDLE hSecureElement;
+    NFC_SE_EVENT_TYPE eEventType;
+    DWORD cbEventData;
+    _Field_size_bytes_(cbEventData)
+    BYTE pbEventData[ANYSIZE_ARRAY];
+} NFC_SE_EVENT_INFO, *PNFC_SE_EVENT_INFO;

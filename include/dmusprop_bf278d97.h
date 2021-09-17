@@ -1,0 +1,89 @@
+#include "dmusbuff.h"
+    0x1a82f8bc, 0x3f8b, 0x11d2, 0xb7, 0x74, 0x00, 0x60, 0x08, 0x33, 0x16, 0xc1
+DEFINE_GUIDSTRUCT("1a82f8bc-3f8b-11d2-b774-0060083316c1", KSDATAFORMAT_SUBTYPE_DIRECTMUSIC);
+    0x94824f88, 0x6183, 0x11d2, 0x8f, 0x7a, 0x0, 0xc0, 0x4f, 0xbf, 0x8f, 0xef
+DEFINE_GUIDSTRUCT("94824F88-6183-11d2-8F7A-00C04FBF8FEF", KSNODETYPE_DMSYNTH);
+    0xbca2a2f1, 0x93c6, 0x11d2, 0xba, 0x1d, 0x0, 0x0, 0xf8, 0x75, 0xac, 0x12
+DEFINE_GUIDSTRUCT("bca2a2f1-93c6-11d2-ba1d-0000f875ac12", KSNODETYPE_DMSYNTH_CAPS);
+    0xd523fa2c, 0xdee3, 0x11d1, 0xa7, 0x89, 0x00, 0x00, 0xf8, 0x75, 0xac, 0x12
+DEFINE_GUIDSTRUCT("d523fa2c-dee3-11d1-a789-0000f875ac12", KSPROPSETID_Synth_Dls);
+typedef enum
+{
+    KSPROPERTY_SYNTH_DLS_DOWNLOAD = 0,
+    KSPROPERTY_SYNTH_DLS_UNLOAD,
+    KSPROPERTY_SYNTH_DLS_COMPACT,
+    KSPROPERTY_SYNTH_DLS_APPEND,
+    KSPROPERTY_SYNTH_DLS_WAVEFORMAT
+} KSPROPERTY_SYNTH_DLS;
+typedef struct _SYNTH_BUFFER
+{
+    ULONG BufferSize;
+    PVOID BufferAddress;
+} SYNTH_BUFFER, *PSYNTH_BUFFER;
+typedef struct _SYNTHDOWNLOAD
+{
+    HANDLE DownloadHandle;
+    BOOL Free;
+} SYNTHDOWNLOAD, *PSYNTHDOWNLOAD;
+    0xfedfae25L, 0xe46e, 0x11d1, 0xaa, 0xce, 0x00, 0x00, 0xf8, 0x75, 0xac, 0x12
+DEFINE_GUIDSTRUCT("fedfae25-e46e-11d1-aace-0000f875ac12", KSPROPSETID_Synth);
+typedef enum
+{
+    KSPROPERTY_SYNTH_VOLUME = 0,
+    KSPROPERTY_SYNTH_VOLUMEBOOST,
+    KSPROPERTY_SYNTH_CAPS,
+    KSPROPERTY_SYNTH_PORTPARAMETERS,
+    KSPROPERTY_SYNTH_CHANNELGROUPS,
+    KSPROPERTY_SYNTH_VOICEPRIORITY,
+    KSPROPERTY_SYNTH_LATENCYCLOCK,
+    KSPROPERTY_SYNTH_RUNNINGSTATS
+} KSPROPERTY_SYNTH;
+typedef struct _SYNTHCAPS
+{
+    GUID Guid;
+    DWORD Flags;
+    DWORD MemorySize;
+    DWORD MaxChannelGroups;
+    DWORD MaxVoices;
+    DWORD MaxAudioChannels;
+    DWORD EffectFlags;
+    WCHAR Description[128];
+} SYNTHCAPS, *PSYNTHCAPS;
+typedef struct _SYNTH_PORTPARAMS
+{
+    DWORD ValidParams;
+    DWORD Voices;
+    DWORD ChannelGroups;
+    DWORD AudioChannels;
+    DWORD SampleRate;
+    DWORD EffectsFlags;
+    DWORD Share;
+} SYNTH_PORTPARAMS, *PSYNTH_PORTPARAMS;
+typedef struct _SYNTHVOICEPRIORITY_INSTANCE
+{
+    DWORD ChannelGroup;
+    DWORD Channel;
+} SYNTHVOICEPRIORITY_INSTANCE, *PSYNTHVOICEPRIORITY_INSTANCE;
+typedef struct _SYNTH_STATS
+{
+    DWORD ValidStats;
+    DWORD Voices;
+    DWORD TotalCPU;
+    DWORD CPUPerVoice;
+    DWORD LostNotes;
+    DWORD FreeMemory;
+    LONG PeakVolume;
+} SYNTH_STATS, *PSYNTH_STATS;
+typedef struct _SYNTH_REVERB_PARAMS
+{
+    float fInGain;
+    float fReverbMix;
+    float fReverbTime;
+    float fHighFreqRTRatio;
+} SYNTH_REVERB_PARAMS, *PSYNTH_REVERB_PARAMS;
+    0xfedfae26L, 0xe46e, 0x11d1, 0xaa, 0xce, 0x00, 0x00, 0xf8, 0x75, 0xac, 0x12
+DEFINE_GUIDSTRUCT("fedfae26-e46e-11d1-aace-0000f875ac12", KSPROPSETID_SynthClock);
+typedef enum
+{
+    KSPROPERTY_SYNTH_MASTERCLOCK
+} KSPROPERTY_SYNTHCLOCK;

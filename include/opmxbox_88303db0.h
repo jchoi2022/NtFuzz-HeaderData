@@ -1,0 +1,17 @@
+       
+ extern "C" {
+typedef enum OPM_HDCP_TYPE
+{
+    OPM_HDCP_TYPE_0 = 0,
+    OPM_HDCP_TYPE_1,
+} OPM_HDCP_TYPE;
+typedef enum OPM_HDCP_STATUS
+{
+    OPM_HDCP_STATUS_ON = 0,
+    OPM_HDCP_STATUS_OFF,
+} OPM_HDCP_STATUS;
+HRESULT OPMXboxEnableHDCP(
+    OPM_HDCP_TYPE HDCPType);
+HRESULT OPMXboxGetHDCPStatus(OPM_HDCP_STATUS *pHDCPStatus);
+HRESULT OPMXboxGetHDCPStatusAndType(OPM_HDCP_STATUS *pHDCPStatus, OPM_HDCP_TYPE *pHDCPType);
+}

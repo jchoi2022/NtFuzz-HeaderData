@@ -1,0 +1,268 @@
+#include <winapifamily.h>
+#include <pshpack8.h>
+extern "C" {
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+struct _PSP;
+typedef struct _PSP * HPROPSHEETPAGE;
+struct _PROPSHEETPAGEA;
+struct _PROPSHEETPAGEW;
+typedef UINT (CALLBACK *LPFNPSPCALLBACKA)(HWND hwnd, UINT uMsg, struct _PROPSHEETPAGEA *ppsp);
+typedef UINT (CALLBACK *LPFNPSPCALLBACKW)(HWND hwnd, UINT uMsg, struct _PROPSHEETPAGEW *ppsp);
+typedef LPCDLGTEMPLATE PROPSHEETPAGE_RESOURCE;
+    DWORD dwSize; \
+    DWORD dwFlags; \
+    HINSTANCE hInstance; \
+    union \
+    { \
+        LPCSTR pszTemplate; \
+        PROPSHEETPAGE_RESOURCE pResource; \
+    } DUMMYUNIONNAME; \
+    union \
+    { \
+        HICON hIcon; \
+        LPCSTR pszIcon; \
+    } DUMMYUNIONNAME2; \
+    LPCSTR pszTitle; \
+    DLGPROC pfnDlgProc; \
+    LPARAM lParam; \
+    LPFNPSPCALLBACKA pfnCallback; \
+    UINT *pcRefParent; \
+    DWORD dwSize; \
+    DWORD dwFlags; \
+    HINSTANCE hInstance; \
+    union \
+    { \
+        LPCWSTR pszTemplate; \
+        PROPSHEETPAGE_RESOURCE pResource; \
+    } DUMMYUNIONNAME; \
+    union \
+    { \
+        HICON hIcon; \
+        LPCWSTR pszIcon; \
+    } DUMMYUNIONNAME2; \
+    LPCWSTR pszTitle; \
+    DLGPROC pfnDlgProc; \
+    LPARAM lParam; \
+    LPFNPSPCALLBACKW pfnCallback; \
+    UINT *pcRefParent; \
+typedef struct _PROPSHEETPAGEA_V1
+{
+    PROPSHEETPAGEA_V1_FIELDS
+} PROPSHEETPAGEA_V1, *LPPROPSHEETPAGEA_V1;
+typedef const PROPSHEETPAGEA_V1 *LPCPROPSHEETPAGEA_V1;
+typedef struct _PROPSHEETPAGEA_V2
+{
+    PROPSHEETPAGEA_V1_FIELDS
+    LPCSTR pszHeaderTitle;
+    LPCSTR pszHeaderSubTitle;
+} PROPSHEETPAGEA_V2, *LPPROPSHEETPAGEA_V2;
+typedef const PROPSHEETPAGEA_V2 *LPCPROPSHEETPAGEA_V2;
+typedef struct _PROPSHEETPAGEA_V3
+{
+    PROPSHEETPAGEA_V1_FIELDS
+    LPCSTR pszHeaderTitle;
+    LPCSTR pszHeaderSubTitle;
+    HANDLE hActCtx;
+} PROPSHEETPAGEA_V3, *LPPROPSHEETPAGEA_V3;
+typedef const PROPSHEETPAGEA_V3 *LPCPROPSHEETPAGEA_V3;
+typedef struct _PROPSHEETPAGEA_V4
+{
+    PROPSHEETPAGEA_V1_FIELDS
+    LPCSTR pszHeaderTitle;
+    LPCSTR pszHeaderSubTitle;
+    HANDLE hActCtx;
+    union
+    {
+        HBITMAP hbmHeader;
+        LPCSTR pszbmHeader;
+    } DUMMYUNIONNAME3;
+} PROPSHEETPAGEA_V4, *LPPROPSHEETPAGEA_V4;
+typedef const PROPSHEETPAGEA_V4 *LPCPROPSHEETPAGEA_V4;
+typedef struct _PROPSHEETPAGEW_V1
+{
+    PROPSHEETPAGEW_V1_FIELDS
+} PROPSHEETPAGEW_V1, *LPPROPSHEETPAGEW_V1;
+typedef const PROPSHEETPAGEW_V1 *LPCPROPSHEETPAGEW_V1;
+typedef struct _PROPSHEETPAGEW_V2
+{
+    PROPSHEETPAGEW_V1_FIELDS
+    LPCWSTR pszHeaderTitle;
+    LPCWSTR pszHeaderSubTitle;
+} PROPSHEETPAGEW_V2, *LPPROPSHEETPAGEW_V2;
+typedef const PROPSHEETPAGEW_V2 *LPCPROPSHEETPAGEW_V2;
+typedef struct _PROPSHEETPAGEW_V3
+{
+    PROPSHEETPAGEW_V1_FIELDS
+    LPCWSTR pszHeaderTitle;
+    LPCWSTR pszHeaderSubTitle;
+    HANDLE hActCtx;
+} PROPSHEETPAGEW_V3, *LPPROPSHEETPAGEW_V3;
+typedef const PROPSHEETPAGEW_V3 *LPCPROPSHEETPAGEW_V3;
+typedef struct _PROPSHEETPAGEW_V4
+{
+    PROPSHEETPAGEW_V1_FIELDS
+    LPCWSTR pszHeaderTitle;
+    LPCWSTR pszHeaderSubTitle;
+    HANDLE hActCtx;
+    union
+    {
+        HBITMAP hbmHeader;
+        LPCWSTR pszbmHeader;
+    } DUMMYUNIONNAME3;
+} PROPSHEETPAGEW_V4, *LPPROPSHEETPAGEW_V4;
+typedef const PROPSHEETPAGEW_V4 *LPCPROPSHEETPAGEW_V4;
+typedef PROPSHEETPAGEA_V4 PROPSHEETPAGEA_LATEST;
+typedef PROPSHEETPAGEW_V4 PROPSHEETPAGEW_LATEST;
+typedef LPPROPSHEETPAGEA_V4 LPPROPSHEETPAGEA_LATEST;
+typedef LPPROPSHEETPAGEW_V4 LPPROPSHEETPAGEW_LATEST;
+typedef LPCPROPSHEETPAGEA_V4 LPCPROPSHEETPAGEA_LATEST;
+typedef LPCPROPSHEETPAGEW_V4 LPCPROPSHEETPAGEW_LATEST;
+typedef PROPSHEETPAGEA_V4 PROPSHEETPAGEA;
+typedef PROPSHEETPAGEW_V4 PROPSHEETPAGEW;
+typedef LPPROPSHEETPAGEA_V4 LPPROPSHEETPAGEA;
+typedef LPPROPSHEETPAGEW_V4 LPPROPSHEETPAGEW;
+typedef LPCPROPSHEETPAGEA_V4 LPCPROPSHEETPAGEA;
+typedef LPCPROPSHEETPAGEW_V4 LPCPROPSHEETPAGEW;
+typedef int (CALLBACK *PFNPROPSHEETCALLBACK)(HWND, UINT, LPARAM);
+        DWORD dwSize; \
+        DWORD dwFlags; \
+        HWND hwndParent; \
+        HINSTANCE hInstance; \
+        union \
+        { \
+            HICON hIcon; \
+            LPCSTR pszIcon; \
+        } DUMMYUNIONNAME; \
+        LPCSTR pszCaption; \
+        UINT nPages; \
+        union \
+        { \
+            UINT nStartPage; \
+            LPCSTR pStartPage; \
+        } DUMMYUNIONNAME2; \
+        union \
+        { \
+            LPCPROPSHEETPAGEA ppsp; \
+            HPROPSHEETPAGE *phpage; \
+        } DUMMYUNIONNAME3; \
+        PFNPROPSHEETCALLBACK pfnCallback;
+typedef struct _PROPSHEETHEADERA_V1
+{
+    PROPSHEETHEADERA_V1_FIELDS
+} PROPSHEETHEADERA_V1, *LPPROPSHEETHEADERA_V1;
+typedef const PROPSHEETHEADERA_V1 *LPCPROPSHEETHEADERA_V1;
+typedef struct _PROPSHEETHEADERA_V2
+{
+    PROPSHEETHEADERA_V1_FIELDS
+    union
+    {
+        HBITMAP hbmWatermark;
+        LPCSTR pszbmWatermark;
+    } DUMMYUNIONNAME4;
+    HPALETTE hplWatermark;
+    union
+    {
+        HBITMAP hbmHeader;
+        LPCSTR pszbmHeader;
+    } DUMMYUNIONNAME5;
+} PROPSHEETHEADERA_V2, *LPPROPSHEETHEADERA_V2;
+typedef const PROPSHEETHEADERA_V2 *LPCPROPSHEETHEADERA_V2;
+        DWORD dwSize; \
+        DWORD dwFlags; \
+        HWND hwndParent; \
+        HINSTANCE hInstance; \
+        union \
+        { \
+            HICON hIcon; \
+            LPCWSTR pszIcon; \
+        } DUMMYUNIONNAME; \
+        LPCWSTR pszCaption; \
+        UINT nPages; \
+        union \
+        { \
+            UINT nStartPage; \
+            LPCWSTR pStartPage; \
+        } DUMMYUNIONNAME2; \
+        union \
+        { \
+            LPCPROPSHEETPAGEW ppsp; \
+            HPROPSHEETPAGE *phpage; \
+        } DUMMYUNIONNAME3; \
+        PFNPROPSHEETCALLBACK pfnCallback;
+typedef struct _PROPSHEETHEADERW_V1
+{
+    PROPSHEETHEADERW_V1_FIELDS
+} PROPSHEETHEADERW_V1, *LPPROPSHEETHEADERW_V1;
+typedef const PROPSHEETHEADERW_V1 *LPCPROPSHEETHEADERW_V1;
+typedef struct _PROPSHEETHEADERW_V2
+{
+    PROPSHEETHEADERW_V1_FIELDS
+    union
+    {
+        HBITMAP hbmWatermark;
+        LPCWSTR pszbmWatermark;
+    } DUMMYUNIONNAME4;
+    HPALETTE hplWatermark;
+    union
+    {
+        HBITMAP hbmHeader;
+        LPCWSTR pszbmHeader;
+    } DUMMYUNIONNAME5;
+} PROPSHEETHEADERW_V2, *LPPROPSHEETHEADERW_V2;
+typedef const PROPSHEETHEADERW_V2 *LPCPROPSHEETHEADERW_V2;
+typedef PROPSHEETHEADERA_V2 PROPSHEETHEADERA;
+typedef PROPSHEETHEADERW_V2 PROPSHEETHEADERW;
+typedef LPPROPSHEETHEADERA_V2 LPPROPSHEETHEADERA;
+typedef LPPROPSHEETHEADERW_V2 LPPROPSHEETHEADERW;
+typedef LPCPROPSHEETHEADERA_V2 LPCPROPSHEETHEADERA;
+typedef LPCPROPSHEETHEADERW_V2 LPCPROPSHEETHEADERW;
+WINCOMMCTRLAPI HPROPSHEETPAGE WINAPI CreatePropertySheetPageA(LPCPROPSHEETPAGEA constPropSheetPagePointer);
+WINCOMMCTRLAPI HPROPSHEETPAGE WINAPI CreatePropertySheetPageW(LPCPROPSHEETPAGEW constPropSheetPagePointer);
+WINCOMMCTRLAPI BOOL WINAPI DestroyPropertySheetPage(HPROPSHEETPAGE);
+WINCOMMCTRLAPI INT_PTR WINAPI PropertySheetA(LPCPROPSHEETHEADERA);
+WINCOMMCTRLAPI INT_PTR WINAPI PropertySheetW(LPCPROPSHEETHEADERW);
+typedef BOOL (CALLBACK *LPFNADDPROPSHEETPAGE)(HPROPSHEETPAGE, LPARAM);
+typedef BOOL (CALLBACK *LPFNADDPROPSHEETPAGES)(LPVOID, LPFNADDPROPSHEETPAGE, LPARAM);
+typedef struct _PSHNOTIFY
+{
+    NMHDR hdr;
+    LPARAM lParam;
+} PSHNOTIFY, *LPPSHNOTIFY;
+        SNDMSG(hDlg, PSM_SETCURSEL, (WPARAM)(index), (LPARAM)(hpage))
+        SNDMSG(hDlg, PSM_REMOVEPAGE, index, (LPARAM)(hpage))
+        SNDMSG(hDlg, PSM_ADDPAGE, 0, (LPARAM)(hpage))
+        SNDMSG(hDlg, PSM_CHANGED, (WPARAM)(hwnd), 0L)
+        SNDMSG(hDlg, PSM_RESTARTWINDOWS, 0, 0L)
+        SNDMSG(hDlg, PSM_REBOOTSYSTEM, 0, 0L)
+        PostMessage(hDlg, PSM_CANCELTOCLOSE, 0, 0L)
+        SNDMSG(hDlg, PSM_QUERYSIBLINGS, wParam, lParam)
+        SNDMSG(hDlg, PSM_UNCHANGED, (WPARAM)(hwnd), 0L)
+        SNDMSG(hDlg, PSM_APPLY, 0, 0L)
+        SNDMSG(hDlg, PSM_SETTITLE, wStyle, (LPARAM)(LPCTSTR)(lpszText))
+        PostMessage(hDlg, PSM_SETWIZBUTTONS, 0, (LPARAM)(dwFlags))
+        PostMessage(hDlg, PSM_PRESSBUTTON, (WPARAM)(iButton), 0)
+        SNDMSG(hDlg, PSM_SETCURSELID, 0, (LPARAM)(id))
+        SNDMSG(hDlg, PSM_SETFINISHTEXT, 0, (LPARAM)(lpszText))
+        (HWND)SNDMSG(hDlg, PSM_GETTABCONTROL, 0, 0)
+        (BOOL)SNDMSG(hDlg, PSM_ISDIALOGMESSAGE, 0, (LPARAM)(pMsg))
+        (HWND)SNDMSG(hDlg, PSM_GETCURRENTPAGEHWND, 0, 0L)
+        SNDMSG(hDlg, PSM_INSERTPAGE, (WPARAM)(index), (LPARAM)(hpage))
+        SNDMSG(hDlg, PSM_SETHEADERTITLE, (WPARAM)(index), (LPARAM)(lpszText))
+        SNDMSG(hDlg, PSM_SETHEADERSUBTITLE, (WPARAM)(index), (LPARAM)(lpszText))
+        (int)SNDMSG(hDlg, PSM_HWNDTOINDEX, (WPARAM)(hwnd), 0)
+        (HWND)SNDMSG(hDlg, PSM_INDEXTOHWND, (WPARAM)(i), 0)
+        (int)SNDMSG(hDlg, PSM_PAGETOINDEX, 0, (LPARAM)(hpage))
+        (HPROPSHEETPAGE)SNDMSG(hDlg, PSM_INDEXTOPAGE, (WPARAM)(i), 0)
+        (int)SNDMSG(hDlg, PSM_IDTOINDEX, 0, (LPARAM)(id))
+        SNDMSG(hDlg, PSM_INDEXTOID, (WPARAM)(i), 0)
+        SNDMSG(hDlg, PSM_GETRESULT, 0, 0)
+        SNDMSG(hDlg, PSM_RECALCPAGESIZES, 0, 0)
+        SNDMSG(hDlg, PSM_SETNEXTTEXT, 0, (LPARAM)(lpszText))
+        PSTMSG(hDlg, PSM_SHOWWIZBUTTONS, (WPARAM)(dwFlag), (LPARAM)(dwButton))
+        PSTMSG(hDlg, PSM_ENABLEWIZBUTTONS, (WPARAM)(dwState), (LPARAM)(dwMask))
+        SNDMSG(hDlg, PSM_SETBUTTONTEXT, (WPARAM)(dwButton), (LPARAM)(lpszText))
+#endif
+#pragma endregion
+}
+#include <poppack.h>
